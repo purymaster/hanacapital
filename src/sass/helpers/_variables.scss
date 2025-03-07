@@ -1,0 +1,13 @@
+// 색상 변수
+$primary-color: #009178; // 메인 색상
+$primary-color-filter: brightness(0) saturate(100%) invert(35%) sepia(97%) saturate(510%) hue-rotate(124deg) brightness(99%) contrast(104%); // 메인 색상 필터 정보
+$primary-color-hover: #00A277; // 메인 색상 hover
+$primary-color-selected: #007F69; // 메인 색상 selected
+
+$secondary-color: #FFF; // 서브 색상
+$secondary-color-hover: #D7EDE6; // 서브 색상 hover
+$secondary-color-selected: #A7D8B7; // 서브 색상 selected
+
+$default-color: #C6C6C6; // 기본 색상
+$default-background-color: #F0F0F0; // 기본 배경 색상
+$default-text-color: #161616; // 기본 텍스트 색상

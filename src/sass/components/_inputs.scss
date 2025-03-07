@@ -1,0 +1,113 @@
+@use "../helpers/_mixins" as mixins;
+@use "../helpers/_variables" as var;
+
+[data-input-group] {
+  @include mixins.inline-flexbox(flex-start);
+  position: relative;
+  background: #fff;
+
+  .label {
+    display: inline-flex;
+    border: 1px solid var.$default-color;
+    border-right: 0;
+    height: 40px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    align-items: center;
+    padding: 0 16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    &+input[type='text'],
+    &+input[type='password'],
+    &+input[type='email'] {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  input[type='text'],
+  input[type='password'],
+  input[type='email'] {
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    transition: border-color, box-shadow .3s ease;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height: 40px;
+    padding: 12px 16px;
+
+    &:focus {
+      border-color: var.$primary-color;
+      box-shadow: 0 0 0 1px var.$primary-color inset;
+    }
+  }
+
+  .input_ctr {
+    @include mixins.pos-center-y;
+    @include mixins.inline-flexbox;
+    right: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+
+    button {
+      width: 16px;
+      height: 16px;
+      font-size: 0;
+
+      &.clear {
+        background: url(/static/img/icon/icon_close_small_on.png) no-repeat center / 16px;
+      }
+    }
+
+    &.on {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &:has(.input_ctr) {
+
+    input[type='text'],
+    input[type='password'],
+    input[type='email'] {
+      padding-right: 40px;
+    }
+  }
+
+  //비밀번호
+  &.password {
+    &.showable {
+
+      input[type='text'],
+      input[type='password'],
+      input[type='email'] {
+        padding-right: 72px;
+      }
+
+      .input_ctr {
+        right: 44px;
+      }
+
+      .pw_ctr {
+        @include mixins.pos-center-y;
+        @include mixins.inline-flexbox;
+        right: 14px;
+
+        .pw {
+          width: 16px;
+          height: 16px;
+          font-size: 0;
+          background: url(/static/img/icon/icon_pw_off.png) no-repeat center / 16px;
+
+          &.on {
+            background: url(/static/img/icon/icon_pw_on.png) no-repeat center / 16px;
+          }
+        }
+      }
+    }
+  }
+}

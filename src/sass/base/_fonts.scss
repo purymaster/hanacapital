@@ -1,0 +1,17 @@
+@use "../helpers/_mixins" as mixins;
+
+/**
+ * @mixin font-face
+ * 
+ * @param {string} 선언명 - 폰트의 이름
+ * @param {string} 경로 - 폰트 파일의 경로 (파일명 포함, 확장자 제외)
+ * @param {string} 굵기 - 폰트의 굵기 (예: normal, bold, 700 등)
+ * @param {string} 스타일 - 폰트의 스타일 (예: normal, italic 등)
+ * @param {string} 확장자 - 지원하는 폰트 파일의 확장자 (예: eot, woff2, woff 등)
+ */
+
+/* Pretendard */
+@include mixins.font-face("Pretendard", "../fonts/Pretendard-Regular.subset", normal, normal, woff2 woff);
+@include mixins.font-face("Pretendard", "../fonts/Pretendard-Medium.subset", 500, normal, woff2 woff);
+@include mixins.font-face("Pretendard", "../fonts/Pretendard-SemiBold.subset", 600, normal, woff2 woff);
+@include mixins.font-face("Pretendard", "../fonts/Pretendard-Bold.subset", 700, normal, woff2 woff);

@@ -1,0 +1,120 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:string';
+
+// Font Face
+@mixin font-face($name, $path, $weight: normal, $style: normal, $exts: eot woff2 woff ttf) {
+	$src: null;
+	$formats: (
+		eot: "embedded-opentype",
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+@each $ext in $exts {
+	$format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
+	$src: list.append($src, url(string.quote($path + "." + $ext)) format(string.quote($format)), comma);
+}
+
+@font-face {
+	font-family: string.quote($name);
+	font-style: $style;
+	font-weight: $weight;
+	src: $src;
+}
+}
+
+// Theme
+@mixin themify($theme) {
+	@if $theme ==dark {
+		@media (prefers-color-scheme: $theme) {
+			@content;
+		}
+	}
+
+	@else {
+		@error "'#{$theme}'은(는) 정의되지 않은 theme입니다.";
+	}
+}
+
+// Blind
+@mixin blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+// Clearfix
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+// Ellipsis
+@mixin ellipsis($line: 1) {
+	@if ($line ==1) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	@else {
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $line;
+	}
+}
+
+// Position
+@mixin pos-center-x($type: absolute) {
+	@if ($type==fixed or $type==absolute) {
+		position: $type;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@mixin pos-center-y($type: absolute) {
+	@if ($type==fixed or $type==absolute) {
+		position: $type;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+@mixin pos-center($type: absolute) {
+	@if ($type==fixed or $type==absolute) {
+		position: $type;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// Flexbox
+@mixin flexbox($jc: center, $ai: center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+@mixin inline-flexbox($jc: center, $ai: center) {
+	display: inline-flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+@mixin column-flexbox($jc: center, $ai: center) {
+	display: flex;
+	flex-direction: column;
+	justify-content: $jc;
+	align-items: $ai;
+}

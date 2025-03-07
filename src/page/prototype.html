@@ -1,0 +1,13 @@
+<%- include('_inc/head', {title:'메인'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content">
+          <% const page_title={ title: "제목" , m1: "1뎁스" , m2: "2뎁스" , isClear: true }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+        </div>
+    </div>
+  </body>
+
+  </html>

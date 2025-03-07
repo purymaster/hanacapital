@@ -1,0 +1,41 @@
+@use "../helpers/_mixins" as mixins;
+
+[data-page-title] {
+  @include mixins.flexbox(space-between);
+  gap: 30px;
+  margin-bottom: 20px;
+
+  .title {
+    @include mixins.flexbox(flex-start);
+    gap: 10px;
+
+    .tit {
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 700;
+    }
+
+    .breadcrumb {
+      @include mixins.flexbox(flex-start);
+      gap: 16px;
+
+      li {
+        position: relative;
+        font-size: 14px;
+        line-height: 16px;
+
+        &:not(:last-child):after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -16px;
+          transform: translateY(-50%) rotate(90deg);
+          width: 16px;
+          height: 16px;
+          background: url(/static/img/icon/icon_snb_up.png) no-repeat center / 16px;
+          filter: brightness(0);
+        }
+      }
+    }
+  }
+}

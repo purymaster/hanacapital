@@ -1,0 +1,22 @@
+<div data-page-title>
+  <div class="title">
+    <h2 class="tit">
+      <%= title %>
+    </h2>
+    <ol class="breadcrumb">
+      <% if (typeof m1 !=='undefined' && m1) { %>
+        <li>
+          <%= m1 %>
+        </li>
+        <% } %>
+          <% if (typeof m2 !=='undefined' && m2) { %>
+            <li>
+              <%= m2 %>
+            </li>
+            <% } %>
+    </ol>
+  </div>
+  <% if (typeof isClear !=='undefined' && isClear) { %>
+    <button type="reset">검색 초기화</button>
+    <% } %>
+</div>
