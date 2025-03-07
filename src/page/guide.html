@@ -60,6 +60,27 @@
         <% const page_title={ title: "마크업 가이드" }; %>
           <%- include('_inc/page_title.ejs', page_title) %>
             <div class="guide_group">
+              <h3 class="guide_tit">Button</h3>
+              <h4 class="guide_sub_tit">기본형</h4>
+              <div class="code">
+                <button type="button" data-btn>버튼 Primary</button>
+                <button type="button" data-btn class="secondary">버튼 Secondary</button>
+                <button type="button" data-btn disabled>버튼(비활성화)</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">medium 사이즈</h4>
+              <div class="code">
+                <button type="button" data-btn>버튼 Primary</button>
+                <button type="button" data-btn class="secondary">버튼 Secondary</button>
+                <button type="button" data-btn disabled>버튼(비활성화)</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h3 class="guide_tit">Input Group</h3>
               <h4 class="guide_sub_tit">기본형</h4>
               <div class="code">
@@ -126,6 +147,16 @@
               <pre><code class="language-markup"></code></pre>
             </div>
 
+            <div class="guide_group">
+              <h3 class="guide_tit">Toast Message(기본 노출 시간 2초, tail.ejs에 포함)</h3>
+              <div class="code">
+                <!-- <div data-toast></div> -->
+                <button type="button" onClick="showToast('메세지')">툴팁 노출</button><br>
+                <button type="button" onClick="showToast('메세지', 5)">툴팁 5초 노출</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
       </div>
     </div>
 
@@ -145,4 +176,4 @@
 
   </body>
 
-  </html>
+  <%- include('_inc/tail') %>

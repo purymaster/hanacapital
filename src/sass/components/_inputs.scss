@@ -31,7 +31,7 @@
   input[type='password'],
   input[type='email'] {
     padding: 10px 15px;
-    border-radius: 8px;
+    border-radius: var.$global-border-radius;
     width: 100%;
     transition: border-color, box-shadow .3s ease;
     border: 1px solid #ccc;

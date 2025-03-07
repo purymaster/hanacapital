@@ -234,12 +234,6 @@ i {
   box-shadow: none;
 }
 
-[readonly],
-:disabled {
-  background: #f1f1f1 !important;
-  cursor: not-allowed !important;
-}
-
 :-moz-submit-invalid,
 :-moz-ui-invalid {
   box-shadow: none;
