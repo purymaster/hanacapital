@@ -145,7 +145,8 @@
 
       // 탭 최대 개수 제한 체크
       if (gnbTabArray.length >= MAX_TABS) {
-        alert(`탭은 최대 ${MAX_TABS}개까지만 추가할 수 있습니다.`);
+        // alert(`탭은 최대 ${MAX_TABS}개까지만 추가할 수 있습니다.`);
+        showToast(`탭은 최대 ${MAX_TABS}개까지만 추가할 수 있습니다.`);
         return;
       }
 
@@ -182,10 +183,28 @@
     });
   }
 
+  /* 토스트 팝업 제어 */
+  const handleToast = () => {
+    const $toast = $('[data-toast]');
+    const TOAST_DURATION_SECOND = 2;
+    let toastTimeout;
+
+    window.showToast = (msg, duration = TOAST_DURATION_SECOND) => {
+      if (toastTimeout) {
+        clearTimeout(toastTimeout);
+      }
+      $toast.text(msg).addClass('on');
+      toastTimeout = setTimeout(() => {
+        $toast.removeClass('on');
+      }, duration * 1000);
+    };
+  }
+
   $(() => {
     handleGnb();
     handleSnb();
     handleInput();
     handleGnbTab();
+    handleToast();
   });
 })(jQuery);
