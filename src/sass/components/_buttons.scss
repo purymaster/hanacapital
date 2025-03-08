@@ -2,12 +2,15 @@
 @use "../helpers/_variables" as var;
 
 [data-btn] {
+  @include mixins.inline-flexbox;
+  gap: 4px;
   border: 1px solid var.$primary-color;
   background: var.$primary-color;
   color: #fff;
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
+  margin: 0 1px;
   padding: 14px 22px;
   border-radius: var.$global-border-radius;
   cursor: pointer;
@@ -47,19 +50,28 @@
   }
 
   &.m {
-    padding: 11px 22px;
+    padding: 10px 22px;
   }
 
   &.s {
-    padding: 9px 18px;
+    padding: 8px 18px;
   }
 
   &.xs {
     font-size: 13px;
     line-height: 16px;
     font-weight: 500;
-    padding: 4px 8px;
+    padding: 3px 8px;
     border-radius: calc(var.$global-border-radius / 2);
+  }
+
+  &.reset {
+    padding: 9px 14px;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
   }
 }
 

@@ -28,7 +28,7 @@
     $('header .snb .tit').on('click', function () {
       const $currentTitle = $(this);
       const $currentSubMenu = $currentTitle.next('.sub');
-      $('.snb .sub').stop().slideUp();
+      $('header .snb .sub').stop().slideUp();
       if ($currentSubMenu.is(':visible')) {
         $currentTitle.parent().removeClass('on');
       } else {

@@ -9,5 +9,9 @@
     overflow: auto;
     padding: 30px;
     padding-left: 50px;
+
+    &.no_snb {
+      padding-left: 30px;
+    }
   }
 }

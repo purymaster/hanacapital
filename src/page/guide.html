@@ -101,6 +101,17 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">검색 초기화 버튼</h4>
+              <div class="code">
+                <button type="reset" data-btn class="secondary s reset">
+                  <img src="/static/img/icon/icon_search_reset.png" alt="">
+                  검색 초기화
+                </button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h3 class="guide_tit">Button Group</h3>
               <h4 class="guide_sub_tit">Button Tag</h4>
               <div class="code">
@@ -210,8 +221,8 @@
               <h3 class="guide_tit">Toast Message(기본 노출 시간 2초, tail.ejs에 포함)</h3>
               <div class="code">
                 <!-- <div data-toast></div> -->
-                <button type="button" onClick="showToast('메세지')">툴팁 노출</button><br>
-                <button type="button" onClick="showToast('메세지', 5)">툴팁 5초 노출</button>
+                <button type="button" data-btn onClick="showToast('메세지')">툴팁 노출</button>
+                <button type="button" data-btn onClick="showToast('메세지', 5)">툴팁 5초 노출</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
