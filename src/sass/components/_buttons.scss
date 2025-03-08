@@ -1,3 +1,4 @@
+@use "../helpers/_mixins" as mixins;
 @use "../helpers/_variables" as var;
 
 [data-btn] {
@@ -42,6 +43,80 @@
     &:focus,
     &:active {
       background: var.$secondary-color-selected;
+    }
+  }
+
+  &.m {
+    padding: 11px 22px;
+  }
+
+  &.s {
+    padding: 9px 18px;
+  }
+
+  &.xs {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: calc(var.$global-border-radius / 2);
+  }
+}
+
+[data-btn-group] {
+  display: inline-flex;
+  border: 1px solid var.$secondary-color-selected;
+  border-radius: var.$global-border-radius;
+  overflow: hidden;
+  background: #fff;
+
+  button {
+    @include mixins.inline-flexbox;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var.$primary-color;
+    padding: 10px 16px;
+    border-right: 1px solid var.$secondary-color-selected;
+    transition: all .3s;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &.on {
+      font-weight: 600;
+      background: var.$primary-color;
+      color: #fff;
+    }
+  }
+
+  .btn {
+    @include mixins.inline-flexbox;
+    position: relative;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var.$primary-color;
+    border-right: 1px solid var.$secondary-color-selected;
+
+    label {
+      transition: all .3s;
+      padding: 10px 16px;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  input[type="radio"] {
+    @include mixins.blind;
+
+    &:checked+label {
+      font-weight: 600;
+      background: var.$primary-color;
+      color: #fff;
     }
   }
 }

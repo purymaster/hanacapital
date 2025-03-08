@@ -64,7 +64,7 @@ const img = () => {
 };
 
 const font = () => {
-  return src('src/fonts/*')
+  return src('src/fonts/*', { encoding: false })
     .pipe(dest('output/static/fonts'))
     .pipe(sync.reload({ stream: true }));
 };

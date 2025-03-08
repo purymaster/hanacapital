@@ -27,4 +27,4 @@ gulp
 ## 이슈사항
 
 - 파일 수정 시, 전체 파일을 생성하는 현상(추후 수정)
-
+- gulp-cli 전역 설치시 file already exists 에러 출력될 경우, --force으로 강제 설치 후 진행

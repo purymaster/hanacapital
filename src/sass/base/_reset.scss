@@ -154,12 +154,11 @@ body {
 
 body {
   line-height: 1.5;
-  font-family: "Pretendard", "Apple SD Gothic Neo", Helvetica, sans-serif;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   background: #fff;
   color: var.$default-text-color;
   word-wrap: break-word;
   word-break: keep-all;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
 
@@ -181,7 +180,7 @@ textarea {
   border: none;
   border-radius: 0;
   background: none;
-  color: #333;
+  color: var.$default-text-color;
   font-family: inherit;
   font-size: 100%;
   letter-spacing: 0;
