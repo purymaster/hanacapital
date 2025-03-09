@@ -217,5 +217,6 @@
     handleGnbTab();
     handleToast();
     handleModal();
+    $(".datepicker").datepicker();
   });
 })(jQuery);
