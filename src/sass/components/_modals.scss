@@ -24,3 +24,50 @@
     opacity: 1;
   }
 }
+
+[data-modal] {
+  @include mixins.flexbox;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 99;
+
+  &.on {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .modal {
+    @include mixins.column-flexbox(center);
+    gap:40px;
+    background: #fff;
+    border-radius: 10px;
+    width: 364px;
+    max-height: calc(100vh - 30px);
+    padding: 28px 0;
+    text-align: center;
+
+    .modal_cont {
+      @include mixins.column-flexbox(center);
+      gap: 14px;
+      overflow-y: auto;
+      width: 100%;
+      padding: 0 48px;
+
+      .ico {
+        width: 40px;
+        height: 40px;
+      }
+
+      .txt {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+}

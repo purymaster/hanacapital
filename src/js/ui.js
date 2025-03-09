@@ -67,7 +67,7 @@
     });
   };
 
-  /* GNB 탭 제어(시연용 코드) */
+  /* GNB 탭 제어 */
   const handleGnbTab = () => {
     let gnbTabArray = [];
     const MAX_TABS = 15;
@@ -200,11 +200,22 @@
     };
   }
 
+  /* 모달 팝업 제어 */
+  const handleModal = () => {
+    window.toggleModal = (modalId, action) => {
+      const $modalTarget = $(`#${modalId}`);
+      $modalTarget.toggleClass('on', action === 'open');
+    };
+    window.openModal = (modalId) => toggleModal(modalId, 'open');
+    window.closeModal = (modalId) => toggleModal(modalId, 'close');
+  }
+
   $(() => {
     handleGnb();
     handleSnb();
     handleInput();
     handleGnbTab();
     handleToast();
+    handleModal();
   });
 })(jQuery);
