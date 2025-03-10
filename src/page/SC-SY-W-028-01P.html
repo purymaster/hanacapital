@@ -1,0 +1,23 @@
+<%- include('_inc/head', {title:'페이지제목'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content">
+          <div data-modal id="modal2">
+            <div class="modal">
+              <div class="modal_header">
+                <div class="modal_tit">제목</div>
+                <button type="button" class="close" onClick="closeModal('modal2')">팝업 닫기</button>
+              </div>
+              <div class="modal_cont">
+                내용
+              </div>
+            </div>
+          </div>
+          <button type="button" data-btn onClick="openModal('modal2')">팝업 보기</button>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
