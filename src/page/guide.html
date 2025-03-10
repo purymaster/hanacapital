@@ -40,14 +40,14 @@
         font-weight: 700;
         color: #009178;
         font-size: 1.35em;
-        margin-bottom: 0.25em;
+        margin: 0.25em 0;
       }
 
       .guide_sub_tit {
         font-weight: 600;
         color: #999;
         font-size: 1.2em;
-        margin-bottom: 0.25em;
+        margin: 0.25em 0;
       }
 
       .code {
@@ -59,6 +59,7 @@
       <div class="content">
         <% const page_title={ title: "마크업 가이드" }; %>
           <%- include('_inc/page_title.ejs', page_title) %>
+
             <div class="guide_group">
               <h3 class="guide_tit">Button</h3>
               <h4 class="guide_sub_tit">기본형(높이 48px)</h4>
@@ -175,7 +176,8 @@
 
             <div class="guide_group">
               <h3 class="guide_tit">Input Group</h3>
-              <h4 class="guide_sub_tit">기본형(넓이 280px)</h4>
+              <p>Input Group은 내부의 Option, Placeholder 등 내부 컨텐츠 너비를 감안해, 퍼블쪽에서 직접 너비를 inline-style로 지정해서 작업 진행</p>
+              <h4 class="guide_sub_tit">기본형</h4>
               <div class="code">
                 <div data-input-group>
                   <span class="label">구분</span>
@@ -241,7 +243,7 @@
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">검색창(넓이 470px)</h4>
+              <h4 class="guide_sub_tit">검색창</h4>
               <div class="code">
                 <div data-input-group class="search_box">
                   <span class="label">키워드 검색</span>
@@ -275,21 +277,10 @@
 
             <div class="guide_group">
               <h3 class="guide_tit">검색입력폼</h3>
+              <p>검색입력폼의 너비가 100%가 될 경우, Input Group의 너비를 맞춰서 우측 검색 버튼과의 간격이 20px 이상 벌어지지 않도록 작업</p>
               <div class="code">
                 <div data-search-group>
                   <div class="opt">
-                    <div data-input-group>
-                      <span class="label">구분</span>
-                      <input type="text">
-                    </div>
-                    <div data-input-group>
-                      <span class="label">구분</span>
-                      <input type="text">
-                    </div>
-                    <div data-input-group>
-                      <span class="label">구분</span>
-                      <input type="text">
-                    </div>
                     <div data-input-group>
                       <span class="label">구분</span>
                       <input type="text">
@@ -375,9 +366,30 @@
             </div>
 
             <div class="guide_group">
+              <h3 class="guide_tit">Image Preview Popup</h3>
+              <div class="code">
+                <div data-modal id="modal3">
+                  <div class="modal">
+                    <div class="modal_header">
+                      <div class="modal_tit">차량 이미지</div>
+                      <button type="button" class="close" onClick="closeModal('modal3')">팝업 닫기</button>
+                    </div>
+                    <div class="modal_cont">
+                      내용
+                    </div>
+                  </div>
+                </div>
+                <button type="button" data-btn onClick="openModal('modal3')">팝업 보기</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h3 class="guide_tit">AG Grid 더미</h3>
               <div class="code">
-                <div id="myGrid" class="grid_dummy">AG Grid</div>
+                <div class="grid_wrap">
+                  <div id="myGrid" class="grid_dummy">AG Grid</div>
+                </div>
               </div>
             </div>
 
