@@ -4,7 +4,6 @@
 [data-input-group] {
   @include mixins.inline-flexbox(flex-start);
   position: relative;
-  width: 280px;
 
   .label {
     display: inline-flex;
@@ -116,7 +115,6 @@
 
   //검색
   &.search_box {
-    width: 470px;
 
     input[type='text'],
     input[type='password'],
@@ -140,9 +138,11 @@
 }
 
 [data-search-group] {
-  @include mixins.flexbox(space-between, flex-start);
+  @include mixins.inline-flexbox(space-between, flex-start);
+  align-self: flex-start;
+  margin-bottom: 20px;
   padding: 14px 18px;
-  gap: 70px;
+  gap: 20px;
   border: 1px solid #ddd;
   background: var.$default-background-color;
   border-radius: 10px;

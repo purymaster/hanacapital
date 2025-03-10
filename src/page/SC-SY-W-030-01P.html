@@ -1,0 +1,13 @@
+<%- include('_inc/head', {title:'페이지제목'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content">
+          <button type="button" data-btn onClick="showToast('메세지')">툴팁 노출</button>
+          <button type="button" data-btn onClick="showToast('메세지', 5)">툴팁 5초 노출</button>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>

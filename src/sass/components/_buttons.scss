@@ -31,7 +31,7 @@
     background: var.$default-color !important;
     border-color: var.$default-color !important;
     color: #fff !important;
-    cursor: not-allowed !important;
+    cursor: not-allowed;
   }
 
   &.secondary {
@@ -47,6 +47,18 @@
     &:active {
       background: var.$secondary-color-selected;
     }
+
+    &:disabled {
+      background: #fff !important;
+      border-color: #ddd !important;
+      color: #bdc1c6 !important;
+    }
+  }
+
+  &.mx {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 17px 36px;
   }
 
   &.m {
@@ -67,6 +79,10 @@
 
   &.reset {
     padding: 9px 14px;
+  }
+
+  &.docs {
+    padding: 6px 9px;
   }
 
   img {
@@ -101,6 +117,11 @@
       background: var.$primary-color;
       color: #fff;
     }
+
+    &:disabled {
+      color: var.$secondary-color-selected;
+      cursor: not-allowed;
+    }
   }
 
   .btn {
@@ -120,6 +141,7 @@
     &:last-child {
       border: 0;
     }
+
   }
 
   input[type="radio"] {
@@ -129,6 +151,11 @@
       font-weight: 600;
       background: var.$primary-color;
       color: #fff;
+    }
+
+    &:disabled+label {
+      color: var.$secondary-color-selected;
+      cursor: not-allowed;
     }
   }
 }
