@@ -9,6 +9,7 @@
         letter-spacing: 0;
         background: #D7EDE6;
         margin-top: 1.5em;
+        overflow-x: auto;
       }
 
       code[class*="language-"],
@@ -375,10 +376,118 @@
                       <button type="button" class="close" onClick="closeModal('modal3')">팝업 닫기</button>
                     </div>
                     <div class="modal_cont">
-                      내용
+                      <div data-slide>
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
+                              <div class="name">IMG-9999</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
+                            </div>
+                          </div>
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="thumb">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                              <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
+                            </div>
+                          </div>
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-button-next"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <script>
+                  const thumbSwiper = new Swiper(".thumb", {
+                    loop: true,
+                    spaceBetween: 1,
+                    slidesPerView: 10,
+                    watchSlidesProgress: true,
+                    navigation: {
+                      nextEl: '.thumb .swiper-button-next',
+                      prevEl: '.thumb .swiper-button-prev',
+                    },
+                  });
+                  const swiper = new Swiper('.swiper', {
+                    loop: true,
+                    effect: "fade",
+                    pagination: {
+                      el: ".swiper-pagination",
+                      type: "fraction",
+                    },
+                    navigation: {
+                      nextEl: '.swiper .swiper-button-next',
+                      prevEl: '.swiper .swiper-button-prev',
+                    },
+                    thumbs: {
+                      swiper: thumbSwiper,
+                    },
+                  });
+                </script>
                 <button type="button" data-btn onClick="openModal('modal3')">팝업 보기</button>
               </div>
               <pre><code class="language-markup"></code></pre>
