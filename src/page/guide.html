@@ -66,6 +66,18 @@
                 <button type="button" data-btn>버튼 Primary</button>
                 <button type="button" data-btn class="secondary">버튼 Secondary</button>
                 <button type="button" data-btn disabled>버튼(비활성화)</button>
+                <button type="button" data-btn class="secondary" disabled>버튼 Secondary(비활성화)</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">max(높이 56px)</h4>
+              <div class="code">
+                <button type="button" data-btn class="mx">버튼 Primary</button>
+                <button type="button" data-btn class="secondary mx">버튼 Secondary</button>
+                <button type="button" data-btn class="mx" disabled>버튼(비활성화)</button>
+                <button type="button" data-btn class="secondary mx" disabled>버튼 Secondary(비활성화)</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
@@ -76,6 +88,7 @@
                 <button type="button" data-btn class="m">버튼 Primary</button>
                 <button type="button" data-btn class="secondary m">버튼 Secondary</button>
                 <button type="button" data-btn class="m" disabled>버튼(비활성화)</button>
+                <button type="button" data-btn class="secondary m" disabled>버튼 Secondary(비활성화)</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
@@ -86,6 +99,7 @@
                 <button type="button" data-btn class="s">버튼 Primary</button>
                 <button type="button" data-btn class="secondary s">버튼 Secondary</button>
                 <button type="button" data-btn class="s" disabled>버튼(비활성화)</button>
+                <button type="button" data-btn class="secondary s" disabled>버튼 Secondary(비활성화)</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
@@ -96,16 +110,25 @@
                 <button type="button" data-btn class="xs">버튼 Primary</button>
                 <button type="button" data-btn class="secondary xs">버튼 Secondary</button>
                 <button type="button" data-btn class="xs" disabled>버튼(비활성화)</button>
+                <button type="button" data-btn class="secondary xs" disabled>버튼 Secondary(비활성화)</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">검색 초기화 버튼</h4>
+              <h4 class="guide_sub_tit">아이콘 버튼</h4>
               <div class="code">
                 <button type="reset" data-btn class="secondary s reset">
                   <img src="/static/img/icon/icon_search_reset.png" alt="">
                   검색 초기화
+                </button>
+                <button type="button" data-btn class="secondary docs">
+                  <img src="/static/img/icon/icon_print.png" alt="">
+                  인쇄
+                </button>
+                <button type="button" data-btn class="secondary docs">
+                  <img src="/static/img/icon/icon_fax.png" alt="">
+                  팩스
                 </button>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -118,7 +141,7 @@
                 <div data-btn-group>
                   <button type="button" class="on">버튼</button>
                   <button type="button">버튼</button>
-                  <button type="button">버튼</button>
+                  <button type="button" disabled>버튼(선택불가)</button>
                   <button type="button">버튼</button>
                 </div>
               </div>
@@ -138,8 +161,8 @@
                     <label for="radioBtn2">버튼</label>
                   </div>
                   <div class="btn">
-                    <input type="radio" id="radioBtn3" name="btn">
-                    <label for="radioBtn3">버튼</label>
+                    <input type="radio" id="radioBtn3" name="btn" disabled>
+                    <label for="radioBtn3">버튼(선택불가)</label>
                   </div>
                   <div class="btn">
                     <input type="radio" id="radioBtn4" name="btn">
@@ -302,10 +325,19 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Modal Popup</h3>
+              <h3 class="guide_tit">Loading(tail.ejs에 포함)</h3>
+              <div class="code">
+                <!-- <div data-loading></div> -->
+                <button type="button" data-btn onClick="showLoading()">로딩 노출</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h3 class="guide_tit">Dialog Modal Popup</h3>
               <div class="code">
                 <div data-modal id="modal1">
-                  <div class="modal">
+                  <div class="modal dialog">
                     <div class="modal_cont">
                       <img class="ico" src="/static/img/icon/icon_modal_alert.png" alt="">
                       <div class="txt">
@@ -319,6 +351,25 @@
                   </div>
                 </div>
                 <button type="button" data-btn onClick="openModal('modal1')">팝업 보기</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h3 class="guide_tit">Modal Popup</h3>
+              <div class="code">
+                <div data-modal id="modal2">
+                  <div class="modal">
+                    <div class="modal_header">
+                      <div class="modal_tit">제목</div>
+                      <button type="button" class="close" onClick="closeModal('modal2')">팝업 닫기</button>
+                    </div>
+                    <div class="modal_cont">
+                      내용
+                    </div>
+                  </div>
+                </div>
+                <button type="button" data-btn onClick="openModal('modal2')">팝업 보기</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
