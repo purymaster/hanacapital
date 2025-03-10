@@ -145,7 +145,6 @@
 
       // 탭 최대 개수 제한 체크
       if (gnbTabArray.length >= MAX_TABS) {
-        // alert(`탭은 최대 ${MAX_TABS}개까지만 추가할 수 있습니다.`);
         showToast(`탭은 최대 ${MAX_TABS}개까지만 추가할 수 있습니다.`);
         return;
       }
@@ -200,6 +199,16 @@
     };
   }
 
+  /* 로딩 제어 */
+  const handleLoading = () => {
+    window.toggleLoading = action => {
+      const $loading = $('[data-loading]');
+      $loading.toggleClass('on', action === 'open');
+    }
+    window.showLoading = () => toggleLoading('open');
+    window.hideLoading = () => toggleLoading('close');
+  }
+
   /* 모달 팝업 제어 */
   const handleModal = () => {
     window.toggleModal = (modalId, action) => {
@@ -216,6 +225,7 @@
     handleInput();
     handleGnbTab();
     handleToast();
+    handleLoading();
     handleModal();
     $(".datepicker").datepicker();
   });
