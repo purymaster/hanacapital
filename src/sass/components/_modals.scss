@@ -119,22 +119,82 @@
     [data-slide] {
       padding: 0 16px;
 
-      .swiper {
+      .slide {
         width: 100%;
         height: 492px;
         margin-left: auto;
         margin-right: auto;
 
-        &-slide {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          width: 86px;
+          height: 20px;
+          background-image: url(/static/img/image/image_slide_logo.png);
+          background-size: contain;
+          z-index: 1;
+        }
+
+        .swiper-wrapper {
+
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 1;
+          }
+
+          &:before {
+            top: 0;
+            background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 61%, rgba(0, 0, 0, 0) 100%);
+          }
+
+          &:after {
+            bottom: 32px;
+            background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.5) 61%, rgba(0, 0, 0, 0) 100%);
+          }
+        }
+
+        .swiper-slide {
+          position: relative;
           background-color: #fff;
           background-size: cover;
           background-position: center;
+
+          .name {
+            @include mixins.pos-center-x;
+            @include mixins.ellipsis;
+            bottom: 0;
+            width: 100%;
+            background: var.$default-text-color;
+            color: #fff;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            padding: 8px;
+          }
+        }
+
+        .swiper-pagination-fraction {
+          @include mixins.pos-center-x;
+          top: 20px;
+          bottom: auto;
+          font-size: 12px;
+          line-height: 16px;
+          padding: 4px 10px;
+          color: #fff;
+          background: #161616B2;
+          border-radius: 12px;
+          width: auto;
         }
       }
 
       .thumb {
-        overflow: hidden;
-        position: relative;
         height: 64px;
         margin-top: 20px;
 
@@ -151,12 +211,10 @@
         background-size: cover;
         background-position: center;
         transition: all .3s;
-        opacity: 0.4;
         filter: grayscale(1);
 
         &-thumb-active,
         &:hover {
-          opacity: 1;
           filter: none;
         }
       }

@@ -258,7 +258,7 @@
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">Datepicker(넓이 310px)</h4>
+              <h4 class="guide_sub_tit">Datepicker</h4>
               <div class="code">
                 <div data-input-group class="calendar">
                   <span class="label">발주일</span>
@@ -377,48 +377,60 @@
                     </div>
                     <div class="modal_cont">
                       <div data-slide>
-                        <div class="swiper">
+                        <div class="swiper slide">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
-                              <div class="name">IMG-9999</div>
+                              <div class="name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                                voluptas molestias atque minus hic aliquid perferendis voluptatibus doloribus iure quos
+                                dolorum fugiat, odit non cupiditate dolores fugit, nihil incidunt veritatis.</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
+                              <div class="name">IMG-9999</div>
                             </div>
                           </div>
                           <div class="swiper-button-prev"></div>
                           <div class="swiper-button-next"></div>
                           <div class="swiper-pagination"></div>
                         </div>
-                        <div class="thumb">
+                        <div class="swiper thumb">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
                               <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
@@ -472,7 +484,7 @@
                       prevEl: '.thumb .swiper-button-prev',
                     },
                   });
-                  const swiper = new Swiper('.swiper', {
+                  const swiper = new Swiper('.slide', {
                     loop: true,
                     effect: "fade",
                     pagination: {
@@ -480,8 +492,8 @@
                       type: "fraction",
                     },
                     navigation: {
-                      nextEl: '.swiper .swiper-button-next',
-                      prevEl: '.swiper .swiper-button-prev',
+                      nextEl: '.slide .swiper-button-next',
+                      prevEl: '.slide .swiper-button-prev',
                     },
                     thumbs: {
                       swiper: thumbSwiper,
