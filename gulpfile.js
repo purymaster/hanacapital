@@ -1,6 +1,7 @@
 import { src, dest, lastRun, watch, series, parallel } from "gulp";
 import { deleteAsync } from 'del';
 import ejs from 'gulp-ejs';
+import merge from 'merge-stream';
 import prefix from "gulp-autoprefixer";
 import px2rem from "gulp-px2rem";
 import gulpSass from 'gulp-sass';
@@ -19,14 +20,29 @@ const handleError = (error) => {
 const clean = () => deleteAsync(['output/*']);
 
 const html = () => {
-  return src('src/**/*.html')
-    .pipe(ejs().on('error', handleError))
-    .pipe(beautify.html({
-      indent_size: 2,
-      indent_with_tabs: true,
-    }))
-    .pipe(dest('output/template'))
-    .pipe(sync.reload({ stream: true }));
+  const regularHtml = () => {
+    return src(['src/**/*.html', '!src/error/**/*.html'])
+      .pipe(ejs().on('error', handleError))
+      .pipe(beautify.html({
+        indent_size: 2,
+        indent_with_tabs: true,
+      }))
+      .pipe(dest('output/template'))
+      .pipe(sync.reload({ stream: true }));
+  };
+
+  const errorHtml = () => {
+    return src('src/error/**/*.html')
+      .pipe(ejs().on('error', handleError))
+      .pipe(beautify.html({
+        indent_size: 2,
+        indent_with_tabs: true,
+      }))
+      .pipe(dest('output/static/error'))
+      .pipe(sync.reload({ stream: true }));
+  };
+
+  return merge(regularHtml(), errorHtml());
 };
 
 const css = () => {
