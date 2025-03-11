@@ -56,6 +56,23 @@
 
       .grid_wrap {
         flex: 1;
+
+        .nodata {
+          @include mixins.flexbox;
+          height: 100%;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 20px;
+          color: #8d8d8d;
+
+          img {
+            display: block;
+            height: 48px;
+            width: 48px;
+            margin: 0 auto 14px;
+          }
+        }
       }
     }
   }

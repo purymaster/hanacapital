@@ -1,0 +1,70 @@
+<%- include('_inc/head', {title:'차량정보검색'}) %>
+
+  <body>
+    <div class="wrap popup_wrap">
+      <div data-popup class="grid_popup">
+        <div class="popup">
+          <div class="popup_header">
+            <h1 class="popup_tit">차량정보검색</h1>
+          </div>
+          <div class="popup_cont">
+            <div data-search-group>
+              <div class="opt">
+                <div data-input-group class="dropdown" style="width:240px;">
+                  <span class="label">제휴구분</span>
+                  <div data-dropdown>
+                    <button type="button" class="toggle">
+                      <div class="txt">선택하세요.</div>
+                    </button>
+                    <ul class="option">
+                      <li>
+                        <button type="button" class="item" data-value="value1">value1</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value2">value2</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value3">value3</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div data-input-group style="width:320px;">
+                  <input type="text" placeholder="거래처번호, 사업자명, 주소">
+                </div>
+              </div>
+              <div class="btn">
+                <button type="button" data-btn class="m" onclick="openModal('modal1')">검색</button>
+              </div>
+            </div>
+            <div class="grid_wrap">
+              <div id="myGrid" class="grid_dummy" style="height:100%;">AG Grid</div>
+              <!-- <div class="nodata">
+                <div class="txt">
+                  <img src="/static/img/icon/icon_nodata.png" alt>
+                  <p>검색 결과가 없습니다.</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-modal id="modal1">
+        <div class="modal dialog">
+          <div class="modal_cont">
+            <img class="ico" src="/static/img/icon/icon_modal_alert.png" alt="">
+            <div class="txt">
+              지급처정보를 입력하세요.
+            </div>
+          </div>
+          <div class="modal_footer">
+            <button type="button" data-btn class="m" onclick="closeModal('modal1')">확인</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>

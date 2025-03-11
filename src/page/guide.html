@@ -270,8 +270,35 @@
 
             <div class="guide_group">
               <h3 class="guide_tit">Dropdown</h3>
+              <p>선택한 값에 ellipsis를 적용한다면, data-dropdown의 너비에도 inline-style로 지정</p>
               <div class="code">
-
+                <div data-input-group class="dropdown">
+                  <span class="label">구분</span>
+                  <div data-dropdown>
+                    <button type="button" class="toggle">
+                      <div class="txt">전체</div>
+                    </button>
+                    <ul class="option">
+                      <li>
+                        <button type="button" class="item" data-value="value1">long name value long name value long name
+                          value long name
+                          value long name value </button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value2">value2</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value3">value3</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value4">value4</button>
+                      </li>
+                      <li>
+                        <a href="https://naver.com" target="_blank" class="item">link</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
@@ -362,145 +389,6 @@
                   </div>
                 </div>
                 <button type="button" data-btn onClick="openModal('modal2')">팝업 보기</button>
-              </div>
-              <pre><code class="language-markup"></code></pre>
-            </div>
-
-            <div class="guide_group">
-              <h3 class="guide_tit">Image Preview Popup</h3>
-              <div class="code">
-                <div data-modal id="modal3">
-                  <div class="modal">
-                    <div class="modal_header">
-                      <div class="modal_tit">차량 이미지</div>
-                      <button type="button" class="close" onClick="closeModal('modal3')">팝업 닫기</button>
-                    </div>
-                    <div class="modal_cont">
-                      <div data-slide>
-                        <div class="swiper slide">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
-                              <div class="name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                                voluptas molestias atque minus hic aliquid perferendis voluptatibus doloribus iure quos
-                                dolorum fugiat, odit non cupiditate dolores fugit, nihil incidunt veritatis.</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
-                              <div class="name">IMG-9999</div>
-                            </div>
-                          </div>
-                          <div class="swiper-button-prev"></div>
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="swiper thumb">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
-                            </div>
-                            <div class="swiper-slide">
-                              <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
-                            </div>
-                          </div>
-                          <div class="swiper-button-prev"></div>
-                          <div class="swiper-button-next"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <script>
-                  const thumbSwiper = new Swiper(".thumb", {
-                    loop: true,
-                    spaceBetween: 1,
-                    slidesPerView: 10,
-                    watchSlidesProgress: true,
-                    navigation: {
-                      nextEl: '.thumb .swiper-button-next',
-                      prevEl: '.thumb .swiper-button-prev',
-                    },
-                  });
-                  const swiper = new Swiper('.slide', {
-                    loop: true,
-                    effect: "fade",
-                    pagination: {
-                      el: ".swiper-pagination",
-                      type: "fraction",
-                    },
-                    navigation: {
-                      nextEl: '.slide .swiper-button-next',
-                      prevEl: '.slide .swiper-button-prev',
-                    },
-                    thumbs: {
-                      swiper: thumbSwiper,
-                    },
-                  });
-                </script>
-                <button type="button" data-btn onClick="openModal('modal3')">팝업 보기</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
