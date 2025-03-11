@@ -67,6 +67,32 @@
     });
   };
 
+  /* Dropdown 제어 */
+  const handleDropdown = () => {
+    const $dropdown = $('[data-dropdown]');
+
+    $dropdown.each(function () {
+      const $currentDropdown = $(this);
+      const $dropdownToggle = $currentDropdown.find('.toggle');
+      const $items = $currentDropdown.find('.item');
+
+      $dropdownToggle.on('click', function (event) {
+        event.stopPropagation();
+        $(this).toggleClass('on');
+      });
+
+      $items.on('click', function () {
+        const $this = $(this);
+        $this.parent().addClass('on').siblings().removeClass('on');
+        $dropdownToggle.focus().removeClass('on').addClass('selected').find('.txt').text($this.text());
+      });
+    });
+
+    $(document).on('click', function () {
+      $dropdown.find('.toggle').removeClass('on');
+    });
+  }
+
   /* GNB 탭 제어 */
   const handleGnbTab = () => {
     let gnbTabArray = [];
@@ -223,6 +249,7 @@
     handleGnb();
     handleSnb();
     handleInput();
+    handleDropdown();
     handleGnbTab();
     handleToast();
     handleLoading();

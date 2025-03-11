@@ -22,7 +22,8 @@
 
     &+input[type='text'],
     &+input[type='password'],
-    &+input[type='email'] {
+    &+input[type='email'],
+    &+[data-dropdown] .toggle {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -35,7 +36,7 @@
     border-radius: var.$global-border-radius;
     width: 100%;
     transition: border-color, box-shadow .3s ease;
-    border: 1px solid #ccc;
+    border: 1px solid var.$default-color;
     font-size: 14px;
     height: 40px;
     padding: 12px 16px;
@@ -135,6 +136,7 @@
       }
     }
   }
+
 }
 
 [data-search-group] {
@@ -151,5 +153,110 @@
     @include mixins.flexbox(flex-start);
     gap: 10px;
     flex-wrap: wrap;
+  }
+}
+
+//드롭다운
+[data-dropdown] {
+  display: flex;
+  flex: 1;
+
+  .toggle {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 200px;
+    text-align: left;
+    padding: 11px 42px 11px 16px;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.3s ease;
+    border: 1px solid #c6c6c6;
+    font-size: 14px;
+    background: #fff url(/static/img/icon/icon_dropdown_arrow.png) no-repeat calc(100% - 16px) center / 16px;
+    color: #a8a8a8;
+
+    &:focus {
+      border-color: var.$primary-color;
+      box-shadow: 0 0 0 1px var.$primary-color inset;
+    }
+
+    .txt {
+      @include mixins.ellipsis;
+    }
+
+    &.selected {
+      color: var.$default-text-color;
+    }
+
+    &.on+.option {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .option {
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    max-height: 168px;
+    background: #fff;
+    border-radius: var.$global-border-radius;
+    padding: 4px;
+    box-shadow: 0px 0px 10px 0px #16161633;
+    transition: all .1s;
+    opacity: 0;
+    visibility: hidden;
+
+    li {
+      .item {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        padding: 7px 16px;
+        font-size: 14px;
+        line-height: 18px;
+
+        &:hover {
+          background: var.$default-background-color
+        }
+      }
+
+      &:first-child {
+        .item {
+          border-top-left-radius: calc(var.$global-border-radius / 2);
+          border-top-right-radius: calc(var.$global-border-radius / 2);
+        }
+      }
+
+      &:last-child {
+        .item {
+          border-bottom-left-radius: calc(var.$global-border-radius / 2);
+          border-bottom-right-radius: calc(var.$global-border-radius / 2);
+        }
+      }
+
+      &.on {
+        .item {
+          background: var.$secondary-color-hover;
+          color: var.$primary-color;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 18px;
+      height: 18px;
+      background-color: red;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      height: 8px;
+      background: #a8a8a8;
+      border-radius: 18px;
+      border: 5px solid #f0f0f0;
+    }
   }
 }
