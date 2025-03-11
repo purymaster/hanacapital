@@ -1,0 +1,172 @@
+<%- include('_inc/head', {title:'페이지제목'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content">
+          <div data-modal id="modal3">
+            <div class="modal">
+              <div class="modal_header">
+                <div class="modal_tit">차량 이미지</div>
+                <button type="button" class="close" onClick="closeModal('modal3')">팝업 닫기</button>
+              </div>
+              <div class="modal_cont">
+                <div data-slide>
+                  <div class="slide_wrap">
+                    <div class="swiper slide" id="viewerList">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
+                          <div class="name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                            voluptas molestias atque minus hic aliquid perferendis voluptatibus doloribus iure quos
+                            dolorum fugiat, odit non cupiditate dolores fugit, nihil incidunt veritatis.</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
+                          <div class="name">IMG-9999</div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="ctr">
+                      <button type="button" class="full">전체화면 보기</button>
+                      <!-- <button type="button" class="rotate">이미지 90도 회전</button> -->
+                    </div>
+                  </div>
+                  <div class="thumb_wrap">
+                    <div class="swiper thumb">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_01.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_02.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_03.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_04.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_05.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_06.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_07.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_08.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_09.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_10.png" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/static/img/dummy/dummy_slide_11.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            const thumbSwiper = new Swiper(".thumb", {
+              loop: true,
+              spaceBetween: 1,
+              slidesPerView: 10,
+              watchSlidesProgress: true,
+              navigation: {
+                nextEl: '.thumb .swiper-button-next',
+                prevEl: '.thumb .swiper-button-prev',
+              },
+            });
+            const swiper = new Swiper('.slide', {
+              loop: true,
+              effect: "fade",
+              pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+              },
+              navigation: {
+                nextEl: '.slide_wrap .swiper-button-next',
+                prevEl: '.slide_wrap .swiper-button-prev',
+              },
+              thumbs: {
+                swiper: thumbSwiper,
+              },
+            });
+
+            // let rotateAngle = 0;
+
+            // $('.rotate').on('click', function () {
+            //   const currentSlide = swiper.slides[swiper.activeIndex].querySelector('img');
+            //   rotateAngle += 90;
+            //   $(currentSlide).css('transform', `rotate(${rotateAngle}deg`);
+            // });
+
+            // swiper.on('slideChange', function () {
+            //   rotateAngle = 0;
+            //   const currentSlide = swiper.slides[swiper.activeIndex].querySelector('img');
+            //   $(currentSlide).css('transform', `rotate(${rotateAngle}deg`);
+            // });
+
+            const viewer = new Viewer(document.querySelector('#viewerList'));
+
+            $('.full').on('click', function () {
+              viewer.show();
+            });
+
+          </script>
+          <button type="button" data-btn onClick="openModal('modal3')">팝업 보기</button>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
