@@ -171,6 +171,7 @@
     transition: border-color, box-shadow 0.3s ease;
     border: 1px solid #c6c6c6;
     font-size: 14px;
+    height: 40px;
     background: #fff url(/static/img/icon/icon_dropdown_arrow.png) no-repeat calc(100% - 16px) center / 16px;
     color: #a8a8a8;
 
@@ -197,7 +198,7 @@
     overflow-y: auto;
     position: absolute;
     left: 0;
-    top: 40px;
+    top: 41px;
     width: 100%;
     max-height: 168px;
     background: #fff;
@@ -207,6 +208,7 @@
     transition: all .1s;
     opacity: 0;
     visibility: hidden;
+    z-index: 1;
 
     li {
       .item {
@@ -246,17 +248,62 @@
     }
 
     &::-webkit-scrollbar {
-      width: 18px;
-      height: 18px;
-      background-color: red;
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
     }
 
     &::-webkit-scrollbar-thumb {
-      width: 8px;
-      height: 8px;
+      width: 4px;
+      height: 4px;
       background: #a8a8a8;
       border-radius: 18px;
-      border: 5px solid #f0f0f0;
+      border: 2px solid #fff;
+    }
+  }
+}
+
+[data-select-group] {
+
+  input {
+    @include mixins.blind;
+  }
+
+  .list {
+    display: flex;
+    gap: 34px;
+
+    >li {
+      position: relative;
+    }
+
+    &.radio {
+      label {
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    label {
+      display: inline-flex;
+      position: relative;
+      padding: 4px 0 4px 28px;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.16px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 2px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #a8a8a8;
+        background: #fff;
+      }
     }
   }
 }
