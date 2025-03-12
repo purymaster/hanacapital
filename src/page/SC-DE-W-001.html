@@ -1,0 +1,61 @@
+<%- include('_inc/head', {title:'차량탁송현황'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content grid">
+          <% const page_title={ title: "차량탁송현황" , m1: "탁송관리" , m2: "차량탁송현황" , isClear: true }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+              <div data-search-group>
+                <div class="opt">
+                  <div data-input-group class="calendar">
+                    <span class="label">발주일</span>
+                    <div class="date_wrap">
+                      <input type="text" class="datepicker" placeholder="2025.01.01">
+                      ~
+                      <input type="text" class="datepicker" placeholder="2025.01.01">
+                    </div>
+                  </div>
+                  <div data-input-group class="dropdown">
+                    <span class="label">탁송사</span>
+                    <div data-dropdown style="width:240px;">
+                      <button type="button" class="toggle">
+                        <div class="txt">전체</div>
+                      </button>
+                      <ul class="option">
+                        <li>
+                          <button type="button" class="item" data-value="value1">value1</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-input-group class="dropdown">
+                    <span class="label">진행상태</span>
+                    <div data-dropdown style="width:240px;">
+                      <button type="button" class="toggle">
+                        <div class="txt">전체</div>
+                      </button>
+                      <ul class="option">
+                        <li>
+                          <button type="button" class="item" data-value="value1">value1</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-input-group class="search_box" style="width: 420px;">
+                    <span class="label">키워드 검색</span>
+                    <input type="text" placeholder="관리지점, 영업사원, 전문직, 고객명, 계약번호">
+                  </div>
+                </div>
+                <div class="btn">
+                  <button type="button" data-btn class="m">검색</button>
+                </div>
+              </div>
+              <div class="grid_wrap">
+                <div id="myGrid" class="grid_dummy">AG Grid</div>
+              </div>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
