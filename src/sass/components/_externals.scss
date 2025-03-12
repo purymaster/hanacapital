@@ -123,7 +123,20 @@ html .ui-button.ui-state-disabled:active {
   font-size: 12px;
 
   &.ui-datepicker-today {
+    background-color: var.$secondary-color-hover;
+  }
+
+  &.ui-datepicker-current-day {
     background-color: var.$secondary-color-selected;
+  }
+
+  &.ui-datepicker-week-end:first-child a {
+    color: #dc2527;
+    ;
+  }
+
+  &.ui-datepicker-week-end:last-child a {
+    color: #0099ff;
   }
 }
 

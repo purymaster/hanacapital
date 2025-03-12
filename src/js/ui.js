@@ -278,8 +278,8 @@
       changeYear: true,
     });
   });
-})(jQuery);
 
-$.datepicker._gotoToday = function (id) {
-  $(id).datepicker('setDate', new Date()).datepicker('hide').blur();
-};
+  $.datepicker._gotoToday = function (id) {
+    $(id).datepicker('setDate', new Date()).datepicker('hide').blur();
+  };
+})(jQuery);
