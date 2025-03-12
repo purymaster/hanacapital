@@ -163,16 +163,6 @@ html .ui-button.ui-state-disabled:active {
   background-size: 36px;
 }
 
-:not(.ui-monthpicker) .ui-datepicker-calendar>thead>tr>th:first-child,
-:not(.ui-monthpicker) .ui-datepicker-calendar>tbody>tr>td:first-child a {
-  color: #dc2527;
-}
-
-:not(.ui-monthpicker) .ui-datepicker-calendar>thead>tr>th:last-child,
-:not(.ui-monthpicker) .ui-datepicker-calendar>tbody>tr>td:last-child a {
-  color: #0099ff;
-}
-
 .ui-datepicker-close {
   display: none;
 }
