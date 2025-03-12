@@ -42,7 +42,7 @@
     padding: 12px 16px;
     background: #fff;
 
-    &:focus {
+    &:focus:not(:is(.datepicker, .monthpicker)) {
       border-color: var.$primary-color;
       box-shadow: 0 0 0 1px var.$primary-color inset;
     }
@@ -133,6 +133,28 @@
         height: 16px;
         font-size: 0;
         background: url(/static/img/icon/icon_search.png) no-repeat center / 16px;
+      }
+    }
+  }
+
+  //Datepicker
+  &.calendar {
+    .date_wrap {
+      @include mixins.inline-flexbox(flex-end, center);
+      border-top-right-radius: var.$global-border-radius;
+      border-bottom-right-radius: var.$global-border-radius;
+      border: 1px solid var.$default-color;
+      gap: 10px;
+      padding: 0 16px;
+      flex: 1;
+
+      input[type='text'] {
+        border: 0;
+        height: 38px;
+        width: 94px;
+        padding: 0;
+        padding-right: 16px;
+        background: url(/static/img/icon/icon_calendar.png) no-repeat 100% center / 16px;
       }
     }
   }

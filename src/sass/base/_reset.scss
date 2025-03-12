@@ -266,6 +266,22 @@ legend,
   background: #f0f0f0;
 }
 
+select {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 4px;
+    background: #a8a8a8;
+    border-radius: 18px;
+    border: 2px solid #fff;
+  }
+}
+
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or (-ms-flexbox: 1) {
   ::placeholder {
     font-weight: inherit;
