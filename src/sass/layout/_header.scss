@@ -367,7 +367,7 @@ header {
 
     .show {
       @include mixins.pos-center-y;
-      right: -16px;
+      right: -17px;
       width: 16px;
       height: 44px;
       background: var.$primary-color;
