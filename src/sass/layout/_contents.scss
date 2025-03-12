@@ -3,9 +3,18 @@
 .grid_dummy {
   @include mixins.flexbox;
   width: 100%;
-  height: 200px;
+  min-height: 200px;
+  height: 100%;
   border: 1px solid #b02a37;
   background: #f1aeb5;
+}
+
+.grid_wrap {
+  flex: 1;
+}
+
+#myGrid {
+  height: 100%;
 }
 
 .error_page {

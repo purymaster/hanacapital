@@ -4,9 +4,11 @@
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content grid">
-          <% const page_title={ title: "AG-GRID" }; %>
+          <% const page_title={ title: "제목" , m1: "1뎁스" , m2: "2뎁스" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
-              <div id="myGrid" style="flex:1;"></div>
+              <div class="grid_wrap">
+                <div id="myGrid"></div>
+              </div>
         </div>
     </div>
 
