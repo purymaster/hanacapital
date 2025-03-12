@@ -78,6 +78,12 @@
 
       $dropdownToggle.on('click', function (event) {
         event.stopPropagation();
+        $dropdown.each(function () {
+          const $otherDropdown = $(this);
+          if ($otherDropdown[0] !== $currentDropdown[0]) {
+            $otherDropdown.find('.toggle').removeClass('on');
+          }
+        });
         $(this).toggleClass('on');
       });
 
