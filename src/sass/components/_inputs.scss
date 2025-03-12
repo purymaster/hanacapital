@@ -263,6 +263,7 @@
   }
 }
 
+//라디오버튼, 체크박스
 [data-select-group] {
 
   input {
@@ -275,14 +276,6 @@
 
     >li {
       position: relative;
-    }
-
-    &.radio {
-      label {
-        &:before {
-          border-radius: 50%;
-        }
-      }
     }
 
     label {
@@ -303,6 +296,78 @@
         height: 20px;
         border: 1px solid #a8a8a8;
         background: #fff;
+        border-radius: 5px;
+      }
+    }
+
+    :disabled {
+      &+label {
+        &:before {
+          background: var.$default-background-color;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &.radio {
+      label {
+        &:before {
+          border-radius: 50%;
+        }
+      }
+
+      :checked {
+        &+label {
+          &:before {
+            border-width: 5px;
+            border-color: var.$primary-color;
+          }
+        }
+      }
+    }
+
+    &.checkbox {
+      :checked {
+        &+label {
+          &:before {
+            background: var.$primary-color url(/static/img/icon/icon_checkbox.png) no-repeat center / 14px 11px;
+            border-color: var.$primary-color;
+          }
+        }
+      }
+    }
+
+    &.single {
+      >li {
+        overflow: hidden;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &.small {
+      >li {
+        width: 18px;
+        height: 18px;
+      }
+
+      label {
+        &:before {
+          margin: 2px;
+          width: 14px;
+          height: 14px;
+          border-radius: 4px;
+        }
+      }
+
+      &.checkbox {
+        :checked {
+          &+label {
+            &:before {
+              background: var.$primary-color url(/static/img/icon/icon_checkbox_small.png) no-repeat center / 10px 8px;
+            }
+          }
+        }
       }
     }
   }

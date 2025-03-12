@@ -205,10 +205,8 @@
                 <div data-select-group>
                   <ul class="list radio single">
                     <li>
-                      <label>
-                        <input type="radio" name="radio" id="radio4" title="선택">
-                        <span class="hidden">선택</span>
-                      </label>
+                      <input type="radio" name="radio2" id="radio4" title="선택">
+                      <label for="radio4">선택</label>
                     </li>
                   </ul>
                 </div>
@@ -246,10 +244,23 @@
                 <div data-select-group>
                   <ul class="list checkbox single">
                     <li>
-                      <label>
-                        <input type="checkbox" name="check" id="check4" title="선택">
-                        <span class="hidden">선택</span>
-                      </label>
+                      <input type="checkbox" name="check2" id="check4">
+                      <label for="check4">선택</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">Checkbox Single Small</h4>
+              <div class="code">
+                <div data-select-group>
+                  <ul class="list checkbox single small">
+                    <li>
+                      <input type="checkbox" name="check3" id="check5">
+                      <label for="check5">선택</label>
                     </li>
                   </ul>
                 </div>
@@ -352,11 +363,11 @@
 
             <div class="guide_group">
               <h3 class="guide_tit">Dropdown</h3>
-              <p>선택한 값에 ellipsis를 적용한다면, data-dropdown의 너비에도 inline-style로 지정</p>
+              <p>data-dropdown의 너비는 inline-style로 지정하여 사용</p>
               <div class="code">
                 <div data-input-group class="dropdown">
                   <span class="label">구분</span>
-                  <div data-dropdown>
+                  <div data-dropdown style="width:240px;">
                     <button type="button" class="toggle">
                       <div class="txt">전체</div>
                     </button>
