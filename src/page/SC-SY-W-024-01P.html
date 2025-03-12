@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="grid_wrap">
-              <div id="myGrid" class="grid_dummy" style="height:100%;">AG Grid</div>
+              <div id="myGrid" style="height:100%;"></div>
               <!-- <div class="nodata">
                 <div class="txt">
                   <img src="/static/img/icon/icon_nodata.png" alt>
@@ -47,6 +47,63 @@
       </div>
 
     </div>
+
+    <script>
+      const markupObject = {
+        button: `
+          <button type="button" data-btn class="xs">
+            선택
+          </button>
+        `,
+      };
+
+      const rowData = [
+        { userName: "김철수", part: "개발팀", rank: "대리" },
+        { userName: "이영희", part: "디자인팀", rank: "팀장" },
+        { userName: "박민수", part: "인사팀", rank: "사원" },
+        { userName: "최지훈", part: "마케팅팀", rank: "과장" },
+        { userName: "정수연", part: "개발팀", rank: "부장" },
+        { userName: "한지민", part: "영업팀", rank: "사원" },
+        { userName: "오세훈", part: "재무팀", rank: "팀장" },
+        { userName: "윤아름", part: "고객지원팀", rank: "대리" },
+        { userName: "임재범", part: "개발팀", rank: "과장" },
+        { userName: "배수지", part: "디자인팀", rank: "사원" },
+      ];
+
+      const gridOptions = {
+        defaultColDef: {
+          editable: true,
+        },
+        pagination: true,
+        paginationPageSizeSelector: [10, 20, 50, 100],
+        paginationPageSize: 10,
+        rowHeight: 40,
+        rowData,
+        columnDefs: [
+          {
+            headerName: "이름",
+            field: "userName",
+          },
+          {
+            headerName: "부서",
+            field: "part",
+          },
+          {
+            headerName: "직급",
+            field: "rank",
+          },
+          {
+            headerName: "선택",
+            field: "select", cellRenderer: params => {
+              return markupObject.button;
+            },
+          },
+        ]
+      };
+
+      const myGridElement = document.querySelector('#myGrid');
+      agGrid.createGrid(myGridElement, gridOptions);
+    </script>
   </body>
 
   <%- include('_inc/tail') %>

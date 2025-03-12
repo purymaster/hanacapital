@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="grid_wrap">
-              <div id="myGrid" class="grid_dummy" style="height:100%;">AG Grid</div>
+              <div id="myGrid" style="height:100%;"></div>
               <!-- <div class="nodata">
                 <div class="txt">
                   <img src="/static/img/icon/icon_nodata.png" alt>
@@ -65,6 +65,67 @@
       </div>
 
     </div>
+
+    <script>
+      const markupObject = {
+        button: `
+          <button type="button" data-btn class="xs">
+            선택
+          </button>
+        `,
+      };
+
+      const rowData = [
+        { category: "거래처", clientNumber: "C001", businessName: "ABC 상사", address: "서울특별시 강남구 테헤란로 123" },
+        { category: "거래처", clientNumber: "C002", businessName: "XYZ 주식회사", address: "경기도 성남시 분당구 판교로 456" },
+        { category: "거래처", clientNumber: "C003", businessName: "123 유한회사", address: "인천광역시 남동구 인하로 789" },
+        { category: "거래처", clientNumber: "C004", businessName: "DEF 기업", address: "서울특별시 송파구 올림픽로 101" },
+        { category: "거래처", clientNumber: "C005", businessName: "GHI 서비스", address: "대전광역시 유성구 대학로 123" },
+        { category: "거래처", clientNumber: "C006", businessName: "JKL 컴퍼니", address: "대구광역시 중구 동성로 456" },
+        { category: "거래처", clientNumber: "C007", businessName: "MNO 주식회사", address: "광주광역시 서구 상무대로 789" },
+        { category: "거래처", clientNumber: "C008", businessName: "PQR 유한회사", address: "서울특별시 마포구 월드컵북로 123" },
+        { category: "거래처", clientNumber: "C009", businessName: "STU 상사", address: "경기도 수원시 장안구 정조로 456" },
+        { category: "거래처", clientNumber: "C010", businessName: "VWX 기업", address: "인천광역시 연수구 송도동 789" },
+      ];
+
+      const gridOptions = {
+        defaultColDef: {
+          editable: true,
+        },
+        pagination: true,
+        paginationPageSizeSelector: [10, 20, 50, 100],
+        paginationPageSize: 10,
+        rowHeight: 40,
+        rowData,
+        columnDefs: [
+          {
+            headerName: "구분",
+            field: "category",
+          },
+          {
+            headerName: "거래처번호",
+            field: "clientNumber",
+          },
+          {
+            headerName: "사업장명",
+            field: "businessName",
+          },
+          {
+            headerName: "주소",
+            field: "address",
+          },
+          {
+            headerName: "선택",
+            field: "select", cellRenderer: params => {
+              return markupObject.button;
+            },
+          },
+        ]
+      };
+
+      const myGridElement = document.querySelector('#myGrid');
+      agGrid.createGrid(myGridElement, gridOptions);
+    </script>
   </body>
 
   <%- include('_inc/tail') %>

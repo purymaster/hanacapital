@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="grid_wrap">
-              <div id="myGrid" class="grid_dummy" style="height:100%;">AG Grid</div>
+              <div id="myGrid" style="height:100%;"></div>
               <!-- <div class="nodata">
                 <div class="txt">
                   <img src="/static/img/icon/icon_nodata.png" alt>
@@ -47,6 +47,63 @@
       </div>
 
     </div>
+
+    <script>
+      const markupObject = {
+        button: `
+          <button type="button" data-btn class="xs">
+            선택
+          </button>
+        `,
+      };
+
+      const rowData = [
+        { carNumber: "12가1234", carIdNumber: "A123456789", carType: "준중형" },
+        { carNumber: "34나5678", carIdNumber: "B987654321", carType: "소형" },
+        { carNumber: "56다9101", carIdNumber: "C123123123", carType: "대형" },
+        { carNumber: "78라2345", carIdNumber: "D456456456", carType: "SUV" },
+        { carNumber: "90마6789", carIdNumber: "E789789789", carType: "세단" },
+        { carNumber: "12바3456", carIdNumber: "F321321321", carType: "준중형" },
+        { carNumber: "34사7890", carIdNumber: "G654654654", carType: "소형" },
+        { carNumber: "56아1234", carIdNumber: "H987987987", carType: "대형" },
+        { carNumber: "78자5678", carIdNumber: "I123456789", carType: "SUV" },
+        { carNumber: "90차9101", carIdNumber: "J987654321", carType: "세단" },
+      ];
+
+      const gridOptions = {
+        defaultColDef: {
+          editable: true,
+        },
+        pagination: true,
+        paginationPageSizeSelector: [10, 20, 50, 100],
+        paginationPageSize: 10,
+        rowHeight: 40,
+        rowData,
+        columnDefs: [
+          {
+            headerName: "차량번호",
+            field: "carNumber",
+          },
+          {
+            headerName: "차대번호",
+            field: "carIdNumber",
+          },
+          {
+            headerName: "차종",
+            field: "carType",
+          },
+          {
+            headerName: "선택",
+            field: "select", cellRenderer: params => {
+              return markupObject.button;
+            },
+          },
+        ]
+      };
+
+      const myGridElement = document.querySelector('#myGrid');
+      agGrid.createGrid(myGridElement, gridOptions);
+    </script>
   </body>
 
   <%- include('_inc/tail') %>

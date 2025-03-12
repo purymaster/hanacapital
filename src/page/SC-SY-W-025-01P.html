@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="grid_wrap">
-              <div id="myGrid" class="grid_dummy" style="height:100%;">AG Grid</div>
+              <div id="myGrid" style="height:100%;"></div>
               <!-- <div class="nodata">
                 <div class="txt">
                   <img src="/static/img/icon/icon_nodata.png" alt>
@@ -47,6 +47,71 @@
       </div>
 
     </div>
+
+    <script>
+      const markupObject = {
+        button: `
+          <button type="button" data-btn class="xs">
+            선택
+          </button>
+        `,
+      };
+
+      const rowData = [
+        { companyName: "ABC 주식회사", partnershipType: "전략 제휴", phoneNumber: "02-1234-5678", address: "서울특별시 강남구 테헤란로 123", notes: "주요 거래처" },
+        { companyName: "XYZ 유한회사", partnershipType: "일반 제휴", phoneNumber: "031-9876-5432", address: "경기도 성남시 분당구 판교로 456", notes: "정기 미팅 필요" },
+        { companyName: "123 상사", partnershipType: "단기 제휴", phoneNumber: "032-1111-2222", address: "인천광역시 남동구 인하로 789", notes: "프로젝트 종료 후 평가" },
+        { companyName: "DEF 기업", partnershipType: "전략 제휴", phoneNumber: "02-3333-4444", address: "서울특별시 송파구 올림픽로 101", notes: "장기 계약" },
+        { companyName: "GHI 주식회사", partnershipType: "일반 제휴", phoneNumber: "042-5555-6666", address: "대전광역시 유성구 대학로 123", notes: "상시 거래" },
+        { companyName: "JKL 서비스", partnershipType: "단기 제휴", phoneNumber: "053-7777-8888", address: "대구광역시 중구 동성로 456", notes: "특별 할인 적용" },
+        { companyName: "MNO 컴퍼니", partnershipType: "전략 제휴", phoneNumber: "062-9999-0000", address: "광주광역시 서구 상무대로 789", notes: "상호 협력" },
+        { companyName: "PQR 주식회사", partnershipType: "일반 제휴", phoneNumber: "02-2222-3333", address: "서울특별시 마포구 월드컵북로 123", notes: "정기 점검 필요" },
+        { companyName: "STU 유한회사", partnershipType: "단기 제휴", phoneNumber: "031-4444-5555", address: "경기도 수원시 장안구 정조로 456", notes: "프로젝트 진행 중" },
+        { companyName: "VWX 상사", partnershipType: "전략 제휴", phoneNumber: "032-6666-7777", address: "인천광역시 연수구 송도동 789", notes: "장기 파트너" },
+      ];
+
+      const gridOptions = {
+        defaultColDef: {
+          editable: true,
+        },
+        pagination: true,
+        paginationPageSizeSelector: [10, 20, 50, 100],
+        paginationPageSize: 10,
+        rowHeight: 40,
+        rowData,
+        columnDefs: [
+          {
+            headerName: "업체명",
+            field: "companyName",
+          },
+          {
+            headerName: "제휴구분",
+            field: "partnershipType",
+          },
+          {
+            headerName: "전화번호",
+            field: "phoneNumber",
+          },
+          {
+            headerName: "주소",
+            field: "address",
+          },
+          {
+            headerName: "비고",
+            field: "notes",
+          },
+          {
+            headerName: "선택",
+            field: "select", cellRenderer: params => {
+              return markupObject.button;
+            },
+          },
+        ]
+      };
+
+      const myGridElement = document.querySelector('#myGrid');
+      agGrid.createGrid(myGridElement, gridOptions);
+    </script>
   </body>
 
   <%- include('_inc/tail') %>
