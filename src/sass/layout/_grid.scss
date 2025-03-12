@@ -18,6 +18,11 @@ $scrollbar-width: 18px; // 스크롤바 너비
     &.no_snb {
       padding-left: 30px;
     }
+
+    &.grid {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &.popup_wrap {

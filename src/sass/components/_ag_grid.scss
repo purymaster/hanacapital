@@ -1,0 +1,34 @@
+@use "../helpers/_mixins" as mixins;
+@use "../helpers/_variables" as var;
+
+.ag-root-wrapper {
+  border: 0;
+}
+
+.ag-header-cell,
+.ag-header-group-cell {
+  justify-content: center;
+  padding: 0;
+}
+
+.ag-header-cell-label,
+.ag-header-group-cell-label {
+  justify-content: center;
+}
+
+:where(.ag-ltr) .ag-header-cell-resize {
+  right: -4px;
+}
+
+.ag-row-hover:before,
+.ag-row-selected:before {
+  background: #d7ede6cc !important;
+}
+
+.ag-cell {
+  text-align: center;
+}
+
+.ag-cell-focus:not(.ag-cell-range-selected):focus-within {
+  border-color: var.$primary-color !important;
+}

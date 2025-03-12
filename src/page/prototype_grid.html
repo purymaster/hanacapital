@@ -1,0 +1,343 @@
+<%- include('_inc/head', {title:'페이지제목'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content grid">
+          <% const page_title={ title: "AG-GRID" }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+              <div id="myGrid" style="flex:1;"></div>
+        </div>
+    </div>
+
+    <script>
+      const markupObject = {
+        button: `
+          <button type="button" data-btn class="xs">
+            검색
+          </button>
+        `,
+        textLink: `
+          <a href="https://naver.com" target="_blank" data-btn class="xs">
+            링크
+          </a>
+        `,
+      };
+
+      const rowData = [
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        }, {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+        {
+          orderNumber: "c1243249540359-333",
+          orderPoint: "카렌탈사업팀",
+          orderStatus: "출고확정",
+          customerName: "홍길동",
+          manufactCompany: "삼성전자",
+          manufactNo: "SAMSUNG-123456",
+          releaseType: "정상출고",
+          orderDate: "2025-03-01",
+        },
+      ]
+
+      const gridOptions = {
+        defaultColDef: {
+          editable: true,
+        },
+        rowSelection: {
+          mode: 'multiRow'
+        },
+        pagination: true,
+        paginationPageSizeSelector: [20, 50, 100],
+        paginationPageSize: 20,
+        rowHeight: 40,
+        rowData,
+        columnDefs: [
+          {
+            field: 'test',
+            cellEditor: 'agSelectCellEditor',
+            cellEditorParams: {
+              values: ['value1', 'value2', 'value3', 'value4', 'value5'],
+            },
+            valueGetter: (params) => {
+              return params.data.test || 'value1';
+            },
+            width: 100,
+          },
+          {
+            headerName: "발주번호",
+            field: "orderNumber",
+            width: 210,
+          },
+          {
+            headerName: "발주지점",
+            field: "orderPoint",
+            width: 158,
+          },
+          {
+            headerName: "발주상태",
+            field: "orderStatus",
+            width: 116,
+          },
+          {
+            headerName: "고객명",
+            field: "customerName",
+            width: 116,
+          },
+          {
+            headerName: "제조사",
+            field: "manufactCompany",
+            width: 116,
+          },
+          {
+            headerName: "제조사 계약번호",
+            field: "manufactNo",
+            width: 150,
+          },
+          {
+            headerName: "출고구분",
+            field: "releaseType",
+            width: 116,
+          },
+          {
+            headerName: "발주일",
+            field: "orderDate",
+            width: 158,
+          },
+          {
+            field: "button", cellRenderer: params => {
+              return markupObject.button;
+            },
+            width: 80,
+          },
+          {
+            field: "link", cellRenderer: params => {
+              return markupObject.textLink;
+            },
+            width: 80,
+          },
+        ]
+      };
+
+      const myGridElement = document.querySelector('#myGrid');
+      agGrid.createGrid(myGridElement, gridOptions);
+    </script>
+  </body>
+
+  <%- include('_inc/tail') %>

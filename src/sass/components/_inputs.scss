@@ -185,6 +185,7 @@
 
   .toggle {
     display: flex;
+    align-items: center;
     flex: 1 1 auto;
     min-width: 0;
     text-align: left;
@@ -230,7 +231,7 @@
     transition: all .1s;
     opacity: 0;
     visibility: hidden;
-    z-index: 1;
+    z-index: 3;
 
     li {
       .item {
@@ -360,7 +361,10 @@
     }
 
     &.single {
+      display: inline-flex;
+
       >li {
+        display: inline-flex;
         overflow: hidden;
         width: 24px;
         height: 24px;
