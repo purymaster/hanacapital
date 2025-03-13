@@ -84,6 +84,24 @@
       .code {
         margin-top: 1.5em;
       }
+
+      .palette_wrap {
+        margin-top: 15px;
+      }
+
+      .palette {
+        display: flex;
+        gap: 10px;
+        margin: 3px 0;
+      }
+
+      .palette a {
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 0px rgba(22, 22, 22, 0.2);
+      }
     </style>
 
     <div class="wrap">
@@ -93,6 +111,7 @@
 
           <div class="guide_map">
             <ul>
+              <li><a href="#color">Color</a></li>
               <li><a href="#button">Button</a></li>
               <li><a href="#buttonGroup">Button Group</a></li>
               <li><a href="#radio">Radio Button</a></li>
@@ -109,6 +128,94 @@
           </div>
 
           <div class="guide_cont">
+            <div class="guide_group">
+              <h3 id="color" class="guide_tit">Color</h3>
+              <p>색상을 클릭 시, 변수명을 클립보드에 복사</p>
+              <div class="palette_wrap">
+                <h4 class="guide_sub_tit">Main</h4>
+                <ul class="palette">
+                  <li>
+                    <a href="#none" title="$primary-color, #009178" style="background:#009178"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$secondary-color, #a7d8b7" style="background:#a7d8b7"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$tertiary-color, #d7ede6" style="background:#d7ede6"></a>
+                  </li>
+                </ul>
+                <h4 class="guide_sub_tit">Button</h4>
+                <ul class="palette">
+                  <li>
+                    <a href="#none" title="$btn-default-color, #009178" style="background:#009178"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$btn-hover-color, #00a277" style="background:#00a277"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$btn-select-color, #007f69" style="background:#007f69"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$btn-line-color, #a7d8b7" style="background:#a7d8b7"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$btn-disable-color, #bdc1c6" style="background:#bdc1c6"></a>
+                  </li>
+                </ul>
+                <h4 class="guide_sub_tit">Gray(UI shell)</h4>
+                <ul class="palette">
+                  <li>
+                    <a href="#none" title="$table-hover-color, #eef0f2" style="background:#eef0f2"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$table-select-color, #d7ede6cc" style="background:#d7ede6cc"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$table-title-color, #ebf3ee" style="background:#ebf3ee"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$table-input-disable-color, #f7f7f7" style="background:#f7f7f7"></a>
+                  </li>
+                </ul>
+                <h4 class="guide_sub_tit">Table</h4>
+                <ul class="palette">
+                  <li>
+                    <a href="#none" title="$gray-80-color, #161616" style="background:#161616"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-70-color, #525252" style="background:#525252"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-60-color, #6f6f6f" style="background:#6f6f6f"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-50-color, #8d8d8d" style="background:#8d8d8d"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-40-color, #a8a8a8" style="background:#a8a8a8"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-30-color, #c6c6c6" style="background:#c6c6c6"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-20-color, #ddd" style="background:#ddd"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$gray-10-color, #f0f0f0" style="background:#f0f0f0"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$white-color, #fff" style="background:#fff"></a>
+                  </li>
+                </ul>
+                <h4 class="guide_sub_tit">Error</h4>
+                <ul class="palette">
+                  <li>
+                    <a href="#none" title="$error-color, #dc2527" style="background:#dc2527"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <div class="guide_group">
               <h3 id="button" class="guide_tit">Button</h3>
               <h4 class="guide_sub_tit">기본형(높이 48px)</h4>
@@ -618,6 +725,19 @@
           let codeContent = $(this).html();
           codeContent = escapeHtml(codeContent);
           $(this).next("pre").find(".language-markup").html(codeContent);
+        });
+
+        $('.palette').find('a').on('click', function (event) {
+          event.preventDefault();
+
+          const title = $(this).attr('title');
+          const variableName = title.split(',')[0].trim();
+
+          navigator.clipboard.writeText(variableName).then(function () {
+            alert(variableName + ' 클립보드에 복사되었습니다.');
+          }, function (err) {
+            console.error('클립보드 복사실패 ', err);
+          });
         });
       });
 
