@@ -48,7 +48,6 @@
       $currentInput.on('input', function () {
         const $this = $(this);
         $this.next('.input_ctr').toggleClass('on', $this.val() !== '');
-        console.log($this.val());
       });
 
       $(this).find('.clear').on('click', function () {

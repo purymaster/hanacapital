@@ -15,7 +15,59 @@
 }
 
 #myGrid {
-  height: 100%;
+  height: calc(100% - 44px);
+}
+
+[data-pagination] {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+
+  &:after {
+    content: "";
+  }
+
+  [data-dropdown] {
+    .toggle {
+      height: 36px;
+      border-radius: 6px;
+      padding: 0 24px 0 10px;
+      background-position: calc(100% - 6px) center;
+    }
+  }
+
+  .pagination {
+    @include mixins.flexbox;
+
+    .page-item {
+      @include mixins.inline-flexbox;
+
+      .page-link {
+        width: 24px;
+        line-height: 24px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      &:is(.first, .prev, .next, .last) {
+        .page-link {
+          font-size: 0;
+        }
+      }
+
+      &.active {
+        .page-link {
+          background-color: var.$primary-color;
+          color: var.$white-color;
+          border-radius: calc(var.$global-border-radius / 2);
+        }
+      }
+
+      &.first {
+        .page-link {}
+      }
+    }
+  }
 }
 
 .error_page {

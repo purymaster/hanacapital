@@ -8,6 +8,33 @@
             <%- include('_inc/page_title.ejs', page_title) %>
               <div class="grid_wrap">
                 <div id="myGrid"></div>
+                <div data-pagination>
+                  <div data-input-group class="dropdown">
+                    <div data-dropdown>
+                      <button type="button" class="toggle">
+                        <div class="txt">20개</div>
+                      </button>
+                      <ul class="option up">
+                        <li>
+                          <button type="button" class="item" data-value="10">10개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="20">20개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="30">30개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="40">40개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="50">50개</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="pagination-div"></div>
+                </div>
               </div>
         </div>
     </div>
@@ -265,9 +292,6 @@
         rowSelection: {
           mode: 'multiRow'
         },
-        pagination: true,
-        paginationPageSizeSelector: [20, 50, 100],
-        paginationPageSize: 20,
         rowHeight: 40,
         rowData,
         columnDefs: [
@@ -339,6 +363,10 @@
 
       const myGridElement = document.querySelector('#myGrid');
       agGrid.createGrid(myGridElement, gridOptions);
+      $('#pagination-div').twbsPagination({
+        totalPages: 50,
+        visiblePages: 10
+      });
     </script>
   </body>
 
