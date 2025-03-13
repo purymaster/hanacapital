@@ -9,7 +9,7 @@
               <div data-search-group>
                 <div class="opt">
                   <div data-input-group class="calendar">
-                    <span class="label">발주일</span>
+                    <span class="label">등록신청완료일</span>
                     <div class="date_wrap">
                       <input type="text" class="datepicker" placeholder="2025.01.01">
                       ~
@@ -42,17 +42,35 @@
                       </ul>
                     </div>
                   </div>
-                  <div data-input-group class="search_box" style="width: 420px;">
+                  <div data-input-group class="search_box" style="width: 500px;">
                     <span class="label">키워드 검색</span>
-                    <input type="text" placeholder="관리지점, 영업사원, 전문직, 고객명, 계약번호">
+                    <input type="text" placeholder="제조사 계약번호, 차대번호, 관리지점, 영업사원, 전문직, 고객명">
                   </div>
                 </div>
                 <div class="btn">
                   <button type="button" data-btn class="m">검색</button>
                 </div>
               </div>
+              <div data-status>
+                <div class="total">
+                  총 <span class="num">999</span>건
+                </div>
+                <div data-btn-group>
+                  <button type="button">진행상태 등록</button>
+                  <button type="button">2차탁송배정</button>
+                  <button type="button">SMS발송</button>
+                  <button type="button">차량이미지 등록</button>
+                  <button type="button">엑셀다운로드</button>
+                </div>
+              </div>
               <div class="grid_wrap">
                 <div id="myGrid" class="grid_dummy">AG Grid</div>
+                <!-- <div class="nodata">
+                  <div class="txt">
+                    <img src="/static/img/icon/icon_nodata.png" alt>
+                    <p>검색 결과가 없습니다.</p>
+                  </div>
+                </div> -->
               </div>
         </div>
     </div>
