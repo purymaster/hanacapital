@@ -118,6 +118,7 @@
               <li><a href="#checkbox">Checkbox</a></li>
               <li><a href="#inputGroup">Input Group</a></li>
               <li><a href="#dropdown">Dropdown</a></li>
+              <li><a href="#validation">Validation</a></li>
               <li><a href="#searchForm">Search Form</a></li>
               <li><a href="#toast">Toast Message</a></li>
               <li><a href="#loading">Loading</a></li>
@@ -292,6 +293,14 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">텍스트 버튼</h4>
+              <div class="code">
+                <button type="button" data-text-btn>버튼</button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h3 id="buttonGroup" class="guide_tit">Button Group</h3>
               <h4 class="guide_sub_tit">Button Tag</h4>
               <div class="code">
@@ -458,6 +467,16 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">Small</h4>
+              <div class="code">
+                <div data-input-group class="small">
+                  <input type="text">
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h4 class="guide_sub_tit">입력 초기화</h4>
               <div class="code">
                 <div data-input-group class="clearable">
@@ -594,6 +613,32 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">윗방향 메뉴</h4>
+              <div class="code">
+                <div data-input-group class="dropdown">
+                  <span class="label">구분</span>
+                  <div data-dropdown style="width:240px;">
+                    <button type="button" class="toggle">
+                      <div class="txt">전체</div>
+                    </button>
+                    <ul class="option up">
+                      <li>
+                        <button type="button" class="item" data-value="value1">value1</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value2">value2</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value3">value3</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h4 class="guide_sub_tit">비활성화</h4>
               <div class="code">
                 <div data-input-group class="dropdown">
@@ -603,6 +648,85 @@
                       <div class="txt">value1</div>
                     </button>
                   </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">small</h4>
+              <div class="code">
+                <div data-input-group class="dropdown">
+                  <div data-dropdown class="small" style="width:240px;">
+                    <button type="button" class="toggle">
+                      <div class="txt">전체</div>
+                    </button>
+                    <ul class="option">
+                      <li>
+                        <button type="button" class="item" data-value="value1">value1</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value2">value2</button>
+                      </li>
+                      <li>
+                        <button type="button" class="item" data-value="value3">value3</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h3 id="validation" class="guide_tit">Validation</h3>
+              <h4 class="guide_sub_tit">기본형</h4>
+              <div class="code">
+                <div data-validation>
+                  <div data-input-group>
+                    <input type="text">
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">Invalid Input</h4>
+              <div class="code">
+                <div data-validation class="invalid">
+                  <div data-input-group>
+                    <input type="text">
+                  </div>
+                  <p class="msg">에러 메세지</p>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">Invalid Dropdown</h4>
+              <div class="code">
+                <div data-validation class="invalid">
+                  <div data-input-group class="dropdown">
+                    <div data-dropdown style="width:240px;">
+                      <button type="button" class="toggle">
+                        <div class="txt">전체</div>
+                      </button>
+                      <ul class="option">
+                        <li>
+                          <button type="button" class="item" data-value="value1">value1</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="value2">value2</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="value3">value3</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="msg">에러 메세지</p>
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -633,6 +757,16 @@
                   <div class="btn">
                     <button type="button" data-btn class="m">검색</button>
                   </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h3 id="table" class="guide_tit">Table(조회)</h3>
+              <div class="code">
+                <div data-detail-table>
+
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>

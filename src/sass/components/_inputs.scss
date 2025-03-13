@@ -32,14 +32,13 @@
   input[type='text'],
   input[type='password'],
   input[type='email'] {
-    padding: 10px 15px;
     border-radius: var.$global-border-radius;
     width: 100%;
     transition: border-color, box-shadow .3s ease;
     border: 1px solid var.$gray-30-color;
     font-size: 14px;
     height: 40px;
-    padding: 12px 16px;
+    padding: 0 16px;
     background: var.$white-color;
 
     &:focus:not(:is(.datepicker, .monthpicker)) {
@@ -47,7 +46,8 @@
       box-shadow: 0 0 0 1px var.$primary-color inset;
     }
 
-    &:read-only {
+    &:read-only,
+    &:disabled {
       background: var.$gray-10-color;
       cursor: not-allowed;
 
@@ -87,7 +87,18 @@
     input[type='text'],
     input[type='password'],
     input[type='email'] {
-      padding-right: 40px;
+      padding-right: 40px !important;
+    }
+  }
+
+  //small
+  &.small {
+
+    input[type='text'],
+    input[type='password'],
+    input[type='email'] {
+      height: 32px;
+      padding: 0 10px;
     }
   }
 
@@ -98,7 +109,7 @@
       input[type='text'],
       input[type='password'],
       input[type='email'] {
-        padding-right: 72px;
+        padding-right: 72px !important;
       }
 
       .input_ctr {
@@ -200,7 +211,7 @@
     flex: 1 1 auto;
     min-width: 0;
     text-align: left;
-    padding: 11px 42px 11px 16px;
+    padding: 0 42px 0 16px;
     border-radius: var.$global-border-radius;
     transition: border-color, box-shadow 0.3s ease;
     border: 1px solid var.$gray-30-color;
@@ -294,6 +305,11 @@
       border-radius: 18px;
       border: 2px solid var.$white-color;
     }
+
+    &.up {
+      top: auto;
+      bottom: 41px;
+    }
   }
 
   &.disabled {
@@ -307,6 +323,14 @@
         box-shadow: none;
       }
 
+    }
+  }
+
+  &.small {
+    .toggle {
+      padding: 0 36px 0 10px;
+      height: 32px;
+      background-position: calc(100% - 8px) center;
     }
   }
 }
@@ -420,6 +444,27 @@
           }
         }
       }
+    }
+  }
+}
+
+//밸리데이션
+[data-validation] {
+  .msg {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var.$error-color;
+  }
+
+  &.invalid {
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    .toggle {
+      border-color: var.$error-color !important;
+      box-shadow: 0 0 0 1px var.$error-color inset !important;
     }
   }
 }
