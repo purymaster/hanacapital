@@ -76,6 +76,8 @@
       const $dropdownToggle = $currentDropdown.find('.toggle');
       const $items = $currentDropdown.find('.item');
 
+      if ($currentDropdown.hasClass('disabled')) return;
+
       $dropdownToggle.on('click', function (event) {
         event.stopPropagation();
         $dropdown.each(function () {
