@@ -21,6 +21,7 @@
             </div>
             <div class="grid_wrap">
               <div id="myGrid"></div>
+              <div id="pagination-div"></div>
               <!-- <div class="nodata">
                 <div class="txt">
                   <img src="/static/img/icon/icon_nodata.png" alt>
@@ -71,9 +72,6 @@
       ];
 
       const gridOptions = {
-        pagination: true,
-        paginationPageSizeSelector: [10, 20, 50, 100],
-        paginationPageSize: 10,
         rowHeight: 40,
         rowData,
         columnDefs: [
