@@ -10,10 +10,10 @@
 
 ## 기술스택
 
-Gulp5 : [https://gulpjs.com/](https://gulpjs.com/){:target="_blank"}
-EJS : [https://ejs.co/](https://ejs.co/){:target="_blank"}
-Sass : [https://sass-lang.com/](https://sass-lang.com/){:target="_blank"}
-AG Grid : [https://www.ag-grid.com/](https://www.ag-grid.com/){:target="_blank"}
+Gulp5 : [https://gulpjs.com/](https://gulpjs.com/)<br/>
+EJS : [https://ejs.co/](https://ejs.co/)<br/>
+Sass : [https://sass-lang.com/](https://sass-lang.com/)<br/>
+AG Grid : [https://www.ag-grid.com/](https://www.ag-grid.com/)
 
 ## 설치
 
@@ -31,54 +31,54 @@ gulp
 
 ## 폴더구조
 
-src
- ┣ error - 에러 페이지
- ┣ fonts
- ┣ img
- ┃ ┣ bg - 배경 이미지
- ┃ ┣ dummy - 더미 이미지
- ┃ ┣ icon - 아이콘 이미지
- ┃ ┗ image - 일반 이미지
-  ┣ js
- ┃ ┣ libs
- ┃ ┃ ┣ ag-grid-community.js - AG Grid
- ┃ ┃ ┣ jquery-3.7.1.js
- ┃ ┃ ┣ jquery-ui.js
- ┃ ┃ ┣ jquery-viewer.js - 이미지 뷰어
- ┃ ┃ ┣ jquery.ui.monthpicker.js - monthpicker
- ┃ ┃ ┗ swiper-bundle.js
- ┃ ┗ ui.js - 컴포넌트 동작 정의
- ┣ page
- ┃ ┣ _inc
- ┃ ┃ ┣ head.ejs
- ┃ ┃ ┣ header.ejs - 헤더
- ┃ ┃ ┣ page_title.ejs - 페이지 제목
- ┃ ┃ ┗ tail.ejs
- ┃ ┣ guide.html - 컴포넌트 가이드
- ┃ ┣ prototype_grid.html - 그리드 페이지
- ┃ ┣ prototype_page.html - 일반 페이지
- ┃ ┣ prototype_popup.html - 팝업 페이지
- ┣ sass
- ┃ ┣ base
- ┃ ┃ ┣ _fonts.scss
- ┃ ┃ ┗ _reset.scss
- ┃ ┣ components
- ┃ ┃ ┣ _ag_grid.scss - AG Grid 스타일 정의
- ┃ ┃ ┣ _buttons.scss
- ┃ ┃ ┣ _externals.scss - 외부 라이브러리 스타일 정의
- ┃ ┃ ┣ _inputs.scss
- ┃ ┃ ┣ _modals.scss - 모달(레이어 팝업) 스타일 정의
- ┃ ┃ ┣ _page_title.scss
- ┃ ┃ ┗ _popups.scss - 팝업(시스템 팝업) 스타일 정의
- ┃ ┣ helpers
- ┃ ┃ ┣ _functions.scss
- ┃ ┃ ┣ _mixins.scss
- ┃ ┃ ┗ _variables.scss
- ┃ ┣ layout
- ┃ ┃ ┣ _contents.scss
- ┃ ┃ ┣ _grid.scss
- ┃ ┃ ┗ _header.scss
- ┃ ┗ ui.scss
+src<br/>
+ ┣ error - 에러 페이지<br/>
+ ┣ fonts<br/>
+ ┣ img<br/>
+ ┃ ┣ bg - 배경 이미지<br/>
+ ┃ ┣ dummy - 더미 이미지<br/>
+ ┃ ┣ icon - 아이콘 이미지<br/>
+ ┃ ┗ image - 일반 이미지<br/>
+ ┣ js<br/>
+ ┃ ┣ libs<br/>
+ ┃ ┃ ┣ ag-grid-community.js - AG Grid<br/>
+ ┃ ┃ ┣ jquery-3.7.1.js<br/>
+ ┃ ┃ ┣ jquery-ui.js<br/>
+ ┃ ┃ ┣ jquery-viewer.js - 이미지 뷰어<br/>
+ ┃ ┃ ┣ jquery.ui.monthpicker.js - monthpicker<br/>
+ ┃ ┃ ┗ swiper-bundle.js<br/>
+ ┃ ┗ ui.js - 컴포넌트 동작 정의<br/>
+ ┣ page<br/>
+ ┃ ┣ _inc<br/>
+ ┃ ┃ ┣ head.ejs<br/>
+ ┃ ┃ ┣ header.ejs - 헤더<br/>
+ ┃ ┃ ┣ page_title.ejs - 페이지 제목<br/>
+ ┃ ┃ ┗ tail.ejs<br/>
+ ┃ ┣ guide.html - 컴포넌트 가이드<br/>
+ ┃ ┣ prototype_grid.html - 그리드 페이지<br/>
+ ┃ ┣ prototype_page.html - 일반 페이지<br/>
+ ┃ ┣ prototype_popup.html - 팝업 페이지<br/>
+ ┣ sass<br/>
+ ┃ ┣ base<br/>
+ ┃ ┃ ┣ _fonts.scss<br/>
+ ┃ ┃ ┗ _reset.scss<br/>
+ ┃ ┣ components<br/>
+ ┃ ┃ ┣ _ag_grid.scss - AG Grid 스타일 정의<br/>
+ ┃ ┃ ┣ _buttons.scss<br/>
+ ┃ ┃ ┣ _externals.scss - 외부 라이브러리 스타일 정의<br/>
+ ┃ ┃ ┣ _inputs.scss<br/>
+ ┃ ┃ ┣ _modals.scss - 모달(레이어 팝업) 스타일 정의<br/>
+ ┃ ┃ ┣ _page_title.scss<br/>
+ ┃ ┃ ┗ _popups.scss - 팝업(시스템 팝업) 스타일 정의<br/>
+ ┃ ┣ helpers<br/>
+ ┃ ┃ ┣ _functions.scss<br/>
+ ┃ ┃ ┣ _mixins.scss<br/>
+ ┃ ┃ ┗ _variables.scss<br/>
+ ┃ ┣ layout<br/>
+ ┃ ┃ ┣ _contents.scss<br/>
+ ┃ ┃ ┣ _grid.scss<br/>
+ ┃ ┃ ┗ _header.scss<br/>
+ ┃ ┗ ui.scss<br/>
  ┗ index.html - 페이지 목록
 
 ## 이슈사항
