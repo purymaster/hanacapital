@@ -33,6 +33,36 @@
         hyphens: none;
       }
 
+      .guide_wrap {
+        padding-left: 250px;
+      }
+
+      .guide_map {
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background: #009178;
+        padding: 30px 15px;
+        color: #fff;
+      }
+
+      .guide_map a {
+        display: block;
+        line-height: 1.5em;
+        padding: .25em 15px;
+        border-radius: 4px;
+        transition: all .3s;
+      }
+
+      .guide_map a:hover {
+        background: #D7EDE6;
+        color: #009178;
+      }
+
       .guide_group {
         margin-top: 50px;
       }
@@ -58,11 +88,29 @@
 
     <div class="wrap">
       <div class="content">
-        <% const page_title={ title: "마크업 가이드" }; %>
-          <%- include('_inc/page_title.ejs', page_title) %>
 
+        <div class="guide_wrap">
+
+          <div class="guide_map">
+            <ul>
+              <li><a href="#button">Button</a></li>
+              <li><a href="#buttonGroup">Button Group</a></li>
+              <li><a href="#radio">Radio Button</a></li>
+              <li><a href="#checkbox">Checkbox</a></li>
+              <li><a href="#inputGroup">Input Group</a></li>
+              <li><a href="#dropdown">Dropdown</a></li>
+              <li><a href="#searchForm">Search Form</a></li>
+              <li><a href="#toast">Toast Message</a></li>
+              <li><a href="#loading">Loading</a></li>
+              <li><a href="#dialog">Dialog Modal Popup</a></li>
+              <li><a href="#modal">Modal Popup</a></li>
+              <li><a href="#agDummy">AG Grid Dummy</a></li>
+            </ul>
+          </div>
+
+          <div class="guide_cont">
             <div class="guide_group">
-              <h3 class="guide_tit">Button</h3>
+              <h3 id="button" class="guide_tit">Button</h3>
               <h4 class="guide_sub_tit">기본형(높이 48px)</h4>
               <div class="code">
                 <button type="button" data-btn>버튼 Primary</button>
@@ -156,7 +204,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Button Group</h3>
+              <h3 id="buttonGroup" class="guide_tit">Button Group</h3>
               <h4 class="guide_sub_tit">Button Tag</h4>
               <div class="code">
                 <div data-btn-group>
@@ -195,7 +243,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Radio Button</h3>
+              <h3 id="radio" class="guide_tit">Radio Button</h3>
               <h4 class="guide_sub_tit">Radio Group</h4>
               <div class="code">
                 <div data-select-group>
@@ -234,7 +282,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Checkbox</h3>
+              <h3 id="checkbox" class="guide_tit">Checkbox</h3>
               <h4 class="guide_sub_tit">Checkbox Group</h4>
               <div class="code">
                 <div data-select-group>
@@ -288,7 +336,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Input Group</h3>
+              <h3 id="inputGroup" class="guide_tit">Input Group</h3>
               <p>Input Group은 내부의 Option, Placeholder 등 내부 컨텐츠 너비를 감안해, 퍼블쪽에서 직접 너비를 inline-style로 지정해서 작업 진행</p>
               <h4 class="guide_sub_tit">기본형</h4>
               <div class="code">
@@ -411,7 +459,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Dropdown</h3>
+              <h3 id="dropdown" class="guide_tit">Dropdown</h3>
               <p>data-dropdown의 너비는 inline-style로 지정하여 사용</p>
               <div class="code">
                 <div data-input-group class="dropdown">
@@ -446,8 +494,8 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">검색입력폼</h3>
-              <p>검색입력폼의 너비가 100%가 될 경우, Input Group의 너비를 맞춰서 우측 검색 버튼과의 간격이 20px 이상 벌어지지 않도록 작업</p>
+              <h3 id="searchForm" class="guide_tit">Search Form</h3>
+              <p>너비가 100%가 될 경우, Input Group의 너비를 맞춰서 우측 검색 버튼과의 간격이 20px 이상 벌어지지 않도록 작업</p>
               <div class="code">
                 <div data-search-group>
                   <div class="opt">
@@ -476,7 +524,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Toast Message(기본 노출 시간 2초, tail.ejs에 포함)</h3>
+              <h3 id="toast" class="guide_tit">Toast Message(기본 노출 시간 2초, tail.ejs에 포함)</h3>
               <div class="code">
                 <!-- <div data-toast></div> -->
                 <button type="button" data-btn onClick="showToast('메세지')">툴팁 노출</button>
@@ -486,7 +534,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Loading(tail.ejs에 포함)</h3>
+              <h3 id="loading" class="guide_tit">Loading(tail.ejs에 포함)</h3>
               <div class="code">
                 <!-- <div data-loading></div> -->
                 <button type="button" data-btn onClick="showLoading()">로딩 노출</button>
@@ -495,7 +543,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Dialog Modal Popup</h3>
+              <h3 id="dialog" class="guide_tit">Dialog Modal Popup</h3>
               <div class="code">
                 <div data-modal id="modal1">
                   <div class="modal dialog">
@@ -517,7 +565,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">Modal Popup</h3>
+              <h3 id="modal" class="guide_tit">Modal Popup</h3>
               <div class="code">
                 <div data-modal id="modal2">
                   <div class="modal">
@@ -536,7 +584,7 @@
             </div>
 
             <div class="guide_group">
-              <h3 class="guide_tit">AG Grid 더미</h3>
+              <h3 id="agDummy" class="guide_tit">AG Grid Dummy</h3>
               <div class="code">
                 <div class="grid_wrap">
                   <div id="myGrid" class="grid_dummy">AG Grid</div>
@@ -544,6 +592,8 @@
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
+          </div>
+        </div>
 
       </div>
     </div>
