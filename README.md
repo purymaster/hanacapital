@@ -45,6 +45,7 @@ src<br/>
  ┃ ┃ ┣ jquery-3.7.1.js<br/>
  ┃ ┃ ┣ jquery-ui.js<br/>
  ┃ ┃ ┣ jquery-viewer.js - 이미지 뷰어<br/>
+ ┃ ┃ ┣ jquery.twbsPagination.min.js - pageination 라이브러리<br/>
  ┃ ┃ ┣ jquery.ui.monthpicker.js - monthpicker<br/>
  ┃ ┃ ┗ swiper-bundle.js<br/>
  ┃ ┗ ui.js - 컴포넌트 동작 정의<br/>
