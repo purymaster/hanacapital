@@ -6,7 +6,7 @@
   gap: 4px;
   border: 1px solid var.$primary-color;
   background: var.$primary-color;
-  color: #fff;
+  color: var.$white-color;
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
@@ -17,41 +17,41 @@
   transition: background .3s;
 
   &:hover {
-    background: var.$primary-color-hover;
-    border-color: var.$primary-color-hover;
+    background: var.$btn-hover-color;
+    border-color: var.$btn-hover-color;
   }
 
   &:focus,
   &:active {
-    background: var.$primary-color-selected;
-    border-color: var.$primary-color-selected;
+    background: var.$btn-select-color;
+    border-color: var.$btn-select-color;
   }
 
   &:disabled {
-    background: var.$default-color !important;
-    border-color: var.$default-color !important;
-    color: #fff !important;
+    background: var.$btn-disable-color !important;
+    border-color: var.$btn-disable-color !important;
+    color: var.$white-color !important;
     cursor: not-allowed;
   }
 
   &.secondary {
-    background: var.$secondary-color;
-    border-color: var.$secondary-color-selected;
+    background: var.$white-color;
+    border-color: var.$secondary-color;
     color: var.$primary-color;
 
     &:hover {
-      background: var.$secondary-color-hover;
+      background: var.$tertiary-color;
     }
 
     &:focus,
     &:active {
-      background: var.$secondary-color-selected;
+      background: var.$secondary-color;
     }
 
     &:disabled {
-      background: #fff !important;
-      border-color: #ddd !important;
-      color: #bdc1c6 !important;
+      background: var.$white-color !important;
+      border-color: var.$gray-20-color !important;
+      color: var.$btn-disable-color !important;
     }
   }
 
@@ -93,10 +93,10 @@
 
 [data-btn-group] {
   display: inline-flex;
-  border: 1px solid var.$secondary-color-selected;
+  border: 1px solid var.$secondary-color;
   border-radius: var.$global-border-radius;
   overflow: hidden;
-  background: #fff;
+  background: var.$white-color;
 
   button {
     @include mixins.inline-flexbox;
@@ -105,21 +105,21 @@
     font-weight: 500;
     color: var.$primary-color;
     padding: 10px 16px;
-    border-right: 1px solid var.$secondary-color-selected;
+    border-right: 1px solid var.$secondary-color;
     transition: all .3s;
 
     &:last-child {
       border: 0;
     }
 
-    &.on {
+    &:focus {
       font-weight: 600;
       background: var.$primary-color;
-      color: #fff;
+      color: var.$white-color;
     }
 
     &:disabled {
-      color: var.$secondary-color-selected;
+      color: var.$secondary-color;
       cursor: not-allowed;
     }
   }
@@ -131,7 +131,7 @@
     line-height: 18px;
     font-weight: 500;
     color: var.$primary-color;
-    border-right: 1px solid var.$secondary-color-selected;
+    border-right: 1px solid var.$secondary-color;
 
     label {
       transition: all .3s;
@@ -150,11 +150,11 @@
     &:checked+label {
       font-weight: 600;
       background: var.$primary-color;
-      color: #fff;
+      color: var.$white-color;
     }
 
     &:disabled+label {
-      color: var.$secondary-color-selected;
+      color: var.$secondary-color;
       cursor: not-allowed;
     }
   }

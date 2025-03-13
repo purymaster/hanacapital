@@ -155,8 +155,8 @@ body {
 body {
   line-height: 1.5;
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  background: #fff;
-  color: var.$default-text-color;
+  background: var.$white-color;
+  color: var.$gray-80-color;
   word-wrap: break-word;
   word-break: keep-all;
   text-size-adjust: none;
@@ -180,7 +180,7 @@ textarea {
   border: none;
   border-radius: 0;
   background: none;
-  color: var.$default-text-color;
+  color: var.$gray-80-color;
   font-family: inherit;
   font-size: 100%;
   letter-spacing: 0;
@@ -251,41 +251,41 @@ legend,
 ::-webkit-scrollbar {
   width: 18px;
   height: 18px;
-  background-color: #f0f0f0;
+  background-color: var.$gray-10-color;
 }
 
 ::-webkit-scrollbar-thumb {
   width: 8px;
   height: 8px;
-  background: #a8a8a8;
+  background: var.$gray-40-color;
   border-radius: 18px;
-  border: 5px solid #f0f0f0;
+  border: 5px solid var.$gray-10-color;
 }
 
 ::-webkit-scrollbar-corner {
-  background: #f0f0f0;
+  background: var.$gray-10-color;
 }
 
 select {
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;
-    background-color: #fff;
+    background-color: var.$white-color;
   }
 
   &::-webkit-scrollbar-thumb {
     width: 4px;
     height: 4px;
-    background: #a8a8a8;
+    background: var.$gray-40-color;
     border-radius: 18px;
-    border: 2px solid #fff;
+    border: 2px solid var.$white-color;
   }
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or (-ms-flexbox: 1) {
   ::placeholder {
     font-weight: inherit;
-    color: #a8a8a8;
+    color: var.$gray-40-color;
     opacity: 1;
   }
 }

@@ -1,15 +1,30 @@
 // 색상 변수
-$primary-color: #009178; // 메인 색상
+$primary-color: #009178;
 $primary-color-filter: brightness(0) saturate(100%) invert(35%) sepia(97%) saturate(510%) hue-rotate(124deg) brightness(99%) contrast(104%); // 메인 색상 필터 정보
-$primary-color-hover: #00a277; // 메인 색상 hover
-$primary-color-selected: #007f69; // 메인 색상 selected
+$secondary-color : #a7d8b7;
+$tertiary-color: #d7ede6;
 
-$secondary-color: #fff; // 서브 색상
-$secondary-color-hover: #d7ede6; // 서브 색상 hover
-$secondary-color-selected: #a7d8b7; // 서브 색상 selected
+$btn-default-color: #009178;
+$btn-hover-color: #00a277;
+$btn-select-color: #007f69;
+$btn-line-color: #a7d8b7;
+$btn-disable-color: #bdc1c6;
 
-$default-color: #c6c6c6; // 기본 색상
-$default-background-color: #f0f0f0; // 기본 배경 색상
-$default-text-color: #161616; // 기본 텍스트 색상
+$table-hover-color: #eef0f2;
+$table-select-color: #d7ede6cc;
+$table-title-color: #ebf3ee;
+$table-input-disable-color: #f7f7f7;
+
+$gray-80-color: #161616;
+$gray-70-color: #525252;
+$gray-60-color: #6f6f6f;
+$gray-50-color: #8d8d8d;
+$gray-40-color: #a8a8a8;
+$gray-30-color: #c6c6c6;
+$gray-20-color: #ddd;
+$gray-10-color: #f0f0f0;
+$white-color: #fff;
+
+$error-color: #dc2527;
 
 $global-border-radius: 8px;

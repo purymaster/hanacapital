@@ -4,8 +4,8 @@
 [data-toast] {
   position: fixed;
   @include mixins.pos-center(fixed);
-  background: var.$default-text-color;
-  color: #fff;
+  background: var.$gray-80-color;
+  color: var.$white-color;
   font-size: 15px;
   line-height: 20px;
   padding: 14px;
@@ -44,7 +44,7 @@
 
   .modal {
     @include mixins.column-flexbox(center);
-    background: #fff;
+    background: var.$white-color;
     max-height: calc(100vh - 30px);
     padding: 40px 30px;
     width: 1000px;
@@ -64,7 +64,7 @@
         bottom: 0;
         width: calc(100% + 60px);
         height: 1px;
-        background: #ddd;
+        background: var.$gray-20-color;
       }
 
       .modal_tit {
@@ -132,7 +132,7 @@
           width: 32px;
           height: 32px;
           margin-top: -16px;
-          background: #fff;
+          background: var.$white-color;
           border-radius: 50%;
           box-shadow: 0px 0px 10px 0px #0000004D;
           position: absolute;
@@ -245,7 +245,7 @@
 
         .swiper-slide {
           position: relative;
-          background-color: #fff;
+          background-color: var.$white-color;
           background-size: cover;
           background-position: center;
           pointer-events: none;
@@ -255,8 +255,8 @@
             @include mixins.ellipsis;
             bottom: 0;
             width: 100%;
-            background: var.$default-text-color;
-            color: #fff;
+            background: var.$gray-80-color;
+            color: var.$white-color;
             font-size: 12px;
             line-height: 16px;
             text-align: center;
@@ -271,7 +271,7 @@
           font-size: 12px;
           line-height: 16px;
           padding: 4px 10px;
-          color: #fff;
+          color: var.$white-color;
           background: #161616B2;
           border-radius: 12px;
           width: auto;
@@ -290,7 +290,7 @@
         .swiper-slide {
           width: 10%;
           height: 100%;
-          background-color: #fff;
+          background-color: var.$white-color;
           background-size: cover;
           background-position: center;
           transition: all .3s;
@@ -304,7 +304,7 @@
               width: 100%;
               height: 100%;
               background: #0091784D;
-              border: 2px solid #009178;
+              border: 2px solid var.$primary-color;
             }
           }
         }

@@ -123,11 +123,11 @@ html .ui-button.ui-state-disabled:active {
   font-size: 12px;
 
   &.ui-datepicker-today {
-    background-color: var.$secondary-color-hover;
+    background-color: var.$tertiary-color;
   }
 
   &.ui-datepicker-current-day {
-    background-color: var.$secondary-color-selected;
+    background-color: var.$secondary-color;
   }
 
   &.ui-datepicker-week-end:first-child a {
@@ -1252,7 +1252,7 @@ button.swiper-pagination-bullet {
 }
 
 .viewer-toolbar>ul>li:hover {
-  background-color: var.$primary-color-hover;
+  background-color: var.$btn-hover-color;
 }
 
 .viewer-toolbar>ul>li:before {

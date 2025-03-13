@@ -7,7 +7,7 @@ header {
     @include mixins.flexbox(flex-start);
     height: 52px;
     padding: 0 17px 0 34px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var.$gray-20-color;
 
     h1 {
       a {
@@ -59,7 +59,7 @@ header {
         box-shadow: 0px 4px 8px 0px #16161633;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
-        background: #fff;
+        background: var.$white-color;
         z-index: 50;
 
         >li {
@@ -71,7 +71,7 @@ header {
             transition: all .3s;
 
             &:hover {
-              background: var.$default-background-color;
+              background: var.$gray-10-color;
               color: var.$primary-color;
               font-weight: 700;
             }
@@ -103,11 +103,11 @@ header {
         transition: all .3s;
 
         &:hover {
-          background-color: var.$secondary-color-hover;
+          background-color: var.$tertiary-color;
         }
 
         &:active {
-          background-color: var.$secondary-color-selected;
+          background-color: var.$secondary-color;
         }
       }
     }
@@ -135,7 +135,7 @@ header {
           font-size: 15px;
           line-height: 18px;
           font-weight: 600;
-          color: var.$secondary-color-selected;
+          color: var.$secondary-color;
           white-space: nowrap;
           cursor: pointer;
           flex-shrink: 0;
@@ -165,10 +165,10 @@ header {
           }
 
           &.on {
-            background: #fff;
+            background: var.$white-color;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
-            color: var.$default-text-color;
+            color: var.$gray-80-color;
 
             &:after {
               display: none;
@@ -192,7 +192,7 @@ header {
       button {
         font-size: 14px;
         line-height: 16px;
-        color: #fff;
+        color: var.$white-color;
         font-weight: 500;
 
         &.prev {
@@ -230,8 +230,8 @@ header {
     width: 250px;
     height: calc(100% - 98px);
     padding: 10px 16px;
-    background: var.$default-background-color;
-    border-right: 1px solid #ddd;
+    background: var.$gray-10-color;
+    border-right: 1px solid var.$gray-20-color;
     transform: translateX(calc(-100% + 20px));
     transition: all .3s;
     z-index: 50;
@@ -301,13 +301,13 @@ header {
             }
 
             &:hover {
-              background: #ddd;
+              background: var.$gray-20-color;
             }
           }
 
           &.on {
             .tit {
-              background: #fff;
+              background: var.$white-color;
               box-shadow: 0px 1px 1px 0px #00000033;
               color: var.$primary-color;
 
@@ -338,7 +338,7 @@ header {
       .sub {
         display: none;
         padding: 6px 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid var.$gray-20-color;
 
         li {
           margin-top: 2px;
@@ -347,7 +347,7 @@ header {
             display: block;
             padding: 9px 16px 9px 50px;
             border-radius: var.$global-border-radius;
-            color: #525252;
+            color: var.$gray-70-color;
             font-size: 15px;
             line-height: 18px;
 
@@ -357,7 +357,7 @@ header {
 
             &:focus {
               background: var.$primary-color;
-              color: #fff;
+              color: var.$white-color;
               font-weight: 700;
             }
           }

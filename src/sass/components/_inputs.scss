@@ -7,7 +7,7 @@
 
   .label {
     display: inline-flex;
-    border: 1px solid var.$default-color;
+    border: 1px solid var.$gray-30-color;
     border-right: 0;
     height: 40px;
     font-size: 15px;
@@ -18,7 +18,7 @@
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     flex-shrink: 0;
-    background: #fff;
+    background: var.$white-color;
 
     &+input[type='text'],
     &+input[type='password'],
@@ -36,15 +36,25 @@
     border-radius: var.$global-border-radius;
     width: 100%;
     transition: border-color, box-shadow .3s ease;
-    border: 1px solid var.$default-color;
+    border: 1px solid var.$gray-30-color;
     font-size: 14px;
     height: 40px;
     padding: 12px 16px;
-    background: #fff;
+    background: var.$white-color;
 
     &:focus:not(:is(.datepicker, .monthpicker)) {
       border-color: var.$primary-color;
       box-shadow: 0 0 0 1px var.$primary-color inset;
+    }
+
+    &:read-only {
+      background: var.$gray-10-color;
+      cursor: not-allowed;
+
+      &:focus {
+        border-color: var.$gray-30-color;
+        box-shadow: none;
+      }
     }
   }
 
@@ -143,11 +153,11 @@
       @include mixins.inline-flexbox(flex-end, center);
       border-top-right-radius: var.$global-border-radius;
       border-bottom-right-radius: var.$global-border-radius;
-      border: 1px solid var.$default-color;
+      border: 1px solid var.$gray-30-color;
       gap: 10px;
       padding: 0 16px;
       flex: 1;
-      background: #fff;
+      background: var.$white-color;
 
       input[type='text'] {
         border: 0;
@@ -168,8 +178,8 @@
   margin-bottom: 20px;
   padding: 14px 18px;
   gap: 20px;
-  border: 1px solid #ddd;
-  background: var.$default-background-color;
+  border: 1px solid var.$gray-20-color;
+  background: var.$gray-10-color;
   border-radius: 10px;
 
   .opt {
@@ -191,13 +201,13 @@
     min-width: 0;
     text-align: left;
     padding: 11px 42px 11px 16px;
-    border-radius: 8px;
+    border-radius: var.$global-border-radius;
     transition: border-color, box-shadow 0.3s ease;
-    border: 1px solid #c6c6c6;
+    border: 1px solid var.$gray-30-color;
     font-size: 14px;
     height: 40px;
-    background: #fff url(/static/img/icon/icon_dropdown_arrow.png) no-repeat calc(100% - 16px) center / 16px;
-    color: #a8a8a8;
+    background: var.$white-color url(/static/img/icon/icon_dropdown_arrow.png) no-repeat calc(100% - 16px) center / 16px;
+    color: var.$gray-40-color;
 
     &:focus {
       border-color: var.$primary-color;
@@ -209,7 +219,7 @@
     }
 
     &.selected {
-      color: var.$default-text-color;
+      color: var.$gray-80-color;
     }
 
     &.on+.option {
@@ -225,7 +235,7 @@
     top: 41px;
     width: 100%;
     max-height: 168px;
-    background: #fff;
+    background: var.$white-color;
     border-radius: var.$global-border-radius;
     padding: 4px;
     box-shadow: 0px 0px 10px 0px #16161633;
@@ -244,7 +254,7 @@
         line-height: 18px;
 
         &:hover {
-          background: var.$default-background-color
+          background: var.$gray-10-color
         }
       }
 
@@ -264,7 +274,7 @@
 
       &.on {
         .item {
-          background: var.$secondary-color-hover;
+          background: var.$tertiary-color;
           color: var.$primary-color;
           font-weight: 700;
         }
@@ -274,15 +284,29 @@
     &::-webkit-scrollbar {
       width: 8px;
       height: 8px;
-      background-color: #fff;
+      background-color: var.$white-color;
     }
 
     &::-webkit-scrollbar-thumb {
       width: 4px;
       height: 4px;
-      background: #a8a8a8;
+      background: var.$gray-40-color;
       border-radius: 18px;
-      border: 2px solid #fff;
+      border: 2px solid var.$white-color;
+    }
+  }
+
+  &.disabled {
+    .toggle {
+      background-color: var.$gray-10-color;
+      color: var.$gray-80-color;
+      cursor: not-allowed;
+
+      &:focus {
+        border-color: var.$gray-30-color;
+        box-shadow: none;
+      }
+
     }
   }
 }
@@ -318,8 +342,8 @@
         margin: 2px;
         width: 20px;
         height: 20px;
-        border: 1px solid #a8a8a8;
-        background: #fff;
+        border: 1px solid var.$gray-40-color;
+        background: var.$white-color;
         border-radius: 5px;
       }
     }
@@ -327,7 +351,7 @@
     :disabled {
       &+label {
         &:before {
-          background: var.$default-background-color;
+          background: var.$gray-10-color;
           cursor: not-allowed;
         }
       }

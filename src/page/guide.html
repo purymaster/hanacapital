@@ -189,7 +189,7 @@
               <h4 class="guide_sub_tit">Button Tag</h4>
               <div class="code">
                 <div data-btn-group>
-                  <button type="button" class="on">버튼</button>
+                  <button type="button">버튼</button>
                   <button type="button">버튼</button>
                   <button type="button" disabled>버튼(선택불가)</button>
                   <button type="button">버튼</button>
@@ -330,6 +330,17 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">비활성화</h4>
+              <div class="code">
+                <div data-input-group>
+                  <span class="label">구분</span>
+                  <input type="text" readonly>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h4 class="guide_sub_tit">레이블 없음</h4>
               <div class="code">
                 <div data-input-group>
@@ -442,6 +453,7 @@
             <div class="guide_group">
               <h3 id="dropdown" class="guide_tit">Dropdown</h3>
               <p>data-dropdown의 너비는 inline-style로 지정하여 사용</p>
+              <h4 class="guide_sub_tit">기본형</h4>
               <div class="code">
                 <div data-input-group class="dropdown">
                   <span class="label">구분</span>
@@ -468,6 +480,21 @@
                         <a href="https://naver.com" target="_blank" class="item">link</a>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">비활성화</h4>
+              <div class="code">
+                <div data-input-group class="dropdown">
+                  <span class="label">구분</span>
+                  <div data-dropdown class="disabled" style="width:240px;">
+                    <button type="button" class="toggle">
+                      <div class="txt">value1</div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -569,6 +596,12 @@
               <div class="code">
                 <div class="grid_wrap">
                   <div id="myGrid" class="grid_dummy">AG Grid</div>
+                  <!-- <div class="nodata">
+                    <div class="txt">
+                      <img src="/static/img/icon/icon_nodata.png" alt>
+                      <p>검색 결과가 없습니다.</p>
+                    </div>
+                  </div> -->
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>

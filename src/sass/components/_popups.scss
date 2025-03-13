@@ -24,7 +24,7 @@
         bottom: 0;
         width: calc(100% + 60px);
         height: 1px;
-        background: #ddd;
+        background: var.$gray-20-color;
       }
 
       .popup_tit {
@@ -63,7 +63,7 @@
           font-size: 18px;
           font-weight: 500;
           line-height: 20px;
-          color: #8d8d8d;
+          color: var.$gray-50-color;
 
           img {
             display: block;
