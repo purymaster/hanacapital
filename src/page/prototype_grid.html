@@ -92,6 +92,12 @@
                   </div>
                   <div id="pagination-div"></div>
                 </div>
+                <script>
+                  $('#pagination-div').twbsPagination({
+                    totalPages: 50,
+                    visiblePages: 10
+                  });
+                </script>
               </div>
         </div>
     </div>
@@ -420,10 +426,6 @@
 
       const myGridElement = document.querySelector('#myGrid');
       agGrid.createGrid(myGridElement, gridOptions);
-      $('#pagination-div').twbsPagination({
-        totalPages: 50,
-        visiblePages: 10
-      });
     </script>
   </body>
 
