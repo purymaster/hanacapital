@@ -1,0 +1,91 @@
+<%- include('_inc/head', {title:'로그인'}) %>
+
+  <body>
+    <div class="wrap" data-login>
+      <div class="login_box">
+        <form action="">
+          <div data-validation>
+            <div data-input-group class="clearable">
+              <input type="text" placeholder="아이디 입력">
+              <div class="input_ctr">
+                <button type="button" class="clear">입력 초기화</button>
+              </div>
+            </div>
+            <!-- <p class="msg">아이디를 입력해주세요.</p> -->
+          </div>
+          <div data-validation>
+            <div data-input-group class="password showable">
+              <input type="password" placeholder="비밀번호 입력">
+              <div class="input_ctr">
+                <button type="button" class="clear">입력 초기화</button>
+              </div>
+              <div class="pw_ctr">
+                <button type="button" class="pw">비밀번호 노출 변경</button>
+              </div>
+            </div>
+            <!-- <p class="msg">비밀번호를 입력해주세요.</p> -->
+          </div>
+          <div data-select-group>
+            <ul class="list checkbox">
+              <li>
+                <input type="checkbox" name="check" id="check1">
+                <label for="check1">아이디 저장</label>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" data-btn class="mx">로그인</button>
+          <div class="btn_wrap">
+            <button type="button" data-text-btn>비밀번호 초기화 안내</button>
+          </div>
+        </form>
+      </div>
+
+      <div data-modal id="modal1">
+        <div class="modal dialog">
+          <div class="modal_cont">
+            <img class="ico" src="/static/img/icon/icon_modal_alert.png" alt="">
+            <div class="txt">
+              최초 로그인 시<br>
+              비밀번호 변경 후 이용 가능합니다.
+            </div>
+          </div>
+          <div class="modal_footer">
+            <button type="button" data-btn class="m" onClick="closeModal('modal1')">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <div data-modal id="modal2">
+        <div class="modal dialog">
+          <div class="modal_cont">
+            <img class="ico" src="/static/img/icon/icon_modal_alert.png" alt="">
+            <div class="txt">
+              비밀번호를 초기화한 경우<br>
+              비밀번호 변경 후 이용 가능합니다.
+            </div>
+          </div>
+          <div class="modal_footer">
+            <button type="button" data-btn class="m" onClick="closeModal('modal2')">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <div data-modal id="modal3">
+        <div class="modal dialog">
+          <div class="modal_cont">
+            <img class="ico" src="/static/img/icon/icon_modal_alert.png" alt="">
+            <div class="txt">
+              비밀번호 유효기간 3개월이 초과되었습니다.<br>
+              비밀번호 변경 후 이용 가능합니다.
+            </div>
+          </div>
+          <div class="modal_footer">
+            <button type="button" data-btn class="m" onClick="closeModal('modal3')">확인</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
