@@ -76,8 +76,8 @@ src<br/>
  ┃ ┃ ┣ _mixins.scss<br/>
  ┃ ┃ ┗ _variables.scss<br/>
  ┃ ┣ layout<br/>
- ┃ ┃ ┣ _contents.scss<br/> - 페이지 내부 컴포넌트 스타일 정의
- ┃ ┃ ┣ _grid.scss<br/> - 페이지 wrapper 스타일 정의
+ ┃ ┃ ┣ _contents.scss - 페이지 내부 컴포넌트 스타일 정의<br/>
+ ┃ ┃ ┣ _grid.scss - 페이지 wrapper 스타일 정의<br/>
  ┃ ┃ ┣ _header.scss<br/>
  ┃ ┃ ┗ _login.scss<br/>
  ┃ ┗ ui.scss<br/>
