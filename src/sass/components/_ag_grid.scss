@@ -20,7 +20,10 @@
   right: -4px;
 }
 
-.ag-row-hover:before,
+.ag-row-hover:before {
+  background: #EEF0F2 !important;
+}
+
 .ag-row-selected:before {
   background: #d7ede6cc !important;
 }
