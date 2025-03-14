@@ -252,6 +252,15 @@
     window.closeModal = (modalId) => toggleModal(modalId, 'close');
   }
 
+  /* Textarea 포커스 제어 */
+  const handleTextareaFocus = () => {
+    const $textarea = $('[data-input-group] textarea');
+    $textarea.on('focus blur', function (event) {
+      const $textareaWrap = $(this).closest('.textarea_wrap');
+      $textareaWrap.toggleClass('focus', event.type === 'focus');
+    });
+  }
+
   $(() => {
     handleGnb();
     handleSnb();
@@ -261,6 +270,7 @@
     handleToast();
     handleLoading();
     handleModal();
+    handleTextareaFocus();
     $(".datepicker").datepicker({
       dateFormat: 'yy.mm.dd',
       showMonthAfterYear: true,

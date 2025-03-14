@@ -32,6 +32,7 @@
   input[type='text'],
   input[type='password'],
   input[type='email'] {
+
     border-radius: var.$global-border-radius;
     width: 100%;
     transition: border-color, box-shadow .3s ease;
@@ -55,6 +56,29 @@
         border-color: var.$gray-30-color;
         box-shadow: none;
       }
+    }
+  }
+
+  .textarea_wrap {
+    width: 100%;
+    border-radius: var.$global-border-radius;
+    transition: border-color, box-shadow .3s ease;
+    border: 1px solid var.$gray-30-color;
+    padding: 4px;
+
+    textarea {
+      @include mixins.scrollbar;
+      display: block;
+      resize: vertical;
+      width: 100%;
+      min-height: 88px;
+      padding: 8px 12px;
+      background: var.$white-color;
+    }
+
+    &.focus {
+      border-color: var.$primary-color;
+      box-shadow: 0 0 0 1px var.$primary-color inset;
     }
   }
 
@@ -89,6 +113,12 @@
     input[type='email'] {
       padding-right: 40px !important;
     }
+  }
+
+  .unit {
+    margin-left: 4px;
+    font-size: 15px;
+    font-weight: 700;
   }
 
   //small
@@ -240,6 +270,7 @@
   }
 
   .option {
+    @include mixins.scrollbar;
     overflow-y: auto;
     position: absolute;
     left: 0;
@@ -290,20 +321,6 @@
           font-weight: 700;
         }
       }
-    }
-
-    &::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-      background-color: var.$white-color;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      width: 4px;
-      height: 4px;
-      background: var.$gray-40-color;
-      border-radius: 18px;
-      border: 2px solid var.$white-color;
     }
 
     &.up {
@@ -450,6 +467,7 @@
 
 //밸리데이션
 [data-validation] {
+
   .msg {
     margin-top: 4px;
     font-size: 12px;
