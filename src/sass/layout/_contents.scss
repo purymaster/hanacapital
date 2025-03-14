@@ -1,5 +1,6 @@
 @use "../helpers/_mixins" as mixins;
 @use "../helpers/_variables" as var;
+@use 'sass:map';
 
 .grid_dummy {
   @include mixins.flexbox;
@@ -19,25 +20,26 @@
 }
 
 [data-pagination] {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   margin-top: 8px;
 
-  &:after {
-    content: "";
-  }
+  [data-input-group] {
+    position: absolute;
+    left: 0;
 
-  [data-dropdown] {
-    .toggle {
-      height: 36px;
-      border-radius: 6px;
-      padding: 0 24px 0 10px;
-      background-position: calc(100% - 6px) center;
+    [data-dropdown] {
+      .toggle {
+        height: 36px;
+        border-radius: 6px;
+        padding: 0 24px 0 10px;
+        background-position: calc(100% - 6px) center;
+      }
     }
   }
 
   .pagination {
     @include mixins.flexbox;
+    padding-top: 6px;
 
     .page-item {
       @include mixins.inline-flexbox;
@@ -47,11 +49,22 @@
         line-height: 24px;
         font-size: 14px;
         text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px;
       }
 
       &:is(.first, .prev, .next, .last) {
         .page-link {
           font-size: 0;
+          width: 16px;
+          height: 16px;
+        }
+
+        &.disabled {
+          .page-link {
+            filter: brightness(0) saturate(100%) invert(79%) sepia(0%) saturate(1117%) hue-rotate(169deg) brightness(84%) contrast(101%);
+          }
         }
       }
 
@@ -63,11 +76,30 @@
         }
       }
 
-      &.first {
-        .page-link {}
+      $page-item-icons: (
+        first: (margin-right: 4px, background-image: url(/static/img/icon/icon_pagination_first.png)),
+        prev: (margin-right: 8px, background-image: url(/static/img/icon/icon_pagination_prev.png)),
+        next: (margin-left: 8px, background-image: url(/static/img/icon/icon_pagination_next.png)),
+        last: (margin-left: 4px, background-image: url(/static/img/icon/icon_pagination_last.png))
+      );
+
+    @each $name, $styles in $page-item-icons {
+      &.#{$name} {
+        @if map.has-key($styles, margin-right) {
+          margin-right: map.get($styles, margin-right)
+        }
+
+        @if map.has-key($styles, margin-left) {
+          margin-left: map.get($styles, margin-left)
+        }
+
+        .page-link {
+          background-image: map.get($styles, background-image);
+        }
       }
     }
   }
+}
 }
 
 .error_page {
