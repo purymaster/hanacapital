@@ -120,6 +120,7 @@
               <li><a href="#dropdown">Dropdown</a></li>
               <li><a href="#validation">Validation</a></li>
               <li><a href="#searchForm">Search Form</a></li>
+              <li><a href="#table">Table</a></li>
               <li><a href="#toast">Toast Message</a></li>
               <li><a href="#loading">Loading</a></li>
               <li><a href="#dialog">Dialog Modal Popup</a></li>
@@ -166,21 +167,6 @@
                 <h4 class="guide_sub_tit">Gray(UI shell)</h4>
                 <ul class="palette">
                   <li>
-                    <a href="#none" title="$table-hover-color, #eef0f2" style="background:#eef0f2"></a>
-                  </li>
-                  <li>
-                    <a href="#none" title="$table-select-color, #d7ede6cc" style="background:#d7ede6cc"></a>
-                  </li>
-                  <li>
-                    <a href="#none" title="$table-title-color, #ebf3ee" style="background:#ebf3ee"></a>
-                  </li>
-                  <li>
-                    <a href="#none" title="$table-input-disable-color, #f7f7f7" style="background:#f7f7f7"></a>
-                  </li>
-                </ul>
-                <h4 class="guide_sub_tit">Table</h4>
-                <ul class="palette">
-                  <li>
                     <a href="#none" title="$gray-80-color, #161616" style="background:#161616"></a>
                   </li>
                   <li>
@@ -206,6 +192,21 @@
                   </li>
                   <li>
                     <a href="#none" title="$white-color, #fff" style="background:#fff"></a>
+                  </li>
+                </ul>
+                <h4 class="guide_sub_tit">Table</h4>
+                <ul class="palette">
+                  <li>
+                    <a href="#none" title="$table-hover-color, #eef0f2" style="background:#eef0f2"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$table-select-color, #d7ede6cc" style="background:#d7ede6cc"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$table-title-color, #ebf3ee" style="background:#ebf3ee"></a>
+                  </li>
+                  <li>
+                    <a href="#none" title="$table-input-disable-color, #f7f7f7" style="background:#f7f7f7"></a>
                   </li>
                 </ul>
                 <h4 class="guide_sub_tit">Error</h4>
@@ -467,6 +468,17 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">단위</h4>
+              <div class="code">
+                <div data-input-group>
+                  <input type="text">
+                  <span class="unit">%</span>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h4 class="guide_sub_tit">Small</h4>
               <div class="code">
                 <div data-input-group class="small">
@@ -570,6 +582,18 @@
                   <span class="label">월 검색</span>
                   <div class="date_wrap">
                     <input type="text" class="monthpicker" autocomplete="off">
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">Textarea</h4>
+              <div class="code">
+                <div data-input-group>
+                  <div class="textarea_wrap">
+                    <textarea name="" id=""></textarea>
                   </div>
                 </div>
               </div>
@@ -763,10 +787,120 @@
             </div>
 
             <div class="guide_group">
-              <h3 id="table" class="guide_tit">Table(조회)</h3>
+              <h3 id="table" class="guide_tit">Table</h3>
+              <p>컬럼의 너비는 col 태그에 inline-style로 정의</p>
+              <h4 class="guide_sub_tit">조회</h4>
               <div class="code">
-                <div data-detail-table>
+                <div data-table>
+                  <table>
+                    <colgroup>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">항목</th>
+                        <td>내용</td>
+                        <th scope="row">항목</th>
+                        <td>내용</td>
+                        <th scope="row">항목</th>
+                        <td>내용</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">항목</th>
+                        <td colspan="5">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad facilis rem saepe vel
+                          reiciendis, quas adipisci, id asperiores harum veritatis vero minima molestias repellat. Sit
+                          consequuntur vel odit natus.<br>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta enim, amet optio dignissimos
+                          mollitia aliquam veniam voluptatum corrupti beatae dolorem eaque ipsa aut blanditiis nesciunt
+                          unde sapiente quo ratione aliquid?
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
 
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">입력</h4>
+              <div class="code">
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:106px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">입력</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">선택</th>
+                        <td>
+                          <div data-select-group>
+                            <ul class="list radio">
+                              <li>
+                                <input type="radio" name="radioValue" id="radioValue1">
+                                <label for="radioValue1">Value1</label>
+                              </li>
+                              <li>
+                                <input type="radio" name="radioValue" id="radioValue2">
+                                <label for="radioValue2">Value2</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">텍스트에리어</th>
+                        <td>
+                          <div data-input-group>
+                            <div class="textarea_wrap">
+                              <textarea name="" id=""></textarea>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사진첨부</th>
+                        <td>
+                          <div data-photo-upload>
+                            <div class="guide">
+                              <label for="photoUpload">파일찾기</label>
+                              <input id="photoUpload" type="file" accept=".jpg, .jpeg, .pdf" multiple>
+                              <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
+                            </div>
+                            <ul class="preview">
+                              <li>
+                                <img src="/static/img/dummy/dummy_slide_01.png" alt="">
+                                <button type="button" class="del">삭제</button>
+                              </li>
+                              <li>
+                                <img src="/static/img/dummy/dummy_slide_02.png" alt="">
+                                <button type="button" class="del">삭제</button>
+                              </li>
+                              <li>
+                                <img src="/static/img/dummy/dummy_slide_03.png" alt="">
+                                <button type="button" class="del">삭제</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -837,6 +971,39 @@
               <div class="code">
                 <div class="grid_wrap">
                   <div id="myGrid" class="grid_dummy">AG Grid</div>
+                  <div data-pagination>
+                    <div data-input-group class="dropdown">
+                      <div data-dropdown>
+                        <button type="button" class="toggle">
+                          <div class="txt">20개</div>
+                        </button>
+                        <ul class="option up">
+                          <li>
+                            <button type="button" class="item" data-value="10">10개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="20">20개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="30">30개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="40">40개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="50">50개</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="pagination-div"></div>
+                  </div>
+                  <script>
+                    $('#pagination-div').twbsPagination({
+                      totalPages: 50,
+                      visiblePages: 10
+                    });
+                  </script>
                   <!-- <div class="nodata">
                     <div class="txt">
                       <img src="/static/img/icon/icon_nodata.png" alt>

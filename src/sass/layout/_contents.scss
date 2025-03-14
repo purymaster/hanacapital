@@ -2,6 +2,7 @@
 @use "../helpers/_variables" as var;
 @use 'sass:map';
 
+/* AG-Grid */
 .grid_dummy {
   @include mixins.flexbox;
   width: 100%;
@@ -19,6 +20,40 @@
   height: calc(100% - 44px);
 }
 
+/* 에러페이지 */
+.error_page {
+  @include mixins.column-flexbox;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  img {
+    display: block;
+    width: 140px;
+    height: 110px;
+    margin-bottom: 24px;
+  }
+
+  .error_tit {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+
+  .txt_wrap {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+
+      &+p {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+/* 페이지네이션 */
 [data-pagination] {
   position: relative;
   margin-top: 8px;
@@ -102,38 +137,7 @@
 }
 }
 
-.error_page {
-  @include mixins.column-flexbox;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-
-  img {
-    display: block;
-    width: 140px;
-    height: 110px;
-    margin-bottom: 24px;
-  }
-
-  .error_tit {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 18px;
-    font-weight: 700;
-  }
-
-  .txt_wrap {
-    p {
-      font-size: 16px;
-      line-height: 24px;
-
-      &+p {
-        margin-top: 8px;
-      }
-    }
-  }
-}
-
+/* 로딩 */
 [data-loading] {
   @include mixins.flexbox;
   position: fixed;
@@ -199,6 +203,7 @@
   }
 }
 
+/* 그리드 상단 통계 */
 [data-status] {
   @include mixins.flexbox(space-between);
   margin-bottom: 12px;
@@ -211,6 +216,135 @@
 
     .num {
       color: var.$primary-color;
+    }
+  }
+}
+
+/* 테이블 */
+[data-table] {
+  table {
+    border-top: 1px solid #000;
+
+    :is(th, td) {
+      font-size: 14px;
+      line-height: 16px;
+      height: 46px;
+      padding: 15px 14px;
+      border-bottom: 1px solid var.$gray-20-color;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var.$table-title-color;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+
+  //입력폼
+  &.form {
+    table {
+      :is(th, td) {
+        vertical-align: middle;
+        height: 72px;
+      }
+
+      th {
+        text-align: center;
+      }
+
+      td {
+        padding: 16px 30px;
+      }
+    }
+  }
+}
+
+/* 사진첨부 */
+[data-photo-upload] {
+  .guide {
+    @include mixins.flexbox(flex-start);
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    gap: 10px;
+    color: var.$gray-50-color;
+
+    label {
+      @include mixins.inline-flexbox;
+      gap: 4px;
+      border: 1px solid var.$primary-color;
+      background: var.$primary-color;
+      color: var.$white-color;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+      padding: 8px 18px;
+      border-radius: var.$global-border-radius;
+    }
+
+    input[type="file"] {
+      @include mixins.blind;
+    }
+  }
+
+  .preview {
+    @include mixins.flexbox(flex-start);
+    @include mixins.scrollbar();
+    margin-top: 10px;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    li {
+      position: relative;
+      width: 180px;
+      height: 120px;
+      flex-shrink: 0;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 4px solid var.$primary-color;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+      }
+
+      &:hover {
+
+        &:after,
+        .del {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .del {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        background: url(/static/img/icon/icon_preview_del.png) no-repeat center / 20px;
+        font-size: 0;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+      }
+
     }
   }
 }

@@ -1,3 +1,4 @@
+@use "../helpers/_variables" as var;
 @use 'sass:map';
 @use 'sass:list';
 @use 'sass:string';
@@ -117,4 +118,21 @@
 	flex-direction: column;
 	justify-content: $jc;
 	align-items: $ai;
+}
+
+// Minor Scrollbar
+@mixin scrollbar() {
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+		background-color: var.$white-color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		width: 4px;
+		height: 4px;
+		background: var.$gray-40-color;
+		border-radius: 18px;
+		border: 2px solid var.$white-color;
+	}
 }

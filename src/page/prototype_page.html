@@ -6,6 +6,77 @@
         <div class="content">
           <% const page_title={ title: "제목" , m1: "1뎁스" , m2: "2뎁스" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
+              <div data-table class="form">
+                <table>
+                  <colgroup>
+                    <col style="width:106px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">입력</th>
+                      <td>
+                        <div data-input-group>
+                          <input type="text">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">선택</th>
+                      <td>
+                        <div data-select-group>
+                          <ul class="list radio">
+                            <li>
+                              <input type="radio" name="radioValue" id="radioValue1">
+                              <label for="radioValue1">Value1</label>
+                            </li>
+                            <li>
+                              <input type="radio" name="radioValue" id="radioValue2">
+                              <label for="radioValue2">Value2</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">텍스트에리어</th>
+                      <td>
+                        <div data-input-group>
+                          <div class="textarea_wrap">
+                            <textarea name="" id=""></textarea>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사진첨부</th>
+                      <td>
+                        <div data-photo-upload>
+                          <div class="guide">
+                            <label for="photoUpload">파일찾기</label>
+                            <input id="photoUpload" type="file" accept=".jpg, .jpeg, .pdf" multiple>
+                            <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
+                          </div>
+                          <ul class="preview">
+                            <li>
+                              <img src="/static/img/dummy/dummy_slide_01.png" alt="">
+                              <button type="button" class="del">삭제</button>
+                            </li>
+                            <li>
+                              <img src="/static/img/dummy/dummy_slide_02.png" alt="">
+                              <button type="button" class="del">삭제</button>
+                            </li>
+                            <li>
+                              <img src="/static/img/dummy/dummy_slide_03.png" alt="">
+                              <button type="button" class="del">삭제</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
         </div>
     </div>
   </body>
