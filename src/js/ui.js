@@ -254,9 +254,17 @@
 
   /* Textarea 포커스 제어 */
   const handleTextareaFocus = () => {
-    const $textarea = $('[data-input-group] textarea');
-    $textarea.on('focus blur', function (event) {
+    const $textareas = $('[data-input-group] textarea');
+    $textareas.each(function () {
       const $textareaWrap = $(this).closest('.textarea_wrap');
+      if ($(this).is('[readonly], [disabled]')) {
+        $textareaWrap.addClass('disabled');
+      }
+    });
+
+    $textareas.on('focus blur', function (event) {
+      const $textareaWrap = $(this).closest('.textarea_wrap');
+      if ($(this).is('[readonly], [disabled]')) return;
       $textareaWrap.toggleClass('focus', event.type === 'focus');
     });
   }
