@@ -113,6 +113,7 @@
           <div class="guide_map">
             <ul>
               <li><a href="#color">Color</a></li>
+              <li><a href="#list">List</a></li>
               <li><a href="#button">Button</a></li>
               <li><a href="#buttonGroup">Button Group</a></li>
               <li><a href="#radio">Radio Button</a></li>
@@ -220,6 +221,20 @@
             </div>
 
             <div class="guide_group">
+              <h3 id="list" class="guide_tit">List</h3>
+              <h4 class="guide_sub_tit">Circle</h4>
+              <div class="code">
+                <ul class="type1" data-list>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, sequi totam ullam tempora
+                    necessitatibus ea iure accusantium, mollitia aperiam sint adipisci modi impedit eaque cumque! Harum
+                    repellat odit corrupti nostrum.</li>
+                </ul>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h3 id="button" class="guide_tit">Button</h3>
               <h4 class="guide_sub_tit">기본형(높이 48px)</h4>
               <div class="code">
@@ -307,7 +322,7 @@
               <h4 class="guide_sub_tit">Button Tag</h4>
               <div class="code">
                 <div data-btn-group>
-                  <button type="button">버튼</button>
+                  <button type="button" class="on">버튼</button>
                   <button type="button">버튼</button>
                   <button type="button" disabled>버튼(선택불가)</button>
                   <button type="button">버튼</button>
@@ -462,7 +477,7 @@
               <h4 class="guide_sub_tit">레이블 없음</h4>
               <div class="code">
                 <div data-input-group>
-                  <input type="text">
+                  <input type="text" placeholder="입력해주세요.">
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -474,16 +489,6 @@
                 <div data-input-group>
                   <input type="text">
                   <span class="unit">%</span>
-                </div>
-              </div>
-              <pre><code class="language-markup"></code></pre>
-            </div>
-
-            <div class="guide_group">
-              <h4 class="guide_sub_tit">Small</h4>
-              <div class="code">
-                <div data-input-group class="small">
-                  <input type="text">
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -679,31 +684,6 @@
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">small</h4>
-              <div class="code">
-                <div data-input-group class="dropdown">
-                  <div data-dropdown class="small" style="width:240px;">
-                    <button type="button" class="toggle">
-                      <div class="txt">전체</div>
-                    </button>
-                    <ul class="option">
-                      <li>
-                        <button type="button" class="item" data-value="value1">value1</button>
-                      </li>
-                      <li>
-                        <button type="button" class="item" data-value="value2">value2</button>
-                      </li>
-                      <li>
-                        <button type="button" class="item" data-value="value3">value3</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <pre><code class="language-markup"></code></pre>
-            </div>
-
-            <div class="guide_group">
               <h3 id="validation" class="guide_tit">Validation</h3>
               <h4 class="guide_sub_tit">기본형</h4>
               <div class="code">
@@ -804,7 +784,10 @@
                     </colgroup>
                     <tbody>
                       <tr>
-                        <th scope="row">항목</th>
+                        <th scope="row">
+                          <span class="essential">필수입력</span>
+                          항목
+                        </th>
                         <td>내용</td>
                         <th scope="row">항목</th>
                         <td>내용</td>
@@ -879,7 +862,7 @@
                         <td>
                           <div data-photo-upload>
                             <div class="guide">
-                              <label for="photoUpload">파일찾기</label>
+                              <label for="photoUpload" data-btn class="s secondary">파일찾기</label>
                               <input id="photoUpload" type="file" accept=".jpg, .jpeg, .pdf" multiple>
                               <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
                             </div>
@@ -939,6 +922,7 @@
                       </div>
                     </div>
                     <div class="modal_footer">
+                      <button type="button" data-btn class="m secondary">취소</button>
                       <button type="button" data-btn class="m" onClick="closeModal('modal1')">확인</button>
                     </div>
                   </div>

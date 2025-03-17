@@ -1,0 +1,242 @@
+<%- include('_inc/head', {title:'입고정보등록'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="on">
+          <div class="modal w1200">
+            <div class="modal_header">
+              <div class="modal_tit">
+                입고정보 등록
+                <!-- 입고정보 수정 -->
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div class="cont_tit">기본정보</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">출고구분</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="대리점출고" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">제조사</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="현대" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">차종</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="그랜저" readonly>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">외장색상</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="유기 브론즈 메탈릭(NGM)" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">내장색상</th>
+                        <td colspan="3">
+                          <div data-input-group style="width:200px;">
+                            <input type="text" value="블랙 모노톤" readonly>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">옵션</th>
+                        <td colspan="5">
+                          <div data-input-group style="width:580px;">
+                            <div class="textarea_wrap">
+                              <textarea name="" id=""
+                                readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odit totam eius. Eligendi, molestiae harum, minima possimus velit ad quia suscipit illum facilis labore eaque esse modi natus nam eos?</textarea>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div class="cont_tit">인도정보</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">고객명</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="김하나" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">AG회사</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="하나AG" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">담당AG</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="김기영" readonly>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">AG연락처</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="010-0000-0000" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">취급지점</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="카렌탈사업팀" readonly>
+                          </div>
+                        </td>
+                        <th scope="row">담당자</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" value="김수현" readonly>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div class="cont_tit">입고정보</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">센터입고/인수거부</th>
+                        <td>
+                          <div data-select-group>
+                            <ul class="list radio">
+                              <li>
+                                <input type="radio" name="radio" id="radio1">
+                                <label for="radio1">센터입고</label>
+                              </li>
+                              <li>
+                                <input type="radio" name="radio" id="radio2">
+                                <label for="radio2">인수거부</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <th scope="row">
+                          <span class="essential">필수입력</span>
+                          차대번호
+                        </th>
+                        <td colspan="3">
+                          <div data-input-group>
+                            <input type="text" placeholder="입력해주세요.">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="essential">필수입력</span>
+                          일반 차키 수(EA)
+                        </th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" placeholder="입력해주세요.">
+                          </div>
+                        </td>
+                        <th scope="row">
+                          <span class="essential">필수입력</span>
+                          보조 차키 수(EA)
+                        </th>
+                        <td colspan="3">
+                          <div data-input-group>
+                            <input type="text" placeholder="입력해주세요.">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" rowspan="2">
+                          <span class="essential">필수입력</span>
+                          인수거부사유
+                        </th>
+                        <td colspan="5">
+                          <div data-input-group class="dropdown">
+                            <div data-dropdown style="width:200px;">
+                              <button type="button" class="toggle">
+                                <div class="txt">선택하세요.</div>
+                              </button>
+                              <ul class="option">
+                                <li>
+                                  <button type="button" class="item" data-value="value1">단순변심</button>
+                                </li>
+                                <li>
+                                  <button type="button" class="item" data-value="value2">차량파손</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">
+                          <div data-input-group style="width:580px;">
+                            <div class="textarea_wrap">
+                              <textarea name="" id=""></textarea>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <button type="button" data-btn>
+                  입고정보 등록
+                  <!-- 입고정보 수정 완료 -->
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
