@@ -53,6 +53,31 @@
   }
 }
 
+/* 목록 */
+[data-list] {
+  margin-top: 12px;
+  color: var.$gray-60-color;
+
+  li {
+    position: relative;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 14px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      margin-top: -2px;
+      border-radius: 50%;
+      background: var.$gray-60-color;
+    }
+  }
+}
+
 /* 페이지네이션 */
 [data-pagination] {
   position: relative;
@@ -67,7 +92,11 @@
         height: 36px;
         border-radius: 6px;
         padding: 0 24px 0 10px;
-        background-position: calc(100% - 6px) center;
+        color: var.$gray-80-color;
+
+        &:after {
+          right: 8px;
+        }
       }
     }
   }
@@ -239,6 +268,15 @@
       background: var.$table-title-color;
       font-weight: 700;
       font-size: 15px;
+
+      .essential {
+        display: inline-block;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        background: url(/static/img/icon/icon_asterisk.png) no-repeat center / 6px;
+        vertical-align: top;
+      }
     }
   }
 
@@ -252,10 +290,14 @@
 
       th {
         text-align: center;
+
+        .essential {
+          margin-top: 8px;
+        }
       }
 
       td {
-        padding: 16px 30px;
+        padding: 16px 25px;
       }
     }
   }
@@ -271,19 +313,6 @@
     gap: 10px;
     color: var.$gray-50-color;
 
-    label {
-      @include mixins.inline-flexbox;
-      gap: 4px;
-      border: 1px solid var.$primary-color;
-      background: var.$primary-color;
-      color: var.$white-color;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 18px;
-      padding: 8px 18px;
-      border-radius: var.$global-border-radius;
-    }
-
     input[type="file"] {
       @include mixins.blind;
     }
@@ -291,7 +320,6 @@
 
   .preview {
     @include mixins.flexbox(flex-start);
-    @include mixins.scrollbar();
     margin-top: 10px;
     gap: 6px;
     overflow-x: auto;

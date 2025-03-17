@@ -54,6 +54,10 @@
       @include mixins.column-flexbox(flex-start, normal);
       flex: 1;
 
+      [data-search-group] {
+        width: auto;
+      }
+
       .grid_wrap {
 
         #myGrid {
