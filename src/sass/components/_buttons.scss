@@ -62,11 +62,13 @@
   }
 
   &.m {
-    padding: 10px 22px;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 11px 20px;
   }
 
   &.s {
-    padding: 8px 18px;
+    padding: 8px 14px;
   }
 
   &.xs {
@@ -120,15 +122,15 @@
       border: 0;
     }
 
-    &:focus {
-      font-weight: 600;
-      background: var.$primary-color;
-      color: var.$white-color;
-    }
-
     &:disabled {
       color: var.$secondary-color;
       cursor: not-allowed;
+    }
+
+    &.on {
+      font-weight: 600;
+      background: var.$primary-color;
+      color: var.$white-color;
     }
   }
 

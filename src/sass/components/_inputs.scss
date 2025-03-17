@@ -74,11 +74,21 @@
       min-height: 88px;
       padding: 8px 12px;
       background: var.$white-color;
+
+      &:read-only,
+      &:disabled {
+        background: var.$gray-10-color;
+        cursor: not-allowed;
+      }
     }
 
     &.focus {
       border-color: var.$primary-color;
       box-shadow: 0 0 0 1px var.$primary-color inset;
+    }
+
+    &.disabled {
+      background: var.$gray-10-color;
     }
   }
 
@@ -121,15 +131,8 @@
     font-weight: 700;
   }
 
-  //small
-  &.small {
-
-    input[type='text'],
-    input[type='password'],
-    input[type='email'] {
-      height: 32px;
-      padding: 0 10px;
-    }
+  &.full {
+    width: 100%;
   }
 
   //비밀번호
@@ -216,6 +219,7 @@
 [data-search-group] {
   @include mixins.inline-flexbox(space-between, flex-start);
   align-self: flex-start;
+  width: 100%;
   margin-bottom: 20px;
   padding: 14px 18px;
   gap: 20px;
@@ -247,8 +251,19 @@
     border: 1px solid var.$gray-30-color;
     font-size: 14px;
     height: 40px;
-    background: var.$white-color url(/static/img/icon/icon_dropdown_arrow.png) no-repeat calc(100% - 16px) center / 16px;
+    background: var.$white-color;
     color: var.$gray-40-color;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      background: url(/static/img/icon/icon_dropdown_arrow.png) no-repeat center / 16px;
+    }
 
     &:focus {
       border-color: var.$primary-color;
@@ -263,9 +278,16 @@
       color: var.$gray-80-color;
     }
 
-    &.on+.option {
-      opacity: 1;
-      visibility: visible;
+    &.on {
+
+      &+.option {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:after {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -340,20 +362,13 @@
         box-shadow: none;
       }
 
+      &:after {
+        filter: brightness(0) saturate(100%) invert(64%) sepia(11%) saturate(0%) hue-rotate(174deg) brightness(106%) contrast(80%);
+      }
+
     }
   }
 
-  &.small {
-    .toggle {
-      padding: 0 36px 0 10px;
-      height: 32px;
-      background-position: calc(100% - 8px) center;
-    }
-
-    .option {
-      top: 33px;
-    }
-  }
 }
 
 //라디오버튼, 체크박스
@@ -365,7 +380,7 @@
 
   .list {
     display: flex;
-    gap: 34px;
+    gap: 37px;
 
     >li {
       position: relative;
