@@ -4,7 +4,7 @@
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content">
-          <% const page_title={ title: "제목" , m1: "1뎁스" , m2: "2뎁스" , isClear: true }; %>
+          <% const page_title={ title: "제목" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
               <div data-table class="form">
                 <table>
@@ -53,7 +53,7 @@
                       <td>
                         <div data-photo-upload>
                           <div class="guide">
-                            <label for="photoUpload">파일찾기</label>
+                            <label for="photoUpload" data-btn class="s secondary">파일찾기</label>
                             <input id="photoUpload" type="file" accept=".jpg, .jpeg, .pdf" multiple>
                             <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
                           </div>

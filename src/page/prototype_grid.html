@@ -4,7 +4,7 @@
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content grid">
-          <% const page_title={ title: "제목" , m1: "1뎁스" , m2: "2뎁스" , isClear: true }; %>
+          <% const page_title={ title: "제목" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
               <div data-search-group>
                 <div class="opt">
@@ -56,7 +56,7 @@
                   총 <span class="num">999</span>건
                 </div>
                 <div data-btn-group>
-                  <button type="button">진행상태 등록</button>
+                  <button type="button" class="on">진행상태 등록</button>
                   <button type="button">2차탁송배정</button>
                   <button type="button">SMS발송</button>
                   <button type="button">차량이미지 등록</button>
@@ -110,7 +110,7 @@
           </button>
         `,
         textLink: `
-          <a href="https://naver.com" target="_blank" data-btn class="xs">
+          <a href="https://naver.com" target="_blank" data-text-btn>
             링크
           </a>
         `,
