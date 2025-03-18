@@ -46,7 +46,7 @@
     @include mixins.column-flexbox(center);
     background: var.$white-color;
     max-height: 100vh;
-    padding: 40px 30px;
+    padding: 40px 30px 34px;
     width: 1000px;
     border-radius: 20px;
 
@@ -113,10 +113,22 @@
         font-size: 18px;
         line-height: 20px;
         margin-bottom: 12px;
+
+        &.status {
+          justify-content: space-between;
+
+          .total {
+            font-weight: 600;
+
+            strong {
+              color: var.$primary-color;
+            }
+          }
+        }
       }
 
       .btn_wrap {
-        margin-top: 30px;
+        margin-top: 34px;
         text-align: center;
       }
 
@@ -124,7 +136,6 @@
 
         #myGrid {
           height: 100%;
-          max-height: 350px;
         }
       }
     }
@@ -450,6 +461,19 @@
     .textarea_wrap {
       textarea {
         min-height: 56px;
+      }
+    }
+  }
+
+  [data-form-group] {
+    column-gap: 40px;
+
+    .box {
+      flex: none;
+      gap: 24px;
+
+      .label {
+        min-width: 0;
       }
     }
   }

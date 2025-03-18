@@ -19,9 +19,28 @@ $scrollbar-width: 18px; // 스크롤바 너비
       padding-left: 30px;
     }
 
+    // 검색입력폼과 그리드만 있는 페이지
     &.grid {
       display: flex;
       flex-direction: column;
+    }
+
+    // 상세 및 입력 페이지
+    &.detail {
+
+      .cont_wrap,
+      [data-action-header] {
+        margin-top: 36px;
+      }
+
+      .cont_wrap {
+        .cont_tit {
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+      }
     }
   }
 

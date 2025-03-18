@@ -4,6 +4,7 @@
   @include mixins.flexbox(space-between);
   gap: 30px;
   margin-bottom: 20px;
+  height: 36px;
 
   .title {
     @include mixins.flexbox(flex-start);
