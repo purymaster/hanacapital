@@ -468,6 +468,7 @@
   hr {
     margin: 8px 0;
     flex-basis: 100%;
+    border: 0;
     border-top: 1px solid var.$gray-20-color;
   }
 
@@ -507,6 +508,23 @@
 
     &.full {
       flex: 0 1 100%;
+    }
+  }
+
+  &.d3 {
+    width: calc(75% - 18px);
+
+    .box {
+      flex: 0 1 calc(33.33% - 44px);
+
+      &.x2 {
+        flex: 0 1 calc(66.66% - 22px);
+      }
+
+      &.x3,
+      &.full {
+        flex: 0 1 100%;
+      }
     }
   }
 
