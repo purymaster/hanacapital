@@ -1,0 +1,76 @@
+<%- include('_inc/head', {title:'배송기사 배정 정보입력'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="on">
+          <div class="modal">
+            <div class="modal_header">
+              <div class="modal_tit">
+                진행상태 등록
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div class="cont_tit status">
+                  대상 차량 목록
+                  <div class="total">
+                    총 <strong>6</strong>건
+                  </div>
+                </div>
+                <div class="grid_wrap" style="height:352px;">
+                  <div id="myGrid" class="grid_dummy">AG Grid</div>
+                  <!-- <div class="nodata">
+                    <div class="txt">
+                      <img src="/static/img/icon/icon_nodata.png" alt>
+                      <p>검색 결과가 없습니다.</p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div data-form-group>
+                  <div class="box">
+                    <div class="label">
+                      <span class="essential">필수입력</span>
+                      탁송기사 이름
+                    </div>
+                    <div data-input-group>
+                      <input type="text" style="width:200px;" placeholder="이름을 입력하세요.">
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="label">
+                      <span class="essential">필수입력</span>
+                      탁송기사 휴대폰번호
+                    </div>
+                    <div data-input-group class="dropdown full">
+                      <div data-dropdown style="width:200px;">
+                        <div data-input-group>
+                          <input type="text" style="width:200px;" placeholder="숫자만 입력하세요.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <ul class="type1" data-list>
+                  <li>입력한 휴대폰번호가 정확한지 확인하세요.</li>
+                  <li>배정 완료 후, 임시 ID/PW 발급이 가능합니다.</li>
+                  <li>진행상태 '2차탁송출발' 선택 시, 도착예정시간을 선택할 수 있습니다.</li>
+                </ul>
+              </div>
+              <div class="btn_wrap">
+                <button type="button" data-btn>
+                  배정 완료
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
