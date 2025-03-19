@@ -8,7 +8,7 @@
             <%- include('_inc/page_title.ejs', page_title) %>
               <div data-search-group>
                 <div class="opt">
-                  <div data-input-group class="calendar">
+                  <div data-input-group class="calendar" style="width:340px;">
                     <span class="label">발주일</span>
                     <div class="date_wrap">
                       <input type="text" class="datepicker" placeholder="2025.01.01">
@@ -55,7 +55,9 @@
                 <div class="total">
                   총 <span class="num">999</span>건
                 </div>
-                <button type="button" data-btn class="m">엑셀다운로드</button>
+                <div class="btn">
+                  <button type="button" data-btn class="s">엑셀다운로드</button>
+                </div>
               </div>
               <div class="grid_wrap">
                 <div id="myGrid" class="grid_dummy">AG Grid</div>
