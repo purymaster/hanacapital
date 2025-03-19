@@ -94,6 +94,14 @@
   }
 }
 
+[data-grid-btn] {
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  vertical-align: middle;
+  vertical-align: text-bottom;
+}
+
 [data-text-btn] {
   font-size: 14px;
   line-height: 16px;

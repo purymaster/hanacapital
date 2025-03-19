@@ -27,6 +27,7 @@ $scrollbar-width: 18px; // 스크롤바 너비
 
     // 상세 및 입력 페이지
     &.detail {
+      padding-bottom: 80px;
 
       .cont_wrap,
       [data-action-header] {
@@ -40,6 +41,11 @@ $scrollbar-width: 18px; // 스크롤바 너비
           font-weight: 700;
           margin-bottom: 12px;
         }
+      }
+
+      .btn_wrap {
+        text-align: center;
+        margin-top: 60px;
       }
     }
   }

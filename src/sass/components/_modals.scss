@@ -58,6 +58,10 @@
       width: 1200px;
     }
 
+    &.h840 {
+      height: 840px;
+    }
+
     .modal_header {
       @include mixins.flexbox(space-between, flex-start);
       position: relative;
@@ -93,7 +97,7 @@
 
     .modal_cont {
       @include mixins.scrollbar;
-      @include mixins.column-flexbox(flex-start);
+      @include mixins.column-flexbox(flex-start, flex-start);
       overflow-y: auto;
       width: calc(100% + 60px);
       padding: 24px 30px 0 30px;
@@ -103,12 +107,22 @@
         width: 100%;
       }
 
-      .cont_wrap:not(:first-of-type) {
-        margin-top: 24px;
+      .cont_wrap {
+        @include mixins.column-flexbox(flex-start, flex-start);
+
+        &:not(:first-of-type) {
+          margin-top: 24px;
+        }
+
+        &:only-child {
+          height: 100%;
+        }
+
       }
 
       .cont_tit {
         @include mixins.flexbox(flex-start);
+        width: 100%;
         font-weight: 700;
         font-size: 18px;
         line-height: 20px;
@@ -135,7 +149,9 @@
       .grid_wrap {
 
         #myGrid {
-          height: 100%;
+          &:only-child {
+            height: 100%;
+          }
         }
       }
     }
@@ -169,8 +185,6 @@
     }
 
     [data-slide] {
-      width: calc(100% + 60px);
-      margin-left: -30px;
       padding: 0 16px;
 
       //메인 슬라이드
@@ -453,14 +467,6 @@
           line-height: 32px;
           vertical-align: top;
         }
-      }
-    }
-  }
-
-  [data-input-group] {
-    .textarea_wrap {
-      textarea {
-        min-height: 56px;
       }
     }
   }

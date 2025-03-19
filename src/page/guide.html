@@ -351,6 +351,17 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">그리드 아이콘 버튼</h4>
+              <div class="code">
+                <button type="button" data-grid-btn>
+                  <img src="/static/img/icon/icon_fax.png" alt="">
+                  텍스트 복사
+                </button>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h4 class="guide_sub_tit">텍스트 버튼</h4>
               <div class="code">
                 <button type="button" data-text-btn>버튼</button>
@@ -876,8 +887,8 @@
               <div class="code">
                 <div data-input-group class="dropdown">
                   <span class="label">구분</span>
-                  <div data-dropdown class="disabled" style="width:240px;">
-                    <button type="button" class="toggle">
+                  <div data-dropdown style="width:240px;">
+                    <button type="button" class="toggle" disabled>
                       <div class="txt">value1</div>
                     </button>
                   </div>
@@ -1137,6 +1148,10 @@
 
             <div class="guide_group">
               <h3 id="modal" class="guide_tit">Modal Popup</h3>
+              <p>
+                기본 너비는 1000px이며, 600/800/1200의 너비가 필요할때는 각각 w600/w800/w1200의 클래스를 .modal에 부여<br>
+                기본 높이는 정해져있지 않으며, 고정 높이가 필요한 경우(그리드 뷰)에만 h840의 클래스를 .modal에 부여
+              </p>
               <div class="code">
                 <div data-modal id="modal2">
                   <div class="modal">

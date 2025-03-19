@@ -1,0 +1,73 @@
+<%- include('_inc/head', {title:'사고이력'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="on">
+          <div class="modal h840">
+            <div class="modal_header">
+              <div class="modal_tit">
+                사고이력
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div class="cont_tit status">
+                  <div class="total">
+                    차량번호 : <strong>111하1234</strong>
+                  </div>
+                </div>
+                <div class="grid_wrap">
+                  <div id="myGrid" class="grid_dummy">AG Grid</div>
+                  <div data-pagination>
+                    <div data-input-group class="dropdown">
+                      <div data-dropdown>
+                        <button type="button" class="toggle">
+                          <div class="txt">20개</div>
+                        </button>
+                        <ul class="option up">
+                          <li>
+                            <button type="button" class="item" data-value="10">10개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="20">20개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="30">30개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="40">40개</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="50">50개</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="pagination-div"></div>
+                  </div>
+                  <script>
+                    $('#pagination-div').twbsPagination({
+                      totalPages: 50,
+                      visiblePages: 10
+                    });
+                  </script>
+                  <!-- <div class="nodata">
+                    <div class="txt">
+                      <img src="/static/img/icon/icon_nodata.png" alt>
+                      <p>
+                        정보를 불러오지 못하였습니다<br>
+                        팝업을 닫고 다시 시도해주세요
+                      </p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
