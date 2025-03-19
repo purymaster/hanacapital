@@ -257,7 +257,8 @@
     const $textareas = $('[data-input-group] textarea');
     $textareas.each(function () {
       const $textareaWrap = $(this).closest('.textarea_wrap');
-      if ($(this).is('[readonly], [disabled]')) {
+      const $fieldset = $(this).closest('fieldset');
+      if ($(this).is('[readonly], [disabled]') || $fieldset.is('[disabled]')) {
         $textareaWrap.addClass('disabled');
       }
     });
@@ -266,7 +267,10 @@
       const $textareaWrap = $(this).closest('.textarea_wrap');
       if ($(this).is('[readonly], [disabled]')) return;
       $textareaWrap.toggleClass('focus', event.type === 'focus');
-    });
+    }).on('input', function () {
+      $(this).css('height', 'auto');
+      $(this).css('height', this.scrollHeight + 'px');
+    })
   }
 
   $(() => {
