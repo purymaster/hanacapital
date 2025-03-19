@@ -1,0 +1,796 @@
+<%- include('_inc/head', {title:'사고접수 상세내용'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content detail">
+          <% const page_title={ title: "사고접수 상세내용" }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+              <div class="cont_wrap">
+                <div data-table>
+                  <table>
+                    <colgroup>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                      <col style="width:160px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사고번호</th>
+                        <td>
+                          2100053006
+                        </td>
+                        <th scope="row">접수일시</th>
+                        <td>
+                          2025-02-20 14:12
+                        </td>
+                        <th scope="row">사고일시</th>
+                        <td>
+                          2025-02-20 13:12
+                        </td>
+                        <th scope="row">차량번호</th>
+                        <td>
+                          <!-- 233하3657 -->
+                          <span data-color="accident">233하3657</span>
+                        </td>
+                        <th scope="row">진행상태</th>
+                        <td>
+                          사고접수
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">콜센터 접수내용</th>
+                        <td colspan="9">
+                          내리막길 주행중 공기압 경고등 떠서 확인하니 타이어파스로 확인<br>
+                          자차파손 : 운)앞타이어
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div data-action-header>
+                <div data-tab class="bar">
+                  <button type="button" class="on">사고 접수 내용</button>
+                  <button type="button">계약 및 보험가입정보</button>
+                </div>
+                <div class="btn">
+                  <button type="button" data-btn class="s">계약확인서</button>
+                  <button type="button" data-btn class="s">사고보고서</button>
+                  <button type="button" data-btn class="s">상담이력</button>
+                  <button type="button" data-btn class="s">사고이력</button>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div class="cont_tit">사고 접수 인적 사항</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:106px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">운전자</th>
+                        <td>
+                          <div data-form-group>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                운전자명
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                운전자 관계
+                              </div>
+                              <div data-input-group class="dropdown full">
+                                <div data-dropdown>
+                                  <button type="button" class="toggle">
+                                    <div class="txt">선택</div>
+                                  </button>
+                                  <ul class="option">
+                                    <li>
+                                      <button type="button" class="item" data-value="value1">value1</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                생년월일
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                운전자 연락처 1
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                운전자 연락처 2
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                면허종류
+                              </div>
+                              <div data-input-group class="dropdown full">
+                                <div data-dropdown>
+                                  <button type="button" class="toggle">
+                                    <div class="txt">선택</div>
+                                  </button>
+                                  <ul class="option">
+                                    <li>
+                                      <button type="button" class="item" data-value="value1">value1</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                <span class="essential">필수입력</span>
+                                면허번호
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사고 접수자</th>
+                        <td>
+                          <div data-form-group>
+                            <div class="box">
+                              <div class="label">
+                                접수자명
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                접수자 관계
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                접수자 연락처 1
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                접수자 연락처 2
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" rowspan="2">지정 운전자</th>
+                        <td>
+                          <div data-form-group class="d3">
+                            <div class="box">
+                              <div class="label">
+                                운전자명
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                운전자 관계
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                면허번호
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                적용시작일자
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                적용종료일자
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div data-form-group class="d3">
+                            <div class="box">
+                              <div class="label">
+                                운전자명
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                운전자 관계
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                면허번호
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                적용시작일자
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                적용종료일자
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div class="cont_tit">사고 접수 조사 내용</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:106px;">
+                      <col>
+                      <col style="width:106px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사고장소</th>
+                        <td colspan="3">
+                          <div data-form-group>
+                            <div class="box">
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                상담원
+                              </div>
+                              <div data-input-group>
+                                <input type="text" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" rowspan="2">사고유형</th>
+                        <td colspan="3">
+                          <div data-form-group class="flexible">
+                            <div class="box">
+                              <div class="label">
+                                차대차
+                              </div>
+                              <div data-select-group>
+                                <ul class="list radio">
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType1" checked>
+                                    <label for="accidentType1">후미추돌(가)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType2">
+                                    <label for="accidentType2">후미추돌(피)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType3">
+                                    <label for="accidentType3">차선변경(가)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType4">
+                                    <label for="accidentType4">차선변경(피)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType5">
+                                    <label for="accidentType5">주정차사고(가)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType6">
+                                    <label for="accidentType6">주정차사고(피)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType7">
+                                    <label for="accidentType7">노외진입(가)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType8">
+                                    <label for="accidentType8">노외진입(피)</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <div data-form-group class="flexible">
+                            <div class="box">
+                              <div class="label">
+                                차량단독
+                              </div>
+                              <div data-select-group>
+                                <ul class="list radio">
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType9">
+                                    <label for="accidentType9">가해자불명</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType10">
+                                    <label for="accidentType10">충돌</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                자연재해
+                              </div>
+                              <div data-select-group>
+                                <ul class="list radio">
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType11">
+                                    <label for="accidentType11">폭설</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType12">
+                                    <label for="accidentType12">침수</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType13">
+                                    <label for="accidentType13">화재</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType14">
+                                    <label for="accidentType14">지진</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                기타
+                              </div>
+                              <div data-select-group>
+                                <ul class="list radio">
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType15">
+                                    <label for="accidentType15">신호위반</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType16">
+                                    <label for="accidentType16">차대인</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="accidentType" id="accidentType17">
+                                    <label for="accidentType17">기타</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">과실유형</th>
+                        <td>
+                          <div data-form-group class="flexible">
+                            <div class="box">
+                              <div data-select-group>
+                                <ul class="list radio">
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType1" checked>
+                                    <label for="faultType1">단독</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType2">
+                                    <label for="faultType2">가해</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType3">
+                                    <label for="faultType3">피해</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType4">
+                                    <label for="faultType4">쌍방</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType5">
+                                    <label for="faultType5">분쟁</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType6">
+                                    <label for="faultType6">분쟁(완료)</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="faultType" id="faultType7">
+                                    <label for="faultType7">과실미정</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <th scope="row">과실비율</th>
+                        <td>
+                          <div data-input-group>
+                            <input type="text" style="width:56px;">
+                            <span class="unit">%</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">면책유형</th>
+                        <td colspan="3">
+                          <div data-form-group class="flexible">
+                            <div class="box">
+                              <div data-select-group>
+                                <ul class="list radio">
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType1" checked>
+                                    <label for="immunityType1">무면허</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType2">
+                                    <label for="immunityType2">음주</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType3">
+                                    <label for="immunityType3">연령위배</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType4">
+                                    <label for="immunityType4">운전자위배</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType5">
+                                    <label for="immunityType5">고의</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType6">
+                                    <label for="immunityType6">약물</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType7">
+                                    <label for="immunityType7">도주</label>
+                                  </li>
+                                  <li>
+                                    <input type="radio" name="immunityType" id="immunityType8">
+                                    <label for="immunityType8">기타</label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">경찰신고</th>
+                        <td colspan="3">
+                          <div data-form-group class="d3">
+                            <div class="box">
+                              <div class="label">신고여부</div>
+                              <div data-input-group class="dropdown full">
+                                <div data-dropdown>
+                                  <button type="button" class="toggle">
+                                    <div class="txt">선택</div>
+                                  </button>
+                                  <ul class="option">
+                                    <li>
+                                      <button type="button" class="item" data-value="value1">value1</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">관할경찰서</div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">담당자연락처</div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">출동업체</th>
+                        <td colspan="3">
+                          <div data-form-group class="d3">
+                            <div class="box">
+                              <div class="label">업체명</div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">출동기사명</div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">기사연락처</div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">본사<br>추가확인<br>내용</th>
+                        <td colspan="3">
+                          <div data-form-group class="d3">
+                            <div class="box full">
+                              <div data-input-group class="full">
+                                <div class="textarea_wrap">
+                                  <textarea name="" id=""></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사고관련<br>사진 정보</th>
+                        <td colspan="3">
+                          <div data-photo-upload>
+                            <div class="guide">
+                              <label for="photoUpload" data-btn class="s secondary">파일찾기</label>
+                              <input id="photoUpload" type="file" accept=".jpg, .jpeg, .pdf" multiple>
+                              <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
+                            </div>
+                            <ul class="preview">
+                              <li>
+                                <img src="/static/img/dummy/dummy_slide_01.png" alt="">
+                                <button type="button" class="del">삭제</button>
+                              </li>
+                              <li>
+                                <img src="/static/img/dummy/dummy_slide_02.png" alt="">
+                                <button type="button" class="del">삭제</button>
+                              </li>
+                              <li>
+                                <img src="/static/img/dummy/dummy_slide_03.png" alt="">
+                                <button type="button" class="del">삭제</button>
+                              </li>
+                            </ul>
+                            <!-- <div class="no_photo">
+                                등록된 이미지가 없습니다.
+                              </div> -->
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div class="cont_tit">사고 보험 처리 내용</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:106px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">보험 정보</th>
+                        <td>
+                          <div data-form-group>
+                            <div class="box">
+                              <div class="label">
+                                보험사
+                              </div>
+                              <div data-input-group class="dropdown">
+                                <div data-dropdown>
+                                  <button type="button" class="toggle">
+                                    <div class="txt">선택</div>
+                                  </button>
+                                  <ul class="option">
+                                    <li>
+                                      <button type="button" class="item" data-value="value1">value1</button>
+                                    </li>
+                                    <li>
+                                      <button type="button" class="item" data-value="value2">value2</button>
+                                    </li>
+                                    <li>
+                                      <button type="button" class="item" data-value="value3">value3</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                보험접수번호
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box x2">
+                              <div class="label">
+                                보험 접수
+                              </div>
+                              <div data-input-group>
+                                <div data-select-group>
+                                  <ul class="list checkbox">
+                                    <li>
+                                      <input type="checkbox" name="InsuranceApplication" id="InsuranceApplication1"
+                                        checked>
+                                      <label for="InsuranceApplication1">대인</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" name="InsuranceApplication" id="InsuranceApplication2">
+                                      <label for="InsuranceApplication2">대물</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" name="InsuranceApplication" id="InsuranceApplication3">
+                                      <label for="InsuranceApplication3">자손</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" name="InsuranceApplication" id="InsuranceApplication4">
+                                      <label for="InsuranceApplication4">자차</label>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">상대 정보</th>
+                        <td>
+                          <div data-action-header>
+                            <div class="btn">
+                              <button type="button" data-btn class="s">행 추가</button>
+                              <button type="button" data-btn class="s">행 삭제</button>
+                            </div>
+                          </div>
+                          <div class="grid_wrap">
+                            <div id="myGrid" class="grid_dummy">AG Grid</div>
+                            <!-- <div class="nodata">
+                                <div class="txt">
+                                  <img src="/static/img/icon/icon_nodata.png" alt>
+                                  <p>검색 결과가 없습니다.</p>
+                                </div>
+                              </div> -->
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <div class="cont_tit">입고 공업사 정보</div>
+                <div data-table class="form">
+                  <table>
+                    <colgroup>
+                      <col style="width:106px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">업체정보</th>
+                        <td>
+                          <div data-form-group>
+                            <div class="box">
+                              <div class="label">
+                                공업사명
+                              </div>
+                              <div data-input-group>
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="box">
+                              <div class="label">
+                                사고입고일
+                              </div>
+                              <div data-input-group class="calendar">
+                                <div class="date_wrap">
+                                  <input type="text" class="datepicker">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <button type="button" data-btn class="mx secondary">취소</button>
+                <button type="button" data-btn class="mx">저장</button>
+              </div>
+        </div>
+    </div>
+  </body>
+
+  <%- include('_inc/tail') %>
