@@ -72,7 +72,7 @@
                         <li>
                           <span class="index">2</span>
                           <p>
-                            당사와 체결된 자동임대차(렌트)계약 (계약번호 : <strong class="num">L2140-43002-300501</strong>)<br>
+                            당사와 체결된 자동임대차(렌트)계약 (계약번호 : <strong class="num">L2140-43002-300501</strong>)
                             과 관련하여 다음과 같이 확인합니다.
                           </p>
                         </li>
@@ -239,18 +239,24 @@
 
         <script>
           const printPage = () => {
-            let initWrap;
-            window.onbeforeprint = function () {
-              initWrap = document.querySelector('.wrap').innerHTML;
-              document.querySelector('.wrap').innerHTML = document.getElementById('print').innerHTML;
+            const wrap = document.querySelector('.wrap');
+            const printContent = document.getElementById('print').innerHTML;
+            const initWrap = wrap.innerHTML;
+
+            window.onbeforeprint = () => {
+              wrap.innerHTML = printContent;
+              wrap.classList.add('print');
               showLoading('blind');
             };
-            window.onafterprint = function () {
-              document.querySelector('.wrap').innerHTML = initWrap;
+
+            window.onafterprint = () => {
+              wrap.innerHTML = initWrap;
+              wrap.classList.remove('print');
               hideLoading();
             };
+
             window.print();
-          }
+          };
 
           const handlePage = () => {
             const $pages = $('[data-contract]');
