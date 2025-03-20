@@ -243,9 +243,9 @@
 
             <div class="guide_group">
               <h3 id="list" class="guide_tit">List</h3>
-              <h4 class="guide_sub_tit">Circle</h4>
+              <h4 class="guide_sub_tit">Middot, $gray-60-color, 12/14</h4>
               <div class="code">
-                <ul class="type1" data-list>
+                <ul class="middot type1" data-list>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, sequi totam ullam tempora
                     necessitatibus ea iure accusantium, mollitia aperiam sint adipisci modi impedit eaque cumque! Harum
@@ -269,7 +269,7 @@
             <div class="guide_group">
               <h4 class="guide_sub_tit">기본형(bar)</h4>
               <div data-tab class="bar">
-                <button type="button">Tab1</button>
+                <button type="button" class="on">Tab1</button>
                 <button type="button">Tab2</button>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -1116,9 +1116,11 @@
 
             <div class="guide_group">
               <h3 id="loading" class="guide_tit">Loading(tail.ejs에 포함)</h3>
+              <p>hideLoading()으로 로딩 해제</p>
               <div class="code">
                 <!-- <div data-loading></div> -->
                 <button type="button" data-btn onClick="showLoading()">로딩 노출</button>
+                <button type="button" data-btn onClick="showLoading('blind')">불투명 로딩 노출</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>

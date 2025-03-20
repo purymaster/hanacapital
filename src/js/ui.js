@@ -234,17 +234,23 @@
 
   /* 로딩 제어 */
   const handleLoading = () => {
-    window.toggleLoading = action => {
+    const toggleLoading = (action, opt) => {
       const $loading = $('[data-loading]');
       $loading.toggleClass('on', action === 'open');
+      if (action === 'close') {
+        $loading.removeClass();
+      } else if (opt) {
+        $loading.addClass(opt);
+      }
     }
-    window.showLoading = () => toggleLoading('open');
+
+    window.showLoading = (opt) => toggleLoading('open', opt);
     window.hideLoading = () => toggleLoading('close');
   }
 
   /* 모달 팝업 제어 */
   const handleModal = () => {
-    window.toggleModal = (modalId, action) => {
+    const toggleModal = (modalId, action) => {
       const $modalTarget = $(`#${modalId}`);
       $modalTarget.toggleClass('on', action === 'open');
     };

@@ -4,7 +4,9 @@
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content">
+          <p>hideLoading()으로 로딩 해제</p>
           <button type="button" data-btn onClick="showLoading()">로딩 노출</button>
+          <button type="button" data-btn onClick="showLoading('blind')">불투명 로딩 노출</button>
         </div>
     </div>
     <%- include('_inc/tail') %>
