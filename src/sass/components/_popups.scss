@@ -46,6 +46,23 @@
     .popup_cont {
       width: 100%;
       padding-top: 30px;
+
+      //fax
+      &.fax {
+        padding-top: 57px;
+        text-align: center;
+
+        p {
+          font-size: 15px;
+          line-height: 18px;
+          margin-bottom: 14px;
+        }
+      }
+
+      .btn_wrap {
+        margin-top: 60px;
+        text-align: center;
+      }
     }
   }
 

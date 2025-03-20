@@ -110,6 +110,10 @@
       .cont_wrap {
         @include mixins.column-flexbox(flex-start, flex-start);
 
+        >* {
+          width: 100%;
+        }
+
         &:not(:first-of-type) {
           margin-top: 24px;
         }
@@ -154,6 +158,12 @@
           }
         }
       }
+    }
+
+    //계약서에서만 사용
+    .modal_footer {
+      padding-top: 20px;
+      font-size: 0;
     }
 
     &.dialog {
@@ -428,8 +438,6 @@
       table {
         :is(th, td) {
           height: 52px;
-          padding: 10px 10px;
-          text-align: left;
 
           input[type='text'],
           input[type='password'],
@@ -469,6 +477,14 @@
         }
       }
     }
+
+    table {
+      :is(th, td) {
+        padding: 10px 14px !important;
+        text-align: left !important;
+        height: 36px;
+      }
+    }
   }
 
   [data-form-group] {
@@ -482,5 +498,205 @@
         min-width: 0;
       }
     }
+  }
+
+  //계약확인서
+  &.contract_form {
+
+    .modal_cont {
+      padding-top: 16px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .contract_ctr {
+      @include mixins.flexbox(space-between);
+      margin-bottom: 16px;
+      padding: 0 30px;
+
+      .pagination {
+        @include mixins.flexbox;
+        gap: 2px;
+
+        button {
+          width: 16px;
+          height: 16px;
+          background: url(/static/img/icon/icon_snb_up.png) no-repeat center / 16px;
+          filter: brightness(0);
+
+          &.prev {
+            transform: rotate(-90deg);
+          }
+
+          &.next {
+            transform: rotate(90deg);
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+            filter: brightness(0) saturate(100%) invert(88%) sepia(1%) saturate(222%) hue-rotate(344deg) brightness(92%) contrast(90%);
+          }
+        }
+      }
+    }
+
+    .print_area {
+      flex: 1;
+      position: relative;
+    }
+
+    [data-contract] {
+      position: absolute;
+      inset: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: #fff;
+      padding: 0 30px;
+    }
+
+    .seal {
+      height: 31px;
+    }
+
+  }
+}
+
+// 계약확인서 인쇄영역
+[data-contract] {
+  position: relative;
+  background-image: url(/static/img/bg/bg_contract_watermark.png);
+  background-position: center;
+  background-size: 200px 218px;
+  background-repeat: no-repeat;
+  page-break-after: always;
+  z-index: 0;
+
+  &.on {
+    z-index: 1;
+  }
+
+  .contract_tit {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var.$primary-color;
+
+    img {
+      display: block;
+      height: 24px;
+    }
+  }
+
+  .contract_info {
+    padding: 10px 0;
+    border-bottom: 1px solid var.$gray-80-color;
+
+    li {
+      @include mixins.flexbox(flex-start, flex-start);
+      font-size: 15px;
+      line-height: 18px;
+      gap: 4px;
+
+      &:not(:first-child) {
+        margin-top: 6px;
+      }
+
+      &.date {
+        margin-bottom: 10px;
+        justify-content: flex-end;
+      }
+
+      .tit {
+        font-weight: 700;
+        flex-shrink: 0;
+
+        &:after {
+          content: " :"
+        }
+      }
+    }
+  }
+
+  .contract_txt {
+    .list {
+      margin-top: 10px;
+
+      li {
+        @include mixins.flexbox(flex-start, flex-start);
+        font-size: 12px;
+        line-height: 15px;
+        color: var.$gray-60-color;
+        gap: 6px;
+
+        &+li {
+          margin-top: 5px;
+        }
+
+        .index {
+          display: inline-block;
+          width: 12px;
+
+          &:after {
+            content: "."
+          }
+        }
+
+        .num {
+          color: var.$primary-color;
+        }
+      }
+    }
+  }
+
+  .contract_cont {
+    [data-table] {
+      table {
+        :is(th, td) {
+          font-size: 14px;
+        }
+
+        th {
+          background: rgba(235, 243, 238, 0.5);
+          font-weight: 400;
+        }
+
+        .major {
+          th {
+            background: var.$table-title-color;
+            font-weight: 700;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .contract_footer {
+    display: none;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    img {
+      height: 31px;
+    }
+  }
+}
+
+@media print {
+  [data-contract] {
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    background-position: center calc(50vh - 109px);
+
+    .contract_footer {
+      display: block;
+    }
+  }
+
+  [data-loading],
+  [data-toast] {
+    display: none !important;
   }
 }

@@ -16,7 +16,11 @@
                 <div class="contract_ctr">
                   <div class="pagination">
                     <button class="prev"></button>
-                    <div class="fraction">1/3</div>
+                    <div class="fraction">
+                      <span class="current"></span>
+                      /
+                      <span class="total"></span>
+                    </div>
                     <button class="next"></button>
                   </div>
                   <div class="btn">
@@ -31,20 +35,199 @@
                   </div>
                 </div>
                 <div id="print" class="print_area">
+
+                  <!-- 1페이지 -->
                   <div data-contract>
                     <div class="contract_tit">
                       <img src="/static/img/image/image_hanacapital_logo.png" alt="">
                     </div>
-                    <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                    <div class="contract_info">
+                      <ul>
+                        <li class="date">
+                          <span class="tit">발급일자</span>
+                          YYYY-MM-DD
+                        </li>
+                        <li>
+                          <span class="tit">계약자</span>
+                          김하나
+                        </li>
+                        <li>
+                          <span class="tit">제목</span>
+                          렌터카 계약 확인서
+                        </li>
+                        <li>
+                          <span class="tit">계약구분</span>
+                          개인사업자
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="contract_txt">
+                      <ul class="list">
+                        <li>
+                          <span class="index">1</span>
+                          <p>
+                            고객님 일의 번창 하심을 기원합니다.
+                          </p>
+                        </li>
+                        <li>
+                          <span class="index">2</span>
+                          <p>
+                            당사와 체결된 자동임대차(렌트)계약 (계약번호 : <strong class="num">L2140-43002-300501</strong>)<br>
+                            과 관련하여 다음과 같이 확인합니다.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="contract_footer">
+                      <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                    </div>
                   </div>
+                  <!-- //1페이지 -->
+
+                  <!-- 2페이지 -->
                   <div data-contract>
-                    2페이지<br>
-                    <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                    <div class="contract_cont">
+                      <div data-table>
+                        <table>
+                          <colgroup>
+                            <col style="width:160px;">
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr class="major">
+                              <th scope="row">렌트차량</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">차량번호</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">명의</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">예외납부렌트료</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">매회렌트료</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">매회선납렌트료</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">렌트기간</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">실행일자</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">렌트보증금/<br>이행증권담보금</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">잔존가치</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">정비상품</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">연간 약정주행거리</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">보험</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">운전자 연령 및 범위</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">대인1/대인2<br>의무가입</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">대물</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">자기신체사고</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">특약</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">자기차량손해</th>
+                              <td>-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="contract_footer">
+                      <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                    </div>
                   </div>
+                  <!-- //2페이지 -->
+
+                  <!-- 3페이지 -->
                   <div data-contract>
-                    3페이지<br>
-                    <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                    <div class="contract_cont">
+                      <div data-table>
+                        <table>
+                          <colgroup>
+                            <col style="width:160px;">
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr class="major">
+                              <th scope="row">납부일자</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">납부방법</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">종료 후 처리</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">중도해지수수료</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">범칙금/과태로</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">연체이자율</th>
+                              <td>-</td>
+                            </tr>
+                            <tr class="major">
+                              <th scope="row">계약관련<br>주요 고지사항</th>
+                              <td>-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="contract_footer">
+                      <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                    </div>
                   </div>
+                  <!-- //3페이지 -->
+
                 </div>
               </div>
             </div>
@@ -56,18 +239,54 @@
 
         <script>
           const printPage = () => {
-            let initBody;
+            let initWrap;
             window.onbeforeprint = function () {
-              initBody = document.body.innerHTML;
-              document.body.innerHTML = document.getElementById('print').innerHTML;
-              showLoading()
+              initWrap = document.querySelector('.wrap').innerHTML;
+              document.querySelector('.wrap').innerHTML = document.getElementById('print').innerHTML;
+              showLoading('blind');
             };
             window.onafterprint = function () {
-              document.body.innerHTML = initBody;
-              hideLoading()
+              document.querySelector('.wrap').innerHTML = initWrap;
+              hideLoading();
             };
             window.print();
           }
+
+          const handlePage = () => {
+            const $pages = $('[data-contract]');
+            const totalPages = $pages.length;
+            const $currentValue = $('.contract_ctr').find('.current');
+            const $totalValue = $('.contract_ctr').find('.total');
+            const $prevBtn = $('.contract_ctr').find('.prev');
+            const $nextBtn = $('.contract_ctr').find('.next');
+
+            let currentPage = 1;
+
+            function updatePagination() {
+              $pages.removeClass('on').eq(currentPage - 1).addClass('on');
+              $currentValue.text(currentPage);
+              $prevBtn.prop('disabled', currentPage === 1);
+              $nextBtn.prop('disabled', currentPage === totalPages);
+            }
+
+            $prevBtn.off('click').on('click', () => {
+              if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+              }
+            });
+
+            $nextBtn.off('click').on('click', () => {
+              if (currentPage < totalPages) {
+                currentPage++;
+                updatePagination();
+              }
+            });
+
+            $totalValue.text(totalPages);
+            updatePagination();
+          }
+          handlePage();
         </script>
 
     </div>

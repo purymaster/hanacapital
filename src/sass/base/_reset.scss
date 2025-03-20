@@ -5,6 +5,11 @@
   font-size: 16px;
 }
 
+* {
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
 html,
 body,
 div,
@@ -144,6 +149,11 @@ table {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+strong,
+b {
+  font-weight: 700;
 }
 
 html,
