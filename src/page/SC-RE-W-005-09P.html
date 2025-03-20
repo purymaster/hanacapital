@@ -275,19 +275,22 @@
               $nextBtn.prop('disabled', currentPage === totalPages);
             }
 
-            $prevBtn.off('click').on('click', () => {
+            const goToPreviousPage = () => {
               if (currentPage > 1) {
                 currentPage--;
                 updatePagination();
               }
-            });
+            };
 
-            $nextBtn.off('click').on('click', () => {
+            const goToNextPage = () => {
               if (currentPage < totalPages) {
                 currentPage++;
                 updatePagination();
               }
-            });
+            };
+
+            $prevBtn.off('click').on('click', goToPreviousPage);
+            $nextBtn.off('click').on('click', goToNextPage);
 
             $totalValue.text(totalPages);
             updatePagination();
