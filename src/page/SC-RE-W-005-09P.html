@@ -1,0 +1,74 @@
+<%- include('_inc/head', {title:'계약확인서'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="contract_form on">
+          <div class="modal w600 h840">
+            <div class="modal_header">
+              <div class="modal_tit">
+                계약확인서
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div class="contract_ctr">
+                  <div class="pagination">
+                    <button class="prev"></button>
+                    <div class="fraction">1/3</div>
+                    <button class="next"></button>
+                  </div>
+                  <div class="btn">
+                    <button type="button" data-btn class="secondary docs" onclick="printPage();">
+                      <img src="/static/img/icon/icon_print.png" alt="">
+                      인쇄
+                    </button>
+                    <button type="button" data-btn class="secondary docs">
+                      <img src="/static/img/icon/icon_fax.png" alt="">
+                      팩스
+                    </button>
+                  </div>
+                </div>
+                <div id="print" class="print_area">
+                  <div data-contract>
+                    <div class="contract_tit">
+                      <img src="/static/img/image/image_hanacapital_logo.png" alt="">
+                    </div>
+                    <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                  </div>
+                  <div data-contract>
+                    2페이지<br>
+                    <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                  </div>
+                  <div data-contract>
+                    3페이지<br>
+                    <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal_footer">
+              <img src="/static/img/image/image_hanacapital_seal.png" class="seal" alt="">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const printPage = () => {
+            let initBody;
+            window.onbeforeprint = function () {
+              initBody = document.body.innerHTML;
+              document.body.innerHTML = document.getElementById('print').innerHTML;
+              showLoading()
+            };
+            window.onafterprint = function () {
+              document.body.innerHTML = initBody;
+              hideLoading()
+            };
+            window.print();
+          }
+        </script>
+
+    </div>
+    <%- include('_inc/tail') %>
