@@ -1,0 +1,230 @@
+<%- include('_inc/head', {title:'탁송/인도 요청서'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="contract_form on">
+          <div class="modal w1200">
+            <div class="modal_header">
+              <div class="modal_tit">
+                탁송/인도 요청서
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div class="contract_ctr">
+                  <div class="btn">
+                    <button type="button" data-btn class="secondary docs" onclick="printPage();">
+                      <img src="/static/img/icon/icon_print.png" alt="">
+                      인쇄
+                    </button>
+                  </div>
+                </div>
+                <div id="print" class="print_area">
+
+                  <div data-contract>
+                    <div class="contract_header">
+                      <img src="/static/img/image/image_hanacapital_logo.png" class="logo" alt="">
+                      <div class="tit">사고보고서</div>
+                    </div>
+                    <div class="contract_cont">
+                      <div data-table class="approval">
+                        <table>
+                          <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col" colspan="3" class="major">하나캐피탈 결제 담당</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>홍영표 대리</td>
+                              <td>이종훈 과장</td>
+                              <td>박수호 팀장</td>
+                            </tr>
+                            <tr>
+                              <td>YYYY-MM-DD<br>HH:MM</td>
+                              <td>YYYY-MM-DD<br>HH:MM</td>
+                              <td>YYYY-MM-DD<br>HH:MM</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="contract_cont">
+                      <div class="cont_tit">하나캐피탈 카렌탈사업팀</div>
+                      <div data-table>
+                        <table>
+                          <colgroup>
+                            <col style="width:70px;">
+                            <col style="width:130px;">
+                            <col>
+                            <col style="width:130px;">
+                            <col>
+                            <col style="width:130px;">
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row" colspan="2">접수일</th>
+                              <td colspan="3"></td>
+                              <th scope="row">접수자</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="rowgroup" rowspan="5" class="major">계약/<br>운전자<br>정보</th>
+                              <th scope="row">고객명</th>
+                              <td>-</td>
+                              <th scope="row">관리지점</th>
+                              <td>-</td>
+                              <th scope="row">정비상품</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">등록일자</th>
+                              <td>-</td>
+                              <th scope="row">실행일자</th>
+                              <td>-</td>
+                              <th scope="row">만기일자</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">차량번호</th>
+                              <td>-</td>
+                              <th scope="row">차명</th>
+                              <td>-</td>
+                              <th scope="row">보혐연령</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">운전자</th>
+                              <td>-</td>
+                              <th scope="row">생년월일</th>
+                              <td>-</td>
+                              <th scope="row">운전자연락처</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">면허종류</th>
+                              <td>-</td>
+                              <th scope="row">면허번호</th>
+                              <td colspan="3">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="rowgroup" colspan="2">사고일시</th>
+                              <td colspan="3"></td>
+                              <th scope="row">사고번호</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" colspan="2">사고장소</th>
+                              <td colspan="5"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row" rowspan="7" class="major">사고<br>정보</th>
+                              <th scope="row">보험사</th>
+                              <td>-</td>
+                              <th scope="row">보험접수번호</th>
+                              <td>-</td>
+                              <th scope="row">보험접수구분</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">면부책정도</th>
+                              <td>-</td>
+                              <th scope="row">중대사고</th>
+                              <td>-</td>
+                              <th scope="row">과실</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">경찰신고여부</th>
+                              <td>-</td>
+                              <th scope="row">관할경찰서</th>
+                              <td>-</td>
+                              <th scope="row">담당자연락처</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">상대 보험사</th>
+                              <td>-</td>
+                              <th scope="row">상대 보험접수번호</th>
+                              <td>-</td>
+                              <th scope="row">상대 보험접수구분</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">상대 차량번호</th>
+                              <td>-</td>
+                              <th scope="row">상대 차명</th>
+                              <td>-</td>
+                              <th scope="row">상대 성명</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" style="height:190px;">콜센터 사고접수</th>
+                              <td colspan="5">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" style="height:100px;">추가 확인사항</th>
+                              <td colspan="5">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="rowgroup" rowspan="2" class="major">수리<br>결과</th>
+                              <th scope="row">사고정비업체</th>
+                              <td>-</td>
+                              <th scope="row">입고일</th>
+                              <td>-</td>
+                              <th scope="row">출고일</th>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">업체청구금액</th>
+                              <td>-</td>
+                              <th scope="row">최종지급금액</th>
+                              <td>-</td>
+                              <th scope="row">절감금액</th>
+                              <td>-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const printPage = () => {
+            const wrap = document.querySelector('.wrap');
+            const printContent = document.getElementById('print').innerHTML;
+            const initWrap = wrap.innerHTML;
+
+            window.onbeforeprint = () => {
+              wrap.innerHTML = printContent;
+              wrap.classList.add('print', 'w1000');
+              showLoading('blind');
+            };
+
+            window.onafterprint = () => {
+              wrap.innerHTML = initWrap;
+              wrap.classList.remove('print', 'w1000');
+              hideLoading();
+            };
+
+            window.print();
+          };
+
+        </script>
+
+    </div>
+    <%- include('_inc/tail') %>

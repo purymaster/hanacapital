@@ -573,6 +573,10 @@
           }
         }
       }
+
+      .btn {
+        margin-left: auto;
+      }
     }
 
     .print_area {
@@ -581,12 +585,15 @@
     }
 
     [data-contract] {
-      position: absolute;
-      inset: 0;
-      overflow-x: hidden;
-      overflow-y: auto;
       background-color: #fff;
       padding: 0 30px;
+
+      &:not(:only-child) {
+        position: absolute;
+        inset: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
     }
 
     .seal {
