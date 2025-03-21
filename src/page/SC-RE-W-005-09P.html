@@ -238,26 +238,6 @@
         </div>
 
         <script>
-          const printPage = () => {
-            const wrap = document.querySelector('.wrap');
-            const printContent = document.getElementById('print').innerHTML;
-            const initWrap = wrap.innerHTML;
-
-            window.onbeforeprint = () => {
-              wrap.innerHTML = printContent;
-              wrap.classList.add('print');
-              showLoading('blind');
-            };
-
-            window.onafterprint = () => {
-              wrap.innerHTML = initWrap;
-              wrap.classList.remove('print');
-              hideLoading();
-            };
-
-            window.print();
-          };
-
           const handlePage = () => {
             const $pages = $('[data-contract]');
             const totalPages = $pages.length;
@@ -296,6 +276,28 @@
             updatePagination();
           }
           handlePage();
+
+          const printPage = () => {
+            const wrap = document.querySelector('.wrap');
+            const printContent = document.getElementById('print').innerHTML;
+            const initWrap = wrap.innerHTML;
+
+            window.onbeforeprint = () => {
+              wrap.innerHTML = printContent;
+              wrap.classList.add('print', 'w640');
+              showLoading('blind');
+            };
+
+            window.onafterprint = () => {
+              wrap.innerHTML = initWrap;
+              wrap.classList.remove('print', 'w640');
+              hideLoading();
+              handlePage();
+            };
+
+            window.print();
+          };
+
         </script>
 
     </div>

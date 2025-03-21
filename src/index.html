@@ -214,6 +214,10 @@
       background: #d7ede6;
     }
 
+    .map_table .dev :is(th, td) {
+      background: #ddd;
+    }
+
     @media (max-width:1024px) {
       .map_table colgroup :not(.mobile) {
         width: 0 !important
@@ -240,6 +244,7 @@
           <col class="depth mobile" style="width:8%;">
           <col style="width:8%;">
           <col>
+          <col style="width:60px;">
           <col class="mobile" style="width:40px;">
         </colgroup>
         <thead>
@@ -251,6 +256,7 @@
             <th class="depth">Depth4</th>
             <th class="id">ID</th>
             <th class="memo">Memo</th>
+            <th class="modify">Modify</th>
             <th class="link">Link</th>
           </tr>
         </thead>
@@ -263,6 +269,7 @@
             <td class="depth"></td>
             <td class="id center"></td>
             <td class="memo"></td>
+            <td class="modify center">-</td>
             <td class="link center">
               <a href="/template/page/guide.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -275,6 +282,7 @@
             <td class="depth"></td>
             <td class="id center"></td>
             <td class="memo"></td>
+            <td class="modify center">-</td>
             <td class="link center">
               <a href="/template/page/prototype_page.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -286,7 +294,8 @@
             <td class="depth">그리드뷰</td>
             <td class="depth"></td>
             <td class="id center"></td>
-            <td class="memo">목록 형태의 그리드가 포함된 페이지 전용</td>
+            <td class="memo"></td>
+            <td class="modify center">-</td>
             <td class="link center">
               <a href="/template/page/prototype_grid.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -295,36 +304,11 @@
             <td class="num center"></td>
             <td class="depth"></td>
             <td class="depth">팝업</td>
-            <td class="depth">시스템</td>
-            <td class="depth">페이지</td>
-            <td class="id center"></td>
-            <td class="memo"></td>
-            <td class="link center">
-              <a href="/template/page/prototype_system_popup.html" target="_blank" title="새창열림"
-                data-popup="[1080, 800]">보기</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="num center"></td>
-            <td class="depth"></td>
-            <td class="depth"></td>
-            <td class="depth"></td>
-            <td class="depth">그리드뷰</td>
-            <td class="id center"></td>
-            <td class="memo">목록 형태의 그리드가 포함된 페이지 전용</td>
-            <td class="link center">
-              <a href="/template/page/prototype_system_grid_popup.html" target="_blank" title="새창열림"
-                data-popup="[1080, 800]">보기</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="num center"></td>
-            <td class="depth"></td>
-            <td class="depth"></td>
             <td class="depth">레이어</td>
             <td class="depth">페이지</td>
             <td class="id center"></td>
             <td class="memo"></td>
+            <td class="modify center">-</td>
             <td class="link center">
               <a href="/template/page/prototype_layer_popup.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -336,14 +320,29 @@
             <td class="depth"></td>
             <td class="depth">그리드뷰</td>
             <td class="id center"></td>
-            <td class="memo">목록 형태의 그리드가 포함된 페이지 전용</td>
+            <td class="memo"></td>
+            <td class="modify center">-</td>
             <td class="link center">
               <a href="/template/page/prototype_layer_grid_popup.html" target="_blank" title="새창열림">보기</a>
             </td>
           </tr>
         </tbody>
-        <tbody>
+        <tbody class="dev">
           <tr>
+            <td class="num center"></td>
+            <td class="depth">AG-Grid 예제</td>
+            <td class="depth"></td>
+            <td class="depth"></td>
+            <td class="depth"></td>
+            <td class="id center"></td>
+            <td class="memo">그리드 내부에 들어갈 컴포넌트 모음</td>
+            <td class="modify center">-</td>
+            <td class="link center">
+              <a href="/template/page/ag_grid_sample.html" target="_blank" title="새창열림">보기</a>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
           <tr>
             <td class="num center"></td>
             <td class="depth">시스템관리</td>
@@ -352,6 +351,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-018</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-018.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -364,6 +364,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-022</td>
             <td class="memo"></td>
+            <td class="modify center">03/07</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-022.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -376,6 +377,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-023-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-023-01P.html" target="_blank" title="새창열림" data-popup="[1080, 800]">보기</a>
             </td>
@@ -388,6 +390,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-024-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-024-01P.html" target="_blank" title="새창열림" data-popup="[1080, 800]">보기</a>
             </td>
@@ -400,6 +403,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-025-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-025-01P.html" target="_blank" title="새창열림" data-popup="[1080, 800]">보기</a>
             </td>
@@ -412,6 +416,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-026-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-026-01P.html" target="_blank" title="새창열림" data-popup="[1080, 800]">보기</a>
             </td>
@@ -424,6 +429,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-027</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/static/error/SC-SY-W-027.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -436,6 +442,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-028-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-028-01P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -448,6 +455,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-029-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-029-01P.html" target="_blank" title="새창열림" data-popup="[1080, 800]">보기</a>
             </td>
@@ -460,6 +468,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-030-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-030-01P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -472,6 +481,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-031-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/14</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-031-01P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -484,6 +494,7 @@
             <td class="depth"></td>
             <td class="id center">SC-SY-W-032</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-SY-W-032.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -496,6 +507,7 @@
             <td class="depth"></td>
             <td class="id center">SC-DE-W-001</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-DE-W-001.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -508,6 +520,7 @@
             <td class="depth"></td>
             <td class="id center">SC-DE-W-001-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-DE-W-001-01P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -520,6 +533,7 @@
             <td class="depth"></td>
             <td class="id center">SC-DE-W-002</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-DE-W-002.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -532,6 +546,7 @@
             <td class="depth"></td>
             <td class="id center">SC-DE-W-003-01P</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-DE-W-003-01P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -544,6 +559,7 @@
             <td class="depth"></td>
             <td class="id center">SC-DE-W-003-02P</td>
             <td class="memo"></td>
+            <td class="modify center"></td>
             <td class="link center">
               <a href="/template/page/SC-DE-W-003-02P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -556,6 +572,7 @@
             <td class="depth"></td>
             <td class="id center">SC-RE-W-004</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-004.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -568,6 +585,7 @@
             <td class="depth">조회모드</td>
             <td class="id center">SC-RE-W-005_r</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005_r.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -580,6 +598,7 @@
             <td class="depth">편집모드</td>
             <td class="id center">SC-RE-W-005_w</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005_w.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -592,6 +611,7 @@
             <td class="depth">계약 및 보험가입정보 탭</td>
             <td class="id center">SC-RE-W-005_2</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005_2.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -604,6 +624,7 @@
             <td class="depth">사고이력 조회</td>
             <td class="id center">SC-RE-W-005-06P</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005-06P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -616,6 +637,7 @@
             <td class="depth">상담이력 조회</td>
             <td class="id center">SC-RE-W-005-07P</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005-07P.html" target="_blank" title="새창열림">보기</a>
             </td>
@@ -628,8 +650,35 @@
             <td class="depth">Fax 전송</td>
             <td class="id center">SC-RE-W-005_f</td>
             <td class="memo"></td>
+            <td class="modify center">03/21</td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005_f.html" target="_blank" title="새창열림" data-popup="[600, 452]">보기</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="num center"></td>
+            <td class="depth"></td>
+            <td class="depth"></td>
+            <td class="depth"></td>
+            <td class="depth">사고보고서(내부용)</td>
+            <td class="id center">SC-RE-W-005-08P</td>
+            <td class="memo"></td>
+            <td class="modify center"></td>
+            <td class="link center">
+              <a href="/template/page/SC-RE-W-005-08P.html" target="_blank" title="새창열림">보기</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="num center"></td>
+            <td class="depth"></td>
+            <td class="depth"></td>
+            <td class="depth"></td>
+            <td class="depth">사고보고서(고객용)</td>
+            <td class="id center">SC-RE-W-005-10P</td>
+            <td class="memo"></td>
+            <td class="modify center"></td>
+            <td class="link center">
+              <a href="/template/page/SC-RE-W-005-10P.html" target="_blank" title="새창열림">보기</a>
             </td>
           </tr>
           <tr>
@@ -640,6 +689,7 @@
             <td class="depth">계약확인서</td>
             <td class="id center">SC-RE-W-005-09P</td>
             <td class="memo"></td>
+            <td class="modify center"></td>
             <td class="link center">
               <a href="/template/page/SC-RE-W-005-09P.html" target="_blank" title="새창열림">보기</a>
             </td>

@@ -11,7 +11,14 @@ $scrollbar-width: 18px; // 스크롤바 너비
 
   &.print {
     height: auto;
-    min-width: 0;
+
+    &.w640 {
+      min-width: 640px;
+    }
+
+    &.w1000 {
+      min-width: 1000px;
+    }
   }
 
   .content {
