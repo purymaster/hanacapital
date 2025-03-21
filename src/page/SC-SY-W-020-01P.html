@@ -1,0 +1,44 @@
+<%- include('_inc/head', {title:'알림'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="notice on">
+          <div class="modal w600">
+            <div class="modal_header">
+              <div class="modal_tit">
+                알림
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div class="notice_tit">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+                <div class="notice_txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem praesentium accusamus
+                  illum tenetur quia dolore culpa impedit eaque nam ipsum temporibus numquam repudiandae ex aliquam
+                  corporis, et necessitatibus! Quam!
+                </div>
+                <div class="day_break">
+                  <div data-select-group>
+                    <ul class="list checkbox">
+                      <li>
+                        <input type="checkbox" name="check" id="check1">
+                        <label for="check1">오늘 하루 안보기</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <button type="button" data-btn>
+                  확인
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <%- include('_inc/tail') %>
