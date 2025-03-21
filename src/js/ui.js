@@ -279,6 +279,31 @@
     })
   }
 
+  /* 그리드 타입 테이블 제어 */
+  const handleGridTable = () => {
+    const $gridTable = $('[data-table].grid');
+    $gridTable.each(function () {
+      const $table = $(this);
+      const $headerCheckbox = $table.find('.grid_select_all');
+      const $rowCheckboxes = $table.find('.grid_select');
+
+      const updateRowAndHeader = () => {
+        const allChecked = $rowCheckboxes.length === $rowCheckboxes.filter(':checked').length;
+        $headerCheckbox.prop('checked', allChecked);
+        $rowCheckboxes.each(function () {
+          $(this).closest('tr').toggleClass('on', $(this).is(':checked'));
+        });
+      };
+
+      $rowCheckboxes.on('change', updateRowAndHeader);
+
+      $headerCheckbox.on('change', function () {
+        $rowCheckboxes.prop('checked', this.checked);
+        updateRowAndHeader();
+      });
+    });
+  };
+
   $(() => {
     handleGnb();
     handleSnb();
@@ -289,6 +314,7 @@
     handleLoading();
     handleModal();
     handleTextareaFocus();
+    handleGridTable();
     $(".datepicker").datepicker({
       dateFormat: 'yy.mm.dd',
       showMonthAfterYear: true,

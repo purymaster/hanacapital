@@ -419,6 +419,81 @@
       }
     }
   }
+
+  //그리드타입
+  &.grid {
+    table {
+      :is(th, td) {
+        height: 40px;
+        padding: 9px;
+        text-align: center;
+        border-color: var.$gray-30-color;
+        vertical-align: middle;
+
+        [data-input-group] {
+          width: 100%;
+
+          input[type='text'],
+          input[type='password'],
+          input[type='email'] {
+            height: 32px;
+            padding: 0 10px;
+          }
+
+          [data-dropdown] {
+            .toggle {
+              padding: 0 40px 0 10px;
+              height: 32px;
+
+              &:after {
+                right: 14px;
+              }
+            }
+
+            .option {
+              top: 33px;
+            }
+          }
+        }
+      }
+
+      th {
+        padding: 10px 14px;
+        background: var.$gray-10-color;
+      }
+
+      thead {
+        tr {
+          th {
+            position: relative;
+
+            &:not(:last-child) {
+              &:after {
+                @include mixins.pos-center-y;
+                content: "";
+                right: 0;
+                width: 1px;
+                height: 16px;
+                background: var.$gray-30-color;
+              }
+            }
+          }
+        }
+      }
+
+      tr {
+        &:hover {
+          background: var.$table-hover-color;
+        }
+
+        &.on {
+          td {
+            background: #d7ede6cc;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 사진첨부 */

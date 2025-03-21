@@ -1105,6 +1105,93 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">그리드 타입</h4>
+              <div class="code">
+                <div data-table class="grid">
+                  <table>
+                    <colgroup>
+                      <col style="width: 50px;">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <div data-select-group>
+                            <ul class="list checkbox single small">
+                              <li>
+                                <input type="checkbox" name="gridCheck" id="gridCheckAll" class="grid_select_all">
+                                <label for="gridCheckAll">선택</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </th>
+                        <th scope="col">Input</th>
+                        <th scope="col">Dropdown</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div data-select-group>
+                            <ul class="list checkbox single small">
+                              <li>
+                                <input type="checkbox" name="gridCheck" id="gridCheck1" class="grid_select">
+                                <label for="gridCheck1">선택</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td>
+                          <div data-input-group>
+                            <input type="text">
+                          </div>
+                        </td>
+                        <td>
+                          <div data-input-group class="dropdown">
+                            <div data-dropdown>
+                              <button type="button" class="toggle">
+                                <div class="txt">선택</div>
+                              </button>
+                              <ul class="option">
+                                <li>
+                                  <button type="button" class="item" data-value="10">10개</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div data-select-group>
+                            <ul class="list checkbox single small">
+                              <li>
+                                <input type="checkbox" name="gridCheck" id="gridCheck2" class="grid_select">
+                                <label for="gridCheck2">선택</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h3 id="toast" class="guide_tit">Toast Message(기본 노출 시간 2초, tail.ejs에 포함)</h3>
               <div class="code">
                 <!-- <div data-toast></div> -->

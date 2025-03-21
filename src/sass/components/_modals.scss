@@ -501,6 +501,36 @@
     }
   }
 
+  //공지사항
+  &.notice {
+    .notice_tit {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var.$gray-80-color;
+    }
+
+    .notice_txt {
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    .day_break {
+      margin-top: 48px;
+      padding-bottom: 4px;
+
+      [data-select-group] {
+        text-align: center;
+
+        .list {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+
   //계약확인서
   &.contract_form {
 
