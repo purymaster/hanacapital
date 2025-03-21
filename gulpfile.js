@@ -21,7 +21,7 @@ const clean = () => deleteAsync(['output/*']);
 
 const html = () => {
   const regularHtml = () => {
-    return src(['src/**/*.html', '!src/error/**/*.html'])
+    return src(['src/**/*.html', '!src/error/**/*.html'], { since: lastRun(html) })
       .pipe(ejs().on('error', handleError))
       .pipe(beautify.html({
         indent_size: 2,
@@ -32,7 +32,7 @@ const html = () => {
   };
 
   const errorHtml = () => {
-    return src('src/error/**/*.html')
+    return src('src/error/**/*.html', { since: lastRun(errorHtml) })
       .pipe(ejs().on('error', handleError))
       .pipe(beautify.html({
         indent_size: 2,
@@ -46,7 +46,7 @@ const html = () => {
 };
 
 const css = () => {
-  return src('src/sass/**/*.scss')
+  return src('src/sass/**/*.scss', { since: lastRun(css) })
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: "expanded",
@@ -64,7 +64,7 @@ const css = () => {
 };
 
 const js = () => {
-  return src('src/js/**/*.js')
+  return src('src/js/**/*.js', { since: lastRun(js) })
     .pipe(beautify.js({
       indent_size: 2,
       indent_with_tabs: true,
@@ -74,13 +74,13 @@ const js = () => {
 };
 
 const img = () => {
-  return src('src/img/**/*.{png,jpg,jpeg,gif,svg}', { encoding: false })
+  return src('src/img/**/*.{png,jpg,jpeg,gif,svg}', { encoding: false, since: lastRun(img) })
     .pipe(dest('output/static/img'))
     .pipe(sync.reload({ stream: true }));
 };
 
 const font = () => {
-  return src('src/fonts/*', { encoding: false })
+  return src('src/fonts/*', { encoding: false, since: lastRun(font) })
     .pipe(dest('output/static/fonts'))
     .pipe(sync.reload({ stream: true }));
 };
