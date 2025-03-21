@@ -8,6 +8,7 @@ import gulpSass from 'gulp-sass';
 import sassCompiler from 'sass';
 import sourcemaps from 'gulp-sourcemaps';
 import beautify from 'gulp-beautify';
+import newer from 'gulp-newer';
 import sync from 'browser-sync';
 
 const sass = gulpSass(sassCompiler);
@@ -32,7 +33,7 @@ const html = () => {
   };
 
   const errorHtml = () => {
-    return src('src/error/**/*.html', { since: lastRun(errorHtml) })
+    return src('src/error/**/*.html', { since: lastRun(html) })
       .pipe(ejs().on('error', handleError))
       .pipe(beautify.html({
         indent_size: 2,
@@ -46,7 +47,7 @@ const html = () => {
 };
 
 const css = () => {
-  return src('src/sass/**/*.scss', { since: lastRun(css) })
+  return src('src/sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: "expanded",
@@ -74,13 +75,15 @@ const js = () => {
 };
 
 const img = () => {
-  return src('src/img/**/*.{png,jpg,jpeg,gif,svg}', { encoding: false, since: lastRun(img) })
+  return src('src/img/**/*.{png,jpg,jpeg,gif,svg}', { encoding: false })
+    .pipe(newer('output/static/img'))
     .pipe(dest('output/static/img'))
     .pipe(sync.reload({ stream: true }));
 };
 
 const font = () => {
-  return src('src/fonts/*', { encoding: false, since: lastRun(font) })
+  return src('src/fonts/*', { encoding: false })
+    .pipe(newer('output/static/fonts'))
     .pipe(dest('output/static/fonts'))
     .pipe(sync.reload({ stream: true }));
 };
@@ -99,12 +102,13 @@ const liveServer = () => {
   });
 };
 
-const watchServer = () => {
+const watchServer = done => {
   watch('src/**/*.{ejs,html}', html);
   watch('src/sass/**/*.scss', css);
   watch('src/js/*.js', js);
   watch('src/img/**/*.{png,jpg,jpeg,gif,svg}', img);
   watch('src/fonts/*', font);
+  done();
 };
 
 const defaultTask = series(
