@@ -584,7 +584,7 @@
       position: relative;
     }
 
-    [data-contract] {
+    [data-print] {
       background-color: #fff;
       padding: 0 30px;
 
@@ -603,8 +603,8 @@
   }
 }
 
-// 계약확인서 인쇄영역
-[data-contract] {
+// 인쇄영역
+[data-print] {
   position: relative;
   background-image: url(/static/img/bg/bg_contract_watermark.png);
   background-position: center;
@@ -764,7 +764,7 @@
 }
 
 @media print {
-  [data-contract] {
+  [data-print] {
     width: 100vw;
     min-height: 100vh;
     padding-bottom: 50px;

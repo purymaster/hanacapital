@@ -37,7 +37,7 @@
                 <div id="print" class="print_area">
 
                   <!-- 1페이지 -->
-                  <div data-contract>
+                  <div data-print>
                     <div class="contract_tit">
                       <img src="/static/img/image/image_hanacapital_logo.png" alt="">
                     </div>
@@ -85,7 +85,7 @@
                   <!-- //1페이지 -->
 
                   <!-- 2페이지 -->
-                  <div data-contract>
+                  <div data-print>
                     <div class="contract_cont">
                       <div data-table>
                         <table>
@@ -181,7 +181,7 @@
                   <!-- //2페이지 -->
 
                   <!-- 3페이지 -->
-                  <div data-contract>
+                  <div data-print>
                     <div class="contract_cont">
                       <div data-table>
                         <table>
@@ -239,7 +239,7 @@
 
         <script>
           const handlePage = () => {
-            const $pages = $('[data-contract]');
+            const $pages = $('[data-print]');
             const totalPages = $pages.length;
             const $currentValue = $('.contract_ctr').find('.current');
             const $totalValue = $('.contract_ctr').find('.total');
