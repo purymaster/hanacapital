@@ -43,7 +43,7 @@ src<br/>
  ┃ ┗ image - 일반 이미지<br/>
  ┣ js<br/>
  ┃ ┣ libs<br/>
- ┃ ┃ ┣ ag-grid-community.js - AG Grid<br/>
+ ┃ ┃ ┣ ag-grid-community.noStyle.js - AG Grid<br/>
  ┃ ┃ ┣ jquery-3.7.1.js<br/>
  ┃ ┃ ┣ jquery-ui.js<br/>
  ┃ ┃ ┣ jquery-viewer.js - 이미지 뷰어<br/>
