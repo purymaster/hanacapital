@@ -1,6 +1,12 @@
 @use "../helpers/_mixins" as mixins;
 @use "../helpers/_variables" as var;
 
+:root {
+  --ag-font-family: var.$global-font-family;
+  --ag-selected-row-background-color: #d7ede6cc !important;
+  --ag-row-hover-color: #eef0f2 !important;
+}
+
 .ag-root-wrapper {
   border: 0;
 }
@@ -16,22 +22,10 @@
   justify-content: center;
 }
 
-:where(.ag-ltr) .ag-header-cell-resize {
-  right: -4px;
-}
-
-.ag-row-hover:before {
-  background: #EEF0F2 !important;
-}
-
-.ag-row-selected:before {
-  background: #d7ede6cc !important;
-}
-
 .ag-cell {
   text-align: center;
 }
 
 .ag-cell-focus:not(.ag-cell-range-selected):focus-within {
-  border-color: var.$primary-color !important;
+  border-color: transparent !important;
 }
