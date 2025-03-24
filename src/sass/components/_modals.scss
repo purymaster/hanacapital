@@ -438,60 +438,6 @@
     }
   }
 
-  [data-table] {
-    &.form {
-      table {
-        :is(th, td) {
-          height: 52px;
-
-          input[type='text'],
-          input[type='password'],
-          input[type='email'] {
-            height: 32px;
-            padding: 0 10px;
-          }
-
-          [data-dropdown] {
-            .toggle {
-              padding: 0 40px 0 10px;
-              height: 32px;
-
-              &:after {
-                right: 14px;
-              }
-            }
-
-            .option {
-              top: 33px;
-            }
-          }
-
-          [data-select-group] {
-            .list {
-              gap: 20px;
-            }
-          }
-
-        }
-
-        th {
-          padding-left: 14px;
-          padding-right: 14px;
-          line-height: 32px;
-          vertical-align: top;
-        }
-      }
-    }
-
-    table {
-      :is(th, td) {
-        padding: 10px 14px !important;
-        text-align: left !important;
-        height: 36px;
-      }
-    }
-  }
-
   [data-form-group] {
     column-gap: 40px;
 
@@ -789,10 +735,6 @@
   .contract_cont {
     [data-table] {
       table {
-        :is(th, td) {
-          font-size: 14px;
-        }
-
         &.group {
           th {
             background: rgba(235, 243, 238, 0.5);
@@ -801,7 +743,6 @@
             &.major {
               background: var.$table-title-color;
               font-weight: 700;
-              font-size: 15px;
               text-align: center !important;
               vertical-align: middle;
             }
@@ -811,7 +752,6 @@
             th {
               background: var.$table-title-color;
               font-weight: 700;
-              font-size: 15px;
             }
           }
         }

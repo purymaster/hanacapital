@@ -50,12 +50,8 @@ $scrollbar-width: 18px; // 스크롤바 너비
     &.detail {
       padding-bottom: 30px;
 
-      .cont_wrap {
+      :not([data-page-title])+.cont_wrap {
         margin-top: 20px;
-
-        &:first-of-type {
-          margin-top: 0;
-        }
       }
 
       [data-action-header] {

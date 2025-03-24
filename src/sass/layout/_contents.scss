@@ -368,7 +368,6 @@
     :is(th, td) {
       font-size: 12px;
       line-height: 16px;
-      // height: 46px;
       padding: 8px;
       border-bottom: 1px solid var.$gray-20-color;
       text-align: left;
@@ -400,15 +399,10 @@
     table {
       :is(th, td) {
         vertical-align: middle;
-        // height: 72px;
       }
 
       th {
         text-align: center;
-
-        .essential {
-          margin-top: 8px;
-        }
       }
 
       td {
@@ -613,35 +607,18 @@
       width: 100%;
     }
 
-    &.x2 {
-      flex: 0 1 calc(50% - 32px);
-    }
+    // &.x2 {
+    //   flex: 0 1 calc(50% - 32px);
+    // }
 
-    &.x3 {
-      flex: 0 1 calc(75% - 16px);
-    }
+    // &.x3 {
+    //   flex: 0 1 calc(75% - 16px);
+    // }
 
-    &.full {
-      flex: 0 1 100%;
-    }
+    // &.full {
+    //   flex: 0 1 100%;
+    // }
   }
-
-  // &.d3 {
-  //   width: calc(75% - 18px);
-
-  //   .box {
-  //     flex: 0 1 calc(33.33% - 44px);
-
-  //     &.x2 {
-  //       flex: 0 1 calc(66.66% - 22px);
-  //     }
-
-  //     &.x3,
-  //     &.full {
-  //       flex: 0 1 100%;
-  //     }
-  //   }
-  // }
 
   &.flexible {
     .box {
