@@ -1,0 +1,105 @@
+@use "../helpers/_mixins" as mixins;
+@use "../helpers/_variables" as var;
+
+[data-progress] {
+  ol {
+    @include mixins.flexbox(center, flex-start);
+    counter-reset: progress-counter;
+
+    li {
+      position: relative;
+      flex: 0 1 160px;
+      text-align: center;
+      padding-top: 52px;
+      color: var.$gray-50-color;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 20px;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        background: var.$gray-30-color;
+      }
+
+      &:after {
+        @include mixins.pos-center-x;
+        content: counter(progress-counter);
+        counter-increment: progress-counter;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        background: var.$gray-30-color;
+        color: var.$gray-70-color;
+        border-radius: 50%;
+        background-size: cover;
+      }
+
+      &:first-child {
+        &:before {
+          width: 50%;
+          left: 50%;
+        }
+      }
+
+      &:last-child {
+        &:before {
+          width: 50%;
+        }
+      }
+
+      &.pass {
+        color: var.$gray-80-color;
+
+        &:before {
+          background-color: var.$primary-color;
+        }
+
+        &:after {
+          content: "";
+          background-color: #fff;
+          background-image: url(/static/img/icon/icon_progress_pass.png);
+        }
+
+        .tit {
+          color: var.$primary-color;
+        }
+      }
+
+      &.fail {
+        color: var.$gray-80-color;
+
+        &:before {
+          background-color: var.$error-10-color;
+        }
+
+        &:after {
+          content: "";
+          background-color: #fff;
+          background-image: url(/static/img/icon/icon_progress_fail.png);
+        }
+
+        .tit {
+          color: var.$error-color;
+        }
+      }
+
+      .tit {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .txt {
+        margin-top: 4px;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+  }
+}

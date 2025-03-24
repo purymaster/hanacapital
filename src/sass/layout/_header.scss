@@ -23,7 +23,7 @@ header {
     .gnb {
       @include mixins.flexbox;
       gap: 64px;
-      margin-left: 196px;
+      margin-left: 120px;
 
       >li {
         position: relative;

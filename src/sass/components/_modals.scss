@@ -505,6 +505,38 @@
     }
   }
 
+  [data-progress] {
+    padding: 28px 0;
+
+    ol {
+      li {
+        flex: 0 1 152px;
+        padding-top: 44px;
+
+        &:before {
+          top: 16px;
+        }
+
+        &:after {
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+        }
+
+        .tit {
+          font-size: 14px;
+        }
+
+        &.pass {
+          .tit {
+            color: var.$gray-80-color;
+          }
+        }
+
+      }
+    }
+  }
+
   //공지사항
   &.notice {
     .notice_tit {
@@ -605,6 +637,50 @@
     }
 
   }
+}
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+
+  .tooltip_box {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 15px);
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 220px;
+    max-height: 140px;
+    padding: 10px 16px;
+    background-color: var.$gray-80-color;
+    color: var.$white-color;
+    // opacity: 0;
+    // visibility: hidden;
+    transition: opacity 0.3s;
+    border-radius: 6px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -24px;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -6px;
+      border-color: transparent transparent red transparent;
+      border-style: solid;
+      border-width: 12px;
+    }
+  }
+
+  &:hover {
+    .tooltip_box {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.up {}
 }
 
 // 인쇄영역
@@ -717,26 +793,29 @@
           font-size: 14px;
         }
 
-        th {
-          background: rgba(235, 243, 238, 0.5);
-          font-weight: 400;
-
-          &.major {
-            background: var.$table-title-color;
-            font-weight: 700;
-            font-size: 15px;
-            text-align: center !important;
-            vertical-align: middle;
-          }
-        }
-
-        .major {
+        &.group {
           th {
-            background: var.$table-title-color;
-            font-weight: 700;
-            font-size: 15px;
+            background: rgba(235, 243, 238, 0.5);
+            font-weight: 400;
+
+            &.major {
+              background: var.$table-title-color;
+              font-weight: 700;
+              font-size: 15px;
+              text-align: center !important;
+              vertical-align: middle;
+            }
+          }
+
+          .major {
+            th {
+              background: var.$table-title-color;
+              font-weight: 700;
+              font-size: 15px;
+            }
           }
         }
+
       }
 
       &.approval {
@@ -749,6 +828,12 @@
           }
         }
       }
+    }
+
+    .request {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 10px 14px;
     }
 
     &+.contract_cont {

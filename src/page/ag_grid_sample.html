@@ -167,7 +167,7 @@
         rowSelection: {
           mode: 'multiRow'
         },
-        rowHeight: 40,
+        rowHeight: 30,
         rowData,
         columnDefs: [
           {
@@ -196,12 +196,12 @@
             width: 158,
             editable: true,
           },
-          {
-            field: "button", cellRenderer: params => {
-              return markupObject.button;
-            },
-            width: 80,
-          },
+          // {
+          //   field: "button", cellRenderer: params => {
+          //     return markupObject.button;
+          //   },
+          //   width: 80,
+          // },
           {
             field: "link", cellRenderer: params => {
               return markupObject.textLink;

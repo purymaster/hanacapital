@@ -3,7 +3,7 @@
 [data-page-title] {
   @include mixins.flexbox(space-between);
   gap: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   height: 36px;
 
   .title {
@@ -11,9 +11,9 @@
     gap: 10px;
 
     .tit {
-      font-size: 24px;
+      font-size: 18px;
       line-height: 26px;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .breadcrumb {

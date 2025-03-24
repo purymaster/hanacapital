@@ -150,16 +150,16 @@
   a,
   button {
     @include mixins.inline-flexbox;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 20px;
-    height: 44px;
-    padding: 0 5px;
-    min-width: 180px;
-    font-weight: 700;
+    height: 28px;
+    padding: 0 12px;
+    min-width: 80px;
+    font-weight: 600;
     background: var.$tertiary-color;
     color: var.$primary-color;
-    border-top-left-radius: var.$global-border-radius;
-    border-top-right-radius: var.$global-border-radius;
+    border-top-left-radius: calc(var.$global-border-radius/2);
+    border-top-right-radius: calc(var.$global-border-radius/2);
 
     &.on {
       background: var.$primary-color;
@@ -185,7 +185,7 @@
 /* 페이지네이션 */
 [data-pagination] {
   position: relative;
-  height: 36px;
+  height: 28px;
   margin-top: 8px;
 
   [data-input-group] {
@@ -194,7 +194,6 @@
 
     [data-dropdown] {
       .toggle {
-        height: 36px;
         border-radius: 6px;
         padding: 0 24px 0 10px;
         color: var.$gray-80-color;
@@ -214,9 +213,9 @@
       @include mixins.inline-flexbox;
 
       .page-link {
-        width: 24px;
-        line-height: 24px;
-        font-size: 14px;
+        width: 20px;
+        line-height: 20px;
+        font-size: 12px;
         text-align: center;
         background-repeat: no-repeat;
         background-position: center;
@@ -344,13 +343,11 @@
 /* 액션헤더 */
 [data-action-header] {
   @include mixins.flexbox(space-between, flex-end);
-  margin-bottom: 12px;
-  gap: 52px;
-  min-height: 36px;
+  margin-bottom: 4px;
+  gap: 30px;
 
   .total {
-    font-size: 18px;
-    line-height: 36px;
+    font-size: 12px;
     font-weight: 600;
 
     .num {
@@ -369,10 +366,10 @@
     border-top: 1px solid #000;
 
     :is(th, td) {
-      font-size: 14px;
-      line-height: 20px;
-      height: 46px;
-      padding: 14px;
+      font-size: 12px;
+      line-height: 16px;
+      // height: 46px;
+      padding: 8px;
       border-bottom: 1px solid var.$gray-20-color;
       text-align: left;
       vertical-align: top;
@@ -380,8 +377,8 @@
 
     th {
       background: var.$table-title-color;
-      font-weight: 700;
-      font-size: 15px;
+      font-weight: 600;
+      font-size: 12px;
 
       .essential {
         display: inline-block;
@@ -403,7 +400,7 @@
     table {
       :is(th, td) {
         vertical-align: middle;
-        height: 72px;
+        // height: 72px;
       }
 
       th {
@@ -415,7 +412,7 @@
       }
 
       td {
-        padding: 14px 25px;
+        padding: 8px;
       }
     }
   }
@@ -424,8 +421,7 @@
   &.grid {
     table {
       :is(th, td) {
-        height: 40px;
-        padding: 9px;
+        padding: 8px;
         text-align: center;
         border-color: var.$gray-30-color;
         vertical-align: middle;
@@ -436,14 +432,12 @@
           input[type='text'],
           input[type='password'],
           input[type='email'] {
-            height: 32px;
             padding: 0 10px;
           }
 
           [data-dropdown] {
             .toggle {
               padding: 0 40px 0 10px;
-              height: 32px;
 
               &:after {
                 right: 14px;
@@ -458,7 +452,7 @@
       }
 
       th {
-        padding: 10px 14px;
+        padding: 8px;
         background: var.$gray-10-color;
       }
 
@@ -584,7 +578,7 @@
 [data-form-group] {
   @include mixins.flexbox(flex-start);
   flex-wrap: wrap;
-  gap: 8px 66px;
+  gap: 8px 24px;
 
   hr {
     margin: 8px 0;
@@ -595,14 +589,14 @@
 
   .box {
     @include mixins.inline-flexbox(flex-start);
-    flex: 0 1 calc(25% - 50px);
-    gap: 14px;
+    flex: 0 1 calc(16.66% - 20px);
+    gap: 10px;
 
     .label {
-      min-width: 110px;
-      font-size: 14px;
+      min-width: 80px;
+      font-size: 12px;
       line-height: 16px;
-      font-weight: 700;
+      font-weight: 600;
       flex-shrink: 0;
 
       .essential {
@@ -632,22 +626,22 @@
     }
   }
 
-  &.d3 {
-    width: calc(75% - 18px);
+  // &.d3 {
+  //   width: calc(75% - 18px);
 
-    .box {
-      flex: 0 1 calc(33.33% - 44px);
+  //   .box {
+  //     flex: 0 1 calc(33.33% - 44px);
 
-      &.x2 {
-        flex: 0 1 calc(66.66% - 22px);
-      }
+  //     &.x2 {
+  //       flex: 0 1 calc(66.66% - 22px);
+  //     }
 
-      &.x3,
-      &.full {
-        flex: 0 1 100%;
-      }
-    }
-  }
+  //     &.x3,
+  //     &.full {
+  //       flex: 0 1 100%;
+  //     }
+  //   }
+  // }
 
   &.flexible {
     .box {

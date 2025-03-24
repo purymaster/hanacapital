@@ -4,7 +4,7 @@
     <div class="wrap">
       <%- include('_inc/header') %>
         <div data-modal id="modal1" class="on">
-          <div class="modal w1200">
+          <div class="modal">
             <div class="modal_header">
               <div class="modal_tit">
                 진행상태 상세정보
@@ -70,6 +70,58 @@
               </div>
               <div class="cont_wrap">
                 <div class="cont_tit">진행상태</div>
+                <div data-progress>
+                  <ol>
+                    <li class="pass">
+                      <div class="txt_wrap">
+                        <div class="tit">센터입고</div>
+                        <div class="txt">
+                          yyyy-mm-dd<br>
+                          hh:mm:ss
+                        </div>
+                      </div>
+                    </li>
+                    <li class="pass">
+                      <div class="txt_wrap">
+                        <div class="tit">용품작업시작</div>
+                        <div class="txt">
+                          yyyy-mm-dd<br>
+                          hh:mm:ss
+                        </div>
+                      </div>
+                    </li>
+                    <li class="pass">
+                      <div class="txt_wrap">
+                        <div class="tit">용품작업완료</div>
+                        <div class="txt">
+                          yyyy-mm-dd<br>
+                          hh:mm:ss
+                        </div>
+                      </div>
+                    </li>
+                    <li class="pass">
+                      <div class="txt_wrap">
+                        <div class="tit">2차탁송배정</div>
+                        <div class="txt">
+                          yyyy-mm-dd<br>
+                          hh:mm:ss
+                        </div>
+                      </div>
+                    </li>
+                    <li class="fail">
+                      <div class="txt_wrap">
+                        <div class="tit">2차탁송출발</div>
+                        <div class="txt"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="txt_wrap">
+                        <div class="tit">고객인도</div>
+                        <div class="txt"></div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>

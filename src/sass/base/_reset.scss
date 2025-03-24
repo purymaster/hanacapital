@@ -5,11 +5,6 @@
   font-size: 16px;
 }
 
-* {
-  -webkit-print-color-adjust: exact !important;
-  color-adjust: exact !important;
-}
-
 html,
 body,
 div,
@@ -144,6 +139,8 @@ table {
 *:before,
 *:after {
   box-sizing: border-box;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
 }
 
 a {

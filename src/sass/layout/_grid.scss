@@ -33,6 +33,7 @@ $scrollbar-width: 18px; // 스크롤바 너비
     flex: 1;
     overflow: auto;
     padding: 30px;
+    padding-top: 8px;
     padding-left: 50px;
 
     &.no_snb {
@@ -47,25 +48,32 @@ $scrollbar-width: 18px; // 스크롤바 너비
 
     // 상세 및 입력 페이지
     &.detail {
-      padding-bottom: 80px;
+      padding-bottom: 30px;
 
-      .cont_wrap,
+      .cont_wrap {
+        margin-top: 20px;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+
       [data-action-header] {
-        margin-top: 36px;
+        margin-top: 20px;
       }
 
       .cont_wrap {
         .cont_tit {
-          font-size: 20px;
-          line-height: 24px;
-          font-weight: 700;
-          margin-bottom: 12px;
+          font-size: 18px;
+          line-height: 26px;
+          font-weight: 500;
+          margin-bottom: 8px;
         }
       }
 
       .btn_wrap {
         text-align: center;
-        margin-top: 60px;
+        margin-top: 30px;
       }
     }
   }
