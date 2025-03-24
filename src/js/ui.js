@@ -304,6 +304,35 @@
     });
   };
 
+  /* 페이지 프린트 제어 */
+  const printPage = (width = 1000, callback) => {
+    const AllowedWidthArray = [640, 800, 1000, 1200];
+    const wrap = document.querySelector('.wrap');
+    const printContent = document.getElementById('print').innerHTML;
+    const initWrap = wrap.innerHTML;
+
+    if (!AllowedWidthArray.includes(width)) {
+      console.error(`${width}는 스타일 시트에 정의되지 않은 너비입니다. _grid.scss를 확인해주세요.`);
+      return;
+    }
+
+    window.onbeforeprint = () => {
+      wrap.innerHTML = printContent;
+      wrap.classList.add('print', `w${width}`);
+      showLoading('blind');
+    };
+
+    window.onafterprint = () => {
+      wrap.innerHTML = initWrap;
+      wrap.classList.remove('print', `w${width}`);
+      hideLoading();
+      callback();
+    };
+
+    window.print();
+  };
+  window.printPage = printPage;
+
   $(() => {
     handleGnb();
     handleSnb();

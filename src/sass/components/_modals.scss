@@ -144,6 +144,10 @@
             }
           }
         }
+
+        [data-btn] {
+          margin-left: auto;
+        }
       }
 
       .btn_wrap {
@@ -792,7 +796,8 @@
   }
 
   [data-loading],
-  [data-toast] {
+  [data-toast],
+  [data-btn].docs {
     display: none !important;
   }
 }

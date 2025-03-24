@@ -208,28 +208,5 @@
           </div>
         </div>
 
-        <script>
-          const printPage = () => {
-            const wrap = document.querySelector('.wrap');
-            const printContent = document.getElementById('print').innerHTML;
-            const initWrap = wrap.innerHTML;
-
-            window.onbeforeprint = () => {
-              wrap.innerHTML = printContent;
-              wrap.classList.add('print', 'w1000');
-              showLoading('blind');
-            };
-
-            window.onafterprint = () => {
-              wrap.innerHTML = initWrap;
-              wrap.classList.remove('print', 'w1000');
-              hideLoading();
-            };
-
-            window.print();
-          };
-
-        </script>
-
     </div>
     <%- include('_inc/tail') %>

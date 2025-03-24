@@ -24,7 +24,7 @@
                     <button class="next"></button>
                   </div>
                   <div class="btn">
-                    <button type="button" data-btn class="secondary docs" onclick="printPage();">
+                    <button type="button" data-btn class="secondary docs" onclick="printPage(640, handlePage);">
                       <img src="/static/img/icon/icon_print.png" alt="">
                       인쇄
                     </button>
@@ -276,28 +276,6 @@
             updatePagination();
           }
           handlePage();
-
-          const printPage = () => {
-            const wrap = document.querySelector('.wrap');
-            const printContent = document.getElementById('print').innerHTML;
-            const initWrap = wrap.innerHTML;
-
-            window.onbeforeprint = () => {
-              wrap.innerHTML = printContent;
-              wrap.classList.add('print', 'w640');
-              showLoading('blind');
-            };
-
-            window.onafterprint = () => {
-              wrap.innerHTML = initWrap;
-              wrap.classList.remove('print', 'w640');
-              hideLoading();
-              handlePage();
-            };
-
-            window.print();
-          };
-
         </script>
 
     </div>

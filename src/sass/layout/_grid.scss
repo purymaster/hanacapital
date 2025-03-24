@@ -16,8 +16,16 @@ $scrollbar-width: 18px; // 스크롤바 너비
       min-width: 640px;
     }
 
+    &.w800 {
+      min-width: 800px;
+    }
+
     &.w1000 {
       min-width: 1000px;
+    }
+
+    &.w1200 {
+      min-width: 1200px;
     }
   }
 
