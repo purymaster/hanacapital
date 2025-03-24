@@ -610,12 +610,15 @@
 // 인쇄영역
 [data-print] {
   position: relative;
-  background-image: url(/static/img/bg/bg_contract_watermark.png);
-  background-position: center;
-  background-size: 200px 218px;
-  background-repeat: no-repeat;
   page-break-after: always;
   z-index: 0;
+
+  &.watermark {
+    background-image: url(/static/img/bg/bg_contract_watermark.png);
+    background-position: center;
+    background-size: 200px 218px;
+    background-repeat: no-repeat;
+  }
 
   &.on {
     z-index: 1;
