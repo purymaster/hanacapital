@@ -151,6 +151,14 @@
       box-sizing: border-box
     }
 
+    strong {
+      font-weight: 700;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
     body,
     html {
       height: 100%;
@@ -158,6 +166,32 @@
       line-height: 1.5;
       letter-spacing: -.025em;
       font-family: "Noto Sans KR", "Apple SD Gothic Neo", Helvetica, sans-serif
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      max-width: 600px;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+      font-size: 12px;
+    }
+
+    .popup .check {
+      margin-top: 1.5em;
+    }
+
+    .popup .check label {
+      display: flex;
     }
 
     .wrap {
@@ -782,8 +816,57 @@
     </div>
   </div> -->
 
+  <div class="modal hidden" id="popup01">
+    <div class="popup">
+      <strong>[03/28] 전체 디자인 수정(마크업 가이드 참조)</strong><br>
+      <br>
+      &middot; [data-btn] 클래스 변경(버튼 종류 감소)<br>
+      &middot; [data-form-group] 클래스 변경(한 가지 타입으로 감소)<br>
+      &middot; .nodata -> [data-noresult]로 일괄 변경
+      <div class="check">
+        <label>
+          <input type="checkbox" id="noPopup">
+          팝업을 다시 보지 않겠습니다.
+        </label>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+
+      const modals = document.querySelectorAll(".modal");
+
+      function getCookie(name) {
+        return document.cookie.split("; ").find(row => row.startsWith(name + "="))?.split("=")[1] || null;
+      }
+
+      function setCookie(name, value) {
+        const date = new Date();
+        date.setTime(date.getTime() + (3650 * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value}; path=/; expires=${date.toUTCString()}`;
+      }
+
+      modals.forEach((modal) => {
+        const popup = modal.querySelector(".popup");
+        const checkbox = modal.querySelector("input[type='checkbox']");
+
+        getCookie(modal.id) === "hidden" ? modal.classList.add("hidden") : modal.classList.remove("hidden");
+
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) modal.classList.add("hidden");
+        });
+
+        if (checkbox) {
+          checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+              setCookie(modal.id, "hidden");
+              modal.classList.add("hidden");
+            }
+          });
+        }
+      });
+
       document.querySelectorAll('tbody .num').forEach((cell, index) => cell.textContent = index + 1);
     });
 
@@ -797,7 +880,6 @@
       });
     });
 
-    alert('[03/28] 전체 디자인 수정(마크업 가이드 참조)\n- [data-btn] 클래스 변경(버튼 종류 감소)\n- [data-form-group] 클래스 변경(한 가지 타입으로 감소)\n- .nodata -> [data-noresult]로 일괄 변경');
   </script>
 </body>
 
