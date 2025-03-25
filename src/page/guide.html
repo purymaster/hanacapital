@@ -57,6 +57,7 @@
         padding: .25em 15px;
         border-radius: 4px;
         transition: all .3s;
+        font-size: 16px;
       }
 
       .guide_map a:hover {
@@ -66,6 +67,7 @@
 
       .guide_group {
         margin-top: 50px;
+        font-size: 16px;
       }
 
       .deprecated {
@@ -282,7 +284,7 @@
 
             <div class="guide_group">
               <h3 id="button" class="guide_tit">Button</h3>
-              <h4 class="guide_sub_tit">기본형(높이 48px)</h4>
+              <h4 class="guide_sub_tit">기본형(높이 28px)</h4>
               <div class="code">
                 <button type="button" data-btn>버튼 Primary</button>
                 <button type="button" data-btn class="secondary">버튼 Secondary</button>
@@ -293,45 +295,12 @@
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">max(높이 56px)</h4>
+              <h4 class="guide_sub_tit">max(높이 32px)</h4>
               <div class="code">
                 <button type="button" data-btn class="mx">버튼 Primary</button>
                 <button type="button" data-btn class="secondary mx">버튼 Secondary</button>
                 <button type="button" data-btn class="mx" disabled>버튼(비활성화)</button>
                 <button type="button" data-btn class="secondary mx" disabled>버튼 Secondary(비활성화)</button>
-              </div>
-              <pre><code class="language-markup"></code></pre>
-            </div>
-
-            <div class="guide_group">
-              <h4 class="guide_sub_tit">medium(높이 40px)</h4>
-              <div class="code">
-                <button type="button" data-btn class="m">버튼 Primary</button>
-                <button type="button" data-btn class="secondary m">버튼 Secondary</button>
-                <button type="button" data-btn class="m" disabled>버튼(비활성화)</button>
-                <button type="button" data-btn class="secondary m" disabled>버튼 Secondary(비활성화)</button>
-              </div>
-              <pre><code class="language-markup"></code></pre>
-            </div>
-
-            <div class="guide_group">
-              <h4 class="guide_sub_tit">small(높이 36px)</h4>
-              <div class="code">
-                <button type="button" data-btn class="s">버튼 Primary</button>
-                <button type="button" data-btn class="secondary s">버튼 Secondary</button>
-                <button type="button" data-btn class="s" disabled>버튼(비활성화)</button>
-                <button type="button" data-btn class="secondary s" disabled>버튼 Secondary(비활성화)</button>
-              </div>
-              <pre><code class="language-markup"></code></pre>
-            </div>
-
-            <div class="guide_group">
-              <h4 class="guide_sub_tit">xsmall(높이 24px)</h4>
-              <div class="code">
-                <button type="button" data-btn class="xs">버튼 Primary</button>
-                <button type="button" data-btn class="secondary xs">버튼 Secondary</button>
-                <button type="button" data-btn class="xs" disabled>버튼(비활성화)</button>
-                <button type="button" data-btn class="secondary xs" disabled>버튼 Secondary(비활성화)</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
@@ -665,7 +634,6 @@
 
             <div class="guide_group">
               <h3 id="formGroup" class="guide_tit">Form Group</h3>
-              <h4 class="guide_sub_tit">6분할</h4>
               <div class="code">
                 <div data-form-group>
                   <div class="box">
@@ -699,7 +667,7 @@
                     </div>
                   </div>
                   <div class="box">
-                    <button type="button" data-btn class="m">면허 유효성 체크</button>
+                    <button type="button" data-btn>면허 유효성 체크</button>
                     <div data-input-group>
                       <input type="text">
                     </div>
@@ -711,39 +679,15 @@
                       <input type="text">
                     </div>
                   </div>
-                  <div class="box">
-                    <div class="label">대물</div>
-                    <div data-input-group>
-                      <input type="text">
-                    </div>
-                  </div>
-                  <div class="box x2">
-                    <div class="label">2배수</div>
-                    <div data-input-group class="full">
-                      <input type="text">
-                    </div>
-                  </div>
-                  <div class="box x3">
-                    <div class="label">3배수</div>
-                    <div data-input-group class="full">
-                      <input type="text">
-                    </div>
-                  </div>
-                  <div class="box">
-                    <div class="label">대물</div>
-                    <div data-input-group>
-                      <input type="text">
-                    </div>
-                  </div>
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">너비 미지정</h4>
+              <h4 class="guide_sub_tit">전체 너비 미지정</h4>
               <div class="code">
-                <div data-form-group class="flexible">
+                <div data-form-group>
                   <div class="box">
                     <div class="label">
                       차대차
@@ -928,7 +872,7 @@
                     </div>
                   </div>
                   <div class="btn">
-                    <button type="button" data-btn class="m">검색</button>
+                    <button type="button" data-btn>검색</button>
                   </div>
                 </div>
               </div>
@@ -1247,7 +1191,7 @@
                     </div>
                     <div class="modal_footer">
                       <button type="button" data-btn class="m secondary">취소</button>
-                      <button type="button" data-btn class="m" onClick="closeModal('modal1')">확인</button>
+                      <button type="button" data-btn> onClick="closeModal('modal1')">확인</button>
                     </div>
                   </div>
                 </div>
@@ -1317,7 +1261,7 @@
                       visiblePages: 10
                     });
                   </script>
-                  <!-- <div class="nodata">
+                  <!-- <div data-noresult>
                     <div class="txt">
                       <img src="/static/img/icon/icon_nodata.png" alt>
                       <p>검색 결과가 없습니다.</p>

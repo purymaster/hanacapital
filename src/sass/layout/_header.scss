@@ -71,9 +71,9 @@ header {
             transition: all .3s;
 
             &:hover {
-              background: var.$gray-10-color;
+              background: var.$tertiary-color;
               color: var.$primary-color;
-              font-weight: 700;
+              font-weight: 600;
             }
 
           }
@@ -91,7 +91,7 @@ header {
         line-height: 20px;
         letter-spacing: 0.16px;
         color: var.$primary-color;
-        font-weight: 700;
+        font-weight: 600;
       }
 
       .logout {
@@ -117,7 +117,7 @@ header {
     @include mixins.flexbox(flex-start, flex-end);
     background: var.$primary-color;
     padding: 8px 30px 0 34px;
-    height: 46px;
+    height: 36px;
 
     .tab_wrap {
       overflow: hidden;
@@ -130,8 +130,8 @@ header {
           @include mixins.flexbox(flex-start);
           position: relative;
           min-width: 170px;
-          height: 38px;
-          padding: 10px 36px 10px 16px;
+          height: 28px;
+          padding: 5px 26px 5px 12px;
           font-size: 15px;
           line-height: 18px;
           font-weight: 600;
@@ -157,7 +157,7 @@ header {
 
           .close {
             @include mixins.pos-center-y;
-            right: 10px;
+            right: 5px;
             width: 16px;
             height: 16px;
             font-size: 0;
@@ -186,7 +186,7 @@ header {
       @include mixins.flexbox;
       height: 16px;
       margin-left: auto;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       flex-shrink: 0;
 
       button {
@@ -276,7 +276,7 @@ header {
             text-align: left;
             padding: 10px 36px 10px 50px;
             border-radius: var.$global-border-radius;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 16px;
             line-height: 20px;
 
@@ -358,7 +358,7 @@ header {
             &:focus {
               background: var.$primary-color;
               color: var.$white-color;
-              font-weight: 700;
+              font-weight: 600;
             }
           }
         }

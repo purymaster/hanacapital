@@ -46,9 +46,9 @@
     @include mixins.column-flexbox(center);
     background: var.$white-color;
     max-height: 100vh;
-    padding: 40px 30px 34px;
+    padding: 20px;
     width: 1000px;
-    border-radius: 20px;
+    border-radius: 10px;
 
     &.w600 {
       width: 600px;
@@ -65,32 +65,31 @@
     .modal_header {
       @include mixins.flexbox(space-between, flex-start);
       position: relative;
-      padding-bottom: 20px;
+      padding-bottom: 14px;
       width: 100%;
       gap: 60px;
 
       &:before {
         content: "";
         position: absolute;
-        left: -30px;
+        left: -20px;
         bottom: 0;
-        width: calc(100% + 60px);
+        width: calc(100% + 40px);
         height: 1px;
         background: var.$gray-20-color;
       }
 
       .modal_tit {
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 500;
       }
 
       .close {
-        width: 24px;
-        height: 24px;
-        margin-top: 4px;
+        width: 20px;
+        height: 20px;
         font-size: 0;
-        background: url(/static/img/icon/icon_popup_close.png) no-repeat center / 24px;
+        background: url(/static/img/icon/icon_popup_close.png) no-repeat center / 20px;
         flex-shrink: 0;
       }
     }
@@ -99,8 +98,8 @@
       @include mixins.scrollbar;
       @include mixins.column-flexbox(flex-start, flex-start);
       overflow-y: auto;
-      width: calc(100% + 60px);
-      padding: 24px 30px 0 30px;
+      width: calc(100% + 40px);
+      padding: 20px 20px 0 20px;
       flex: 1;
 
       >* {
@@ -115,7 +114,7 @@
         }
 
         &:not(:first-of-type) {
-          margin-top: 24px;
+          margin-top: 14px;
         }
 
         &:only-child,
@@ -128,16 +127,15 @@
       .cont_tit {
         @include mixins.flexbox(flex-start);
         width: 100%;
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: 500;
+        font-size: 16px;
         line-height: 20px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
 
         &.status {
           justify-content: space-between;
 
           .total {
-            font-weight: 600;
 
             strong {
               color: var.$primary-color;
@@ -433,7 +431,27 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        background: var.$gray-80-color;
+      }
+    }
+
+    [data-photo-upload] {
+      .preview {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+          height: 142px;
+
+          &:after {
+            height: calc(100% - 34px);
+          }
+
+          img {
+            height: calc(100% - 34px);
+          }
+        }
       }
     }
   }
@@ -452,7 +470,7 @@
   }
 
   [data-progress] {
-    padding: 28px 0;
+    // padding: 28px 0;
 
     ol {
       li {
@@ -488,7 +506,7 @@
     .notice_tit {
       font-size: 20px;
       line-height: 24px;
-      font-weight: 700;
+      font-weight: 600;
       padding-bottom: 12px;
       border-bottom: 1px solid var.$gray-80-color;
     }
@@ -525,7 +543,7 @@
     .contract_ctr {
       @include mixins.flexbox(space-between);
       margin-bottom: 16px;
-      padding: 0 30px;
+      padding: 0 20px;
 
       .logo {
         height: 23px;
@@ -568,7 +586,7 @@
 
     [data-print] {
       background-color: #fff;
-      padding: 0 30px;
+      padding: 0 20px;
 
       &:not(:only-child) {
         position: absolute;
@@ -586,36 +604,40 @@
 }
 
 [data-tooltip] {
+  display: inline-block;
   position: relative;
   cursor: pointer;
 
   .tooltip_box {
-    position: absolute;
-    left: 0;
+    @include mixins.pos-center-x;
     top: calc(100% + 15px);
-    font-size: 14px;
-    line-height: 18px;
-    max-width: 220px;
-    max-height: 140px;
-    padding: 10px 16px;
-    background-color: var.$gray-80-color;
-    color: var.$white-color;
     // opacity: 0;
     // visibility: hidden;
     transition: opacity 0.3s;
+    background-color: var.$gray-80-color;
+    color: var.$white-color;
     border-radius: 6px;
+    padding: 10px 16px;
+
+    .tooltip_txt {
+      @include mixins.ellipsis(7);
+      font-size: 12px;
+      line-height: 16px;
+      min-width: 66px;
+      max-width: 188px;
+    }
 
     &:after {
       content: "";
       position: absolute;
-      top: -24px;
+      top: -12px;
       left: 50%;
       width: 0;
       height: 0;
       margin-left: -6px;
-      border-color: transparent transparent red transparent;
+      border-color: transparent transparent var.$gray-80-color transparent;
       border-style: solid;
-      border-width: 12px;
+      border-width: 6px;
     }
   }
 
@@ -676,7 +698,7 @@
       }
 
       .tit {
-        font-weight: 700;
+        font-weight: 600;
         flex-shrink: 0;
 
         &:after {
@@ -722,7 +744,7 @@
     position: relative;
     text-align: center;
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 50px;
 
     .logo {
@@ -737,12 +759,12 @@
       table {
         &.group {
           th {
-            background: rgba(235, 243, 238, 0.5);
+            background: #f5f9f6;
             font-weight: 400;
 
             &.major {
               background: var.$table-title-color;
-              font-weight: 700;
+              font-weight: 600;
               text-align: center !important;
               vertical-align: middle;
             }
@@ -751,7 +773,7 @@
           .major {
             th {
               background: var.$table-title-color;
-              font-weight: 700;
+              font-weight: 600;
             }
           }
         }
@@ -808,7 +830,7 @@
     }
 
     .cont_tit {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 18px;
       line-height: 20px;
       margin-bottom: 12px;

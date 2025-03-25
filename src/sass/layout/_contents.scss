@@ -15,23 +15,6 @@
 .grid_wrap {
   flex: 1;
   width: 100%;
-
-  .nodata {
-    @include mixins.flexbox;
-    height: 100%;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    color: var.$gray-50-color;
-
-    img {
-      display: block;
-      height: 48px;
-      width: 48px;
-      margin: 0 auto 14px;
-    }
-  }
 }
 
 #myGrid {
@@ -56,7 +39,7 @@
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 18px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .txt_wrap {
@@ -83,6 +66,24 @@
  * [data-photo-upload] : 사진 미리보기가 포함된 파일 업로더
  * [data-form-group] : 테이블 내 또는 모달 팝업에 포함되는 테이블 형태의 입력폼
  */
+
+/* 데이터 없음 */
+[data-noresult] {
+  @include mixins.flexbox;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var.$gray-50-color;
+
+  img {
+    display: block;
+    height: 48px;
+    width: 48px;
+    margin: 0 auto 14px;
+  }
+}
 
 /* 목록 */
 [data-list] {
@@ -368,7 +369,7 @@
     :is(th, td) {
       font-size: 12px;
       line-height: 16px;
-      padding: 8px;
+      padding: 6px;
       border-bottom: 1px solid var.$gray-20-color;
       text-align: left;
       vertical-align: top;
@@ -400,14 +401,6 @@
       :is(th, td) {
         vertical-align: middle;
       }
-
-      th {
-        text-align: center;
-      }
-
-      td {
-        padding: 8px;
-      }
     }
   }
 
@@ -415,7 +408,7 @@
   &.grid {
     table {
       :is(th, td) {
-        padding: 8px;
+        padding: 6px;
         text-align: center;
         border-color: var.$gray-30-color;
         vertical-align: middle;
@@ -446,7 +439,6 @@
       }
 
       th {
-        padding: 8px;
         background: var.$gray-10-color;
       }
 
@@ -489,7 +481,7 @@
   .guide {
     @include mixins.flexbox(flex-start);
     position: relative;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 20px;
     gap: 10px;
     color: var.$gray-50-color;
@@ -497,11 +489,14 @@
     input[type="file"] {
       @include mixins.blind;
     }
+
+    &+.preview {
+      margin-top: 10px;
+    }
   }
 
   .preview {
     @include mixins.flexbox(flex-start);
-    margin-top: 10px;
     gap: 6px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -513,6 +508,7 @@
       height: 120px;
       flex-shrink: 0;
       scroll-snap-align: start;
+      font-size: 0;
       cursor: pointer;
 
       &:after {
@@ -539,7 +535,8 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        background: var.$gray-80-color;
       }
 
       .del {
@@ -554,6 +551,16 @@
         visibility: hidden;
         opacity: 0;
         transition: all .3s;
+      }
+
+      .txt_wrap {
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 14px;
+
+        >div {
+          @include mixins.ellipsis;
+        }
       }
 
     }
@@ -583,11 +590,9 @@
 
   .box {
     @include mixins.inline-flexbox(flex-start);
-    flex: 0 1 calc(16.66% - 20px);
     gap: 10px;
 
     .label {
-      min-width: 80px;
       font-size: 12px;
       line-height: 16px;
       font-weight: 600;
@@ -605,24 +610,6 @@
 
     [data-input-group] {
       width: 100%;
-    }
-
-    // &.x2 {
-    //   flex: 0 1 calc(50% - 32px);
-    // }
-
-    // &.x3 {
-    //   flex: 0 1 calc(75% - 16px);
-    // }
-
-    // &.full {
-    //   flex: 0 1 100%;
-    // }
-  }
-
-  &.flexible {
-    .box {
-      flex: none;
     }
   }
 }

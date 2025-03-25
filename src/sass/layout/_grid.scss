@@ -32,9 +32,7 @@ $scrollbar-width: 18px; // 스크롤바 너비
   .content {
     flex: 1;
     overflow: auto;
-    padding: 30px;
-    padding-top: 8px;
-    padding-left: 50px;
+    padding: 8px 30px 8px 50px;
 
     &.no_snb {
       padding-left: 30px;

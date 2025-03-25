@@ -8,10 +8,10 @@
   background: var.$primary-color;
   color: var.$white-color;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
   margin: 0 1px;
-  padding: 14px 22px;
+  padding: 5px 12px;
   border-radius: calc(var.$global-border-radius/2);
   cursor: pointer;
   white-space: nowrap;
@@ -59,35 +59,7 @@
   &.mx {
     font-size: 14px;
     line-height: 20px;
-    padding: 5px 24px;
-  }
-
-  &.m {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 5px 12px;
-  }
-
-  &.s {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 5px 12px;
-  }
-
-  &.xs {
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 500;
-    padding: 3px 8px;
-    border-radius: 6px;
-  }
-
-  &.docs {
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 500;
-    padding: 6px 9px;
-    border-radius: 6px;
+    padding: 5px 18px;
   }
 
   img {

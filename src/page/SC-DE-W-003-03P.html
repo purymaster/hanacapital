@@ -1,0 +1,129 @@
+<%- include('_inc/head', {title:'차량이미지 등록'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div data-modal id="modal1" class="on">
+          <div class="modal">
+            <div class="modal_header">
+              <div class="modal_tit">
+                차량이미지 등록
+              </div>
+              <button type="button" class="close" onClick="closeModal('modal1')">팝업 닫기</button>
+            </div>
+            <div class="modal_cont">
+              <div class="cont_wrap">
+                <div data-photo-upload>
+                  <div class="guide">
+                    <label for="photoUpload" data-btn="" class="s secondary">파일찾기</label>
+                    <input id="photoUpload" type="file" accept=".jpg, .jpeg, .png">
+                    <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
+                  </div>
+                  <ul class="preview">
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_01.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_02.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_03.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_04.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_05.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_06.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_07.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_08.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_09.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="/static/img/dummy/dummy_slide_10.png" alt="">
+                      <button type="button" class="del">삭제</button>
+                      <div class="txt_wrap">
+                        <div class="name">IMG_0000.jpg</div>
+                        <div class="size">1kb</div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- <div data-noresult style="height: 290px;">
+                    <div class="txt">
+                      <img src="/static/img/icon/icon_nodata.png" alt>
+                      <p>등록된 차량 이미지가 없습니다.</p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="cont_wrap">
+                <ul class="middot type1" data-list>
+                  <li>차량 이미지는 전면, 측후면 5장 내외로 등록하세요.</li>
+                  <li>차량 번호판 이미지는 근접, 원거리 3장 내외로 등록하세요.</li>
+                  <li>이미지 파일 형식은 JPG, JPEG, PNG파일만 등록 가능합니다.</li>
+                  <li>등록한 이미지는 차량탁송현황 목록에서 차량이미지 [보기] 버튼을 통해, 확인하세요.</li>
+                </ul>
+              </div>
+              <div class="btn_wrap">
+                <button type="button" data-btn class="mx">
+                  등록
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <%- include('_inc/tail') %>
