@@ -6,7 +6,7 @@
     @include mixins.flexbox(center, flex-start);
     counter-reset: progress-counter;
 
-    li {
+    >li {
       position: relative;
       flex: 0 1 160px;
       text-align: center;

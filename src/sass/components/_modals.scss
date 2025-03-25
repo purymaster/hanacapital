@@ -473,7 +473,7 @@
     // padding: 28px 0;
 
     ol {
-      li {
+      >li {
         flex: 0 1 152px;
         padding-top: 44px;
 
@@ -849,9 +849,9 @@
     }
 
     .request {
-      font-size: 14px;
-      line-height: 18px;
-      padding: 10px 14px;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 6px;
     }
 
     &+.contract_cont {
