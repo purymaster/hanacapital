@@ -100,6 +100,26 @@
     });
   }
 
+  /* 탭메뉴 제어 */
+  const handleTabMenu = () => {
+    $("[data-tab]").each(function () {
+      const $tabMenu = $(this);
+      const group = $tabMenu.data("tab");
+      const $tabMenus = $tabMenu.find("button, a");
+      const $tabPages = $(`[data-tab-pages="${group}"] .tab_page`);
+
+      $tabMenus.removeClass("on").first().addClass("on");
+      $tabPages.hide().first().show();
+
+      $tabMenus.on("click", function () {
+        const targetId = $(this).data("tab-target");
+        const $targetPage = $(`#${targetId}`);
+        $(this).addClass("on").siblings().removeClass("on");
+        $targetPage.show().siblings().hide();
+      });
+    });
+  };
+
   /* GNB 탭 제어 */
   const handleGnbTab = () => {
     let gnbTabArray = [];
@@ -338,6 +358,7 @@
     handleSnb();
     handleInput();
     handleDropdown();
+    handleTabMenu();
     handleGnbTab();
     handleToast();
     handleLoading();

@@ -265,19 +265,39 @@
             <div class="guide_group">
               <h3 id="tabMenu" class="guide_tit">Tab Menu</h3>
               <h4 class="guide_sub_tit">기본형</h4>
-              <div data-tab>
-                <button type="button" class="on">Tab</button>
-                <button type="button">Long Name Tab Button Long Name Tab Button</button>
-                <a href="https://naver.com" target="_blank">Link</a>
+              <div class="code">
+                <div data-tab>
+                  <button type="button" class="on" data-tab-target="tabPage1">Tab1</button>
+                  <button type="button" data-tab-target="tabPage2">Lorem ipsum dolor sit amet Tab2</button>
+                  <a href="https://naver.com" target="_blank">Link</a>
+                </div>
+                <div data-tab-pages>
+                  <div id="tabPage1">
+                    Page1
+                  </div>
+                  <div id="tabPage2">
+                    Page2
+                  </div>
+                </div>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
 
             <div class="guide_group">
               <h4 class="guide_sub_tit">기본형(bar)</h4>
-              <div data-tab class="bar">
-                <button type="button" class="on">Tab1</button>
-                <button type="button">Tab2</button>
+              <div class="code">
+                <div data-tab class="bar">
+                  <button type="button" class="on" data-tab-target="tabPage3">Tab3</button>
+                  <button type="button" data-tab-target="tabPage4">Tab4</button>
+                </div>
+                <div data-tab-pages>
+                  <div id="tabPage3">
+                    Page3
+                  </div>
+                  <div id="tabPage4">
+                    Page4
+                  </div>
+                </div>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
