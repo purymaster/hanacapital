@@ -115,7 +115,7 @@
         const targetId = $(this).data("tab-target");
         const $targetPage = $(`#${targetId}`);
         $(this).addClass("on").siblings().removeClass("on");
-        $targetPage.show().siblings().hide();
+        $targetPage.show().siblings('.tab_page').hide();
       });
     });
   };

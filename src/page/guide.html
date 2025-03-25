@@ -266,16 +266,16 @@
               <h3 id="tabMenu" class="guide_tit">Tab Menu</h3>
               <h4 class="guide_sub_tit">기본형</h4>
               <div class="code">
-                <div data-tab>
-                  <button type="button" class="on" data-tab-target="tabPage1">Tab1</button>
+                <div data-tab="tabGroup1">
+                  <button type="button" data-tab-target="tabPage1">Tab1</button>
                   <button type="button" data-tab-target="tabPage2">Lorem ipsum dolor sit amet Tab2</button>
                   <a href="https://naver.com" target="_blank">Link</a>
                 </div>
-                <div data-tab-pages>
-                  <div id="tabPage1">
+                <div data-tab-pages="tabGroup1">
+                  <div class="tab_page" id="tabPage1">
                     Page1
                   </div>
-                  <div id="tabPage2">
+                  <div class="tab_page" id="tabPage2">
                     Page2
                   </div>
                 </div>
@@ -284,19 +284,30 @@
             </div>
 
             <div class="guide_group">
-              <h4 class="guide_sub_tit">기본형(bar)</h4>
+              <h4 class="guide_sub_tit">Bar</h4>
               <div class="code">
-                <div data-tab class="bar">
-                  <button type="button" class="on" data-tab-target="tabPage3">Tab3</button>
+                <div data-tab="tabGroup2" class="bar">
+                  <button type="button" data-tab-target="tabPage3">Tab3</button>
                   <button type="button" data-tab-target="tabPage4">Tab4</button>
                 </div>
-                <div data-tab-pages>
-                  <div id="tabPage3">
+                <div data-tab-pages="tabGroup2">
+                  <div class="tab_page" id="tabPage3">
                     Page3
                   </div>
-                  <div id="tabPage4">
+                  <div class="tab_page" id="tabPage4">
                     Page4
                   </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">탭 기능 없음</h4>
+              <div class="code">
+                <div data-tab>
+                  <button type="button">Tab5</button>
+                  <button type="button">Tab6</button>
                 </div>
               </div>
               <pre><code class="language-markup"></code></pre>

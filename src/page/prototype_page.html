@@ -6,32 +6,6 @@
         <div class="content">
           <% const page_title={ title: "제목" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
-              <div data-tab="tabGroup1">
-                <button type="button" data-tab-target="tabPage3">Tab3</button>
-                <button type="button" data-tab-target="tabPage4">Tab4</button>
-              </div>
-              <div data-tab-pages="tabGroup1">
-                <div class="tab_page" id="tabPage3">
-                  Page3
-                </div>
-                <div class="tab_page" id="tabPage4">
-                  Page4
-                </div>
-                <div data-tab-pages="tabGroup2">
-                  <div class="tab_page" id="tabPage5">
-                    Page5
-                  </div>
-                  <div class="tab_page" id="tabPage6">
-                    Page6
-                  </div>
-                </div>
-              </div>
-
-              <div data-tab="tabGroup2">
-                <button type="button" data-tab-target="tabPage5">Tab5</button>
-                <button type="button" data-tab-target="tabPage6">Tab6</button>
-              </div>
-
         </div>
     </div>
     <%- include('_inc/tail') %>
