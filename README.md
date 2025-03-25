@@ -73,7 +73,8 @@ src<br/>
  ┃ ┃ ┣ _inputs.scss<br/>
  ┃ ┃ ┣ _modals.scss - 모달(레이어 팝업) 스타일 정의<br/>
  ┃ ┃ ┣ _page_title.scss<br/>
- ┃ ┃ ┗ _popups.scss - 팝업(시스템 팝업) 스타일 정의<br/>
+ ┃ ┃ ┣ _popups.scss - 팝업(시스템 팝업) 스타일 정의<br/>
+ ┃ ┃ ┗ _progress.scss<br/>
  ┃ ┣ helpers<br/>
  ┃ ┃ ┣ _functions.scss<br/>
  ┃ ┃ ┣ _mixins.scss<br/>
