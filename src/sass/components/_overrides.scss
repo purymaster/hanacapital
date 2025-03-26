@@ -1,0 +1,27 @@
+@use "../helpers/_mixins" as mixins;
+@use "../helpers/_variables" as var;
+
+[data-color="accident"],
+[data-color="fail"] {
+  color: var.$error-color !important;
+}
+
+[data-color="pass"] {
+  color: var.$primary-color !important;
+}
+
+.flex_full {
+  @include mixins.flexbox-full-height();
+
+  .btn_wrap {
+    margin-top: auto !important;
+  }
+}
+
+.ellipsis {
+  @include mixins.ellipsis();
+}
+
+.ellipsis_l2 {
+  @include mixins.ellipsis(2);
+}
