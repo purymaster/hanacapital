@@ -1,13 +1,7 @@
 @use "../helpers/_mixins" as mixins;
 
-$viewport-width: 1920px; // 뷰포트 너비
-$scrollbar-width: 18px; // 스크롤바 너비
-
 .wrap {
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  min-width: calc($viewport-width - $scrollbar-width);
 
   &.print {
     height: auto;
@@ -30,9 +24,9 @@ $scrollbar-width: 18px; // 스크롤바 너비
   }
 
   .content {
-    flex: 1;
+    height: calc(100% - 88px);
     overflow: auto;
-    padding: 8px 30px 8px 50px;
+    padding: 8px 0 8px 50px;
 
     &.no_snb {
       padding-left: 30px;
@@ -74,5 +68,24 @@ $scrollbar-width: 18px; // 스크롤바 너비
 
   &.popup_wrap {
     min-width: 0;
+  }
+
+  //iframe
+  .main_frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  //iframe 내부 UI
+  &.inner {
+    padding-right: 30px;
+
+    .content {
+      height: 100%;
+      padding: 0;
+    }
   }
 }
