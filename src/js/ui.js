@@ -238,19 +238,27 @@
   /* 토스트 팝업 제어 */
   const handleToast = () => {
     const $toast = $('[data-toast]');
-    const TOAST_DURATION_SECOND = 2;
+    const DEFAULT_DURATION = 2;
     let toastTimeout;
 
-    window.showToast = (msg, duration = TOAST_DURATION_SECOND) => {
+    window.showToast = (msg, duration = DEFAULT_DURATION, callback) => {
+      if (typeof duration === 'function') {
+        callback = duration;
+        duration = DEFAULT_DURATION;
+      }
+
       if (toastTimeout) {
         clearTimeout(toastTimeout);
       }
+
       $toast.text(msg).addClass('on');
+
       toastTimeout = setTimeout(() => {
         $toast.removeClass('on');
+        callback?.();
       }, duration * 1000);
     };
-  }
+  };
 
   /* 로딩 제어 */
   const handleLoading = () => {

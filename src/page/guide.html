@@ -1296,6 +1296,10 @@
                 <!-- <div data-toast></div> -->
                 <button type="button" data-btn onClick="showToast('메세지')">툴팁 노출</button>
                 <button type="button" data-btn onClick="showToast('메세지', 5)">툴팁 5초 노출</button>
+                <button type="button" data-btn onClick="showToast('메세지', () => alert('토스트 메시지 종료'))">2초 후 콜백
+                  실행</button>
+                <button type="button" data-btn onClick="showToast('메세지', 5, () => alert('토스트 메시지 종료'))">5초 후 콜백
+                  실행</button>
               </div>
               <pre><code class="language-markup"></code></pre>
             </div>
