@@ -2,7 +2,6 @@
 @use "../helpers/_variables" as var;
 
 [data-toast] {
-  position: fixed;
   @include mixins.pos-center(fixed);
   background: var.$gray-80-color;
   color: var.$white-color;
@@ -58,6 +57,10 @@
       width: 1200px;
     }
 
+    &.mh560 {
+      min-height: 560px;
+    }
+
     &.h840 {
       height: 840px;
     }
@@ -104,10 +107,15 @@
 
       >* {
         width: 100%;
+
+        &:not(:first-child) {
+          margin-top: 14px;
+        }
       }
 
       .cont_wrap {
         @include mixins.column-flexbox(flex-start, flex-start);
+        width: 100%;
 
         >* {
           width: 100%;
@@ -149,6 +157,7 @@
       }
 
       .btn_wrap {
+        width: 100%;
         margin-top: 34px;
         text-align: center;
       }
@@ -501,7 +510,38 @@
     }
   }
 
-  //공지사항
+  [data-tab] {
+
+    &.bar {
+      &:after {
+        background: var.$gray-40-color;
+      }
+    }
+
+    a,
+    button {
+      background: none;
+      color: var.$gray-40-color;
+
+      &.on {
+        background: none;
+        color: var.$primary-color;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: var.$primary-color;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  //공지사항 팝업
   &.notice {
     .notice_tit {
       font-size: 20px;

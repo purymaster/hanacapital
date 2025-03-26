@@ -474,6 +474,11 @@
         }
       }
     }
+
+    &.block {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 }
 

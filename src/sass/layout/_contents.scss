@@ -65,6 +65,7 @@
  * [data-table] : 상세 페이지용 테이블 레이아웃
  * [data-photo-upload] : 사진 미리보기가 포함된 파일 업로더
  * [data-form-group] : 테이블 내 또는 모달 팝업에 포함되는 테이블 형태의 입력폼
+ * [data-status-board] : 차량사고수리현황 페이지 대시보드 레이아웃
  */
 
 /* 데이터 없음 */
@@ -151,6 +152,7 @@
   a,
   button {
     @include mixins.inline-flexbox;
+    position: relative;
     font-size: 14px;
     line-height: 20px;
     height: 28px;
@@ -171,7 +173,7 @@
   &.bar {
     flex: 1;
 
-    :after {
+    &:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -610,6 +612,43 @@
 
     [data-input-group] {
       width: 100%;
+    }
+  }
+}
+
+/* 수리현황 대시보드 */
+[data-status-board] {
+  display: flex;
+  margin-top: 8px;
+  gap: 13px;
+
+  .panel {
+    @include mixins.column-flexbox(space-between, flex-start);
+    width: 190px;
+    height: 96px;
+    border: 1px solid var.$gray-30-color;
+    border-radius: var.$global-border-radius;
+    padding: 14px;
+    font-weight: 600;
+
+    &.hnm {
+      background: #eaefd4;
+      border-color: #eaefd4;
+    }
+
+    &.business {
+      background: #d0e2ff;
+      border-color: #d0e2ff;
+    }
+
+    .tit {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .num {
+      font-size: 24px;
+      line-height: 32px;
     }
   }
 }

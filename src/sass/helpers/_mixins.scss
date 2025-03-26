@@ -120,6 +120,15 @@
 	align-items: $ai;
 }
 
+@mixin flexbox-full-height($jc: flex-start, $ai: flex-start) {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	width: 100%;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
 // Minor Scrollbar
 @mixin scrollbar() {
 	&::-webkit-scrollbar {
