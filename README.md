@@ -68,10 +68,10 @@ src<br/>
  ┃ ┣ components<br/>
  ┃ ┃ ┣ _ag_grid.scss - AG Grid 스타일 정의<br/>
  ┃ ┃ ┣ _buttons.scss<br/>
- ┃ ┃ ┣ _colors.scss - 단일 항목 색상 정의<br/>
  ┃ ┃ ┣ _externals.scss - 외부 라이브러리 스타일 정의<br/>
  ┃ ┃ ┣ _inputs.scss<br/>
  ┃ ┃ ┣ _modals.scss - 모달(레이어 팝업) 스타일 정의<br/>
+ ┃ ┃ ┣ _overrides.scss - 오버라이드 스타일 정의<br/>
  ┃ ┃ ┣ _page_title.scss<br/>
  ┃ ┃ ┣ _popups.scss - 팝업(시스템 팝업) 스타일 정의<br/>
  ┃ ┃ ┗ _progress.scss<br/>
