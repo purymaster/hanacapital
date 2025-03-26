@@ -1,0 +1,136 @@
+<%- include('_inc/head', {title:'차량상태 및 선견적등록'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content detail">
+          <div class="cont_wrap">
+            <div class="cont_tit">수리내역등록</div>
+
+          </div>
+          <div class="cont_wrap">
+            <div class="cont_tit">사고접수내용</div>
+            <div data-table>
+              <table>
+                <colgroup>
+                  <col style="width:160px;">
+                  <col>
+                  <col style="width:160px;">
+                  <col>
+                  <col style="width:160px;">
+                  <col>
+                  <col style="width:160px;">
+                  <col>
+                  <col style="width:160px;">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">사고번호</th>
+                    <td>
+                      2100053006
+                    </td>
+                    <th scope="row">수리번호</th>
+                    <td>
+                      2100053006
+                    </td>
+                    <th scope="row">접수일시</th>
+                    <td>
+                      2025-02-20 14:12
+                    </td>
+                    <th scope="row">사고일시</th>
+                    <td>
+                      2025-02-20 13:12
+                    </td>
+                    <th scope="row">차량번호</th>
+                    <td>
+                      233하3657
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">콜센터 접수내용</th>
+                    <td colspan="5">
+                      내리막길 주행중 공기압 경고등 떠서 확인하니 타이어파스로 확인<br>
+                      자차파손 : 운)앞타이어
+                    </td>
+                    <th scope="row">추가 확인내용</th>
+                    <td colspan="3">
+                      해당 내용 노출
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div data-action-header>
+            <div data-tab class="bar">
+              <button type="button" class="on">수리 전</button>
+              <button type="button">수리 후</button>
+            </div>
+            <div class="btn">
+              <button type="button" data-btn>등록/수정</button>
+            </div>
+          </div>
+          <div class="cont_wrap">
+            <div class="cont_tit">보험가입정보</div>
+            <fieldset disabled>
+              <div data-table>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div data-form-group>
+                          <div class="box">
+                            <div class="label">보험사</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="삼성화재">
+                            </div>
+                          </div>
+                          <div class="box">
+                            <div class="label">보험연령</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="만 26세 이상">
+                            </div>
+                          </div>
+                          <div class="box">
+                            <div class="label">자기 부담금</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="30만원">
+                            </div>
+                          </div>
+                          <div class="box">
+                            <div class="label">임직원 특약</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="적용됨">
+                            </div>
+                          </div>
+                          <div class="box">
+                            <div class="label">대인</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="무한">
+                            </div>
+                          </div>
+                          <div class="box">
+                            <div class="label">대물</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="1억원">
+                            </div>
+                          </div>
+                          <div class="box x2">
+                            <div class="label">자기신체사고</div>
+                            <div data-input-group>
+                              <input type="text" placeholder="1억원">
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </fieldset>
+          </div>
+
+        </div>
+    </div>
+    <%- include('_inc/tail') %>
