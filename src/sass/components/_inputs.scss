@@ -215,6 +215,12 @@
         background: url(/static/img/icon/icon_calendar.png) no-repeat 100% center / 16px;
       }
     }
+
+    &.disabled {
+      .date_wrap {
+        background: var.$gray-10-color;
+      }
+    }
   }
 
 }

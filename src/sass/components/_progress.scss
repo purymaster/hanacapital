@@ -103,3 +103,33 @@
     }
   }
 }
+
+.progress_box {
+  background: var.$table-input-disable-color;
+  border: 1px solid var.$gray-20-color;
+  border-radius: 10px;
+  padding: 0 16px;
+
+  .progress_tit {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  .cont {
+    border-top: 1px solid var.$gray-20-color;
+    padding: 24px 16px;
+  }
+
+  [data-progress] {
+    ol {
+      >li {
+        &.pass {
+          &:after {
+            background-color: var.$table-input-disable-color;
+          }
+        }
+      }
+    }
+  }
+}
