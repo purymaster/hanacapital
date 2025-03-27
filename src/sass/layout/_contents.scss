@@ -385,6 +385,7 @@
   @include mixins.flexbox(space-between, flex-end);
   margin-bottom: 4px;
   gap: 30px;
+  width: 100%;
 
   .total {
     font-size: 12px;

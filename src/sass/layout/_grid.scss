@@ -37,6 +37,19 @@
     &.grid {
       display: flex;
       flex-direction: column;
+
+      [data-tab] {
+        flex: none;
+      }
+
+      [data-tab-pages] {
+        margin-top: 20px;
+        @include mixins.flexbox-full-height;
+
+        .tab_page {
+          @include mixins.flexbox-full-height;
+        }
+      }
     }
 
     // 상세 및 입력 페이지
