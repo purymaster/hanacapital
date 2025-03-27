@@ -1,10 +1,10 @@
-<%- include('_inc/head', {title:'차량사고수리비정산'}) %>
+<%- include('_inc/head', {title:'순회정비일정관리'}) %>
 
   <body>
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content grid">
-          <% const page_title={ title: "차량사고수리비정산" , isClear: true }; %>
+          <% const page_title={ title: "일반·순회정비현황" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
               <div data-search-group>
                 <div class="opt">
@@ -16,64 +16,30 @@
                       <input type="text" class="datepicker" placeholder="2025.01.01">
                     </div>
                   </div>
+                  <div data-input-group class="dropdown" style="width:160px;">
+                    <span class="label">정비구분</span>
+                    <div data-dropdown>
+                      <button type="button" class="toggle">
+                        <div class="txt">전체</div>
+                      </button>
+                      <ul class="option">
+                        <li>
+                          <button type="button" class="item" data-value="value1">value1</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="value2">value2</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="value3">value3</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                   <div data-input-group class="search_box" style="width: 180px;">
                     <span class="label">차량번호</span>
                     <input type="text" placeholder="전체">
                     <div class="search_btn">
                       <button type="button" class="search">검색</button>
-                    </div>
-                  </div>
-                  <div data-input-group style="width: 150px;">
-                    <span class="label">사고번호</span>
-                    <input type="text">
-                  </div>
-                  <div data-input-group style="width: 150px;">
-                    <span class="label">수리번호</span>
-                    <input type="text">
-                  </div>
-                  <div data-input-group class="search_box" style="width: 240px;">
-                    <span class="label">정비업체</span>
-                    <input type="text" placeholder="전체">
-                    <div class="search_btn">
-                      <button type="button" class="search">검색</button>
-                    </div>
-                  </div>
-                  <div data-input-group class="dropdown" style="width:160px;">
-                    <span class="label">지급구분</span>
-                    <div data-dropdown>
-                      <button type="button" class="toggle">
-                        <div class="txt">전체</div>
-                      </button>
-                      <ul class="option">
-                        <li>
-                          <button type="button" class="item" data-value="value1">value1</button>
-                        </li>
-                        <li>
-                          <button type="button" class="item" data-value="value2">value2</button>
-                        </li>
-                        <li>
-                          <button type="button" class="item" data-value="value3">value3</button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div data-input-group class="dropdown" style="width:160px;">
-                    <span class="label">진행상태</span>
-                    <div data-dropdown>
-                      <button type="button" class="toggle">
-                        <div class="txt">전체</div>
-                      </button>
-                      <ul class="option">
-                        <li>
-                          <button type="button" class="item" data-value="value1">value1</button>
-                        </li>
-                        <li>
-                          <button type="button" class="item" data-value="value2">value2</button>
-                        </li>
-                        <li>
-                          <button type="button" class="item" data-value="value3">value3</button>
-                        </li>
-                      </ul>
                     </div>
                   </div>
                 </div>
@@ -87,8 +53,6 @@
                 </div>
                 <div class="btn">
                   <button type="button" data-btn>엑셀다운로드</button>
-                  <button type="button" data-btn>승인 취소</button>
-                  <button type="button" data-btn>확정 등록</button>
                 </div>
               </div>
               <div class="grid_wrap">

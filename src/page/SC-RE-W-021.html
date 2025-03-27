@@ -1,19 +1,17 @@
-<%- include('_inc/head', {title:'차량사고수리비정산'}) %>
+<%- include('_inc/head', {title:'법정검사현황'}) %>
 
   <body>
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content grid">
-          <% const page_title={ title: "차량사고수리비정산" , isClear: true }; %>
+          <% const page_title={ title: "법정검사현황" , isClear: true }; %>
             <%- include('_inc/page_title.ejs', page_title) %>
               <div data-search-group>
                 <div class="opt">
-                  <div data-input-group class="calendar" style="width:260px;">
-                    <span class="label">접수일자</span>
+                  <div data-input-group class="calendar" style="width:180px;">
+                    <span class="label">검사대상 월</span>
                     <div class="date_wrap">
-                      <input type="text" class="datepicker" placeholder="2025.01.01">
-                      ~
-                      <input type="text" class="datepicker" placeholder="2025.01.01">
+                      <input type="text" class="monthpicker" autocomplete="off">
                     </div>
                   </div>
                   <div data-input-group class="search_box" style="width: 180px;">
@@ -23,23 +21,8 @@
                       <button type="button" class="search">검색</button>
                     </div>
                   </div>
-                  <div data-input-group style="width: 150px;">
-                    <span class="label">사고번호</span>
-                    <input type="text">
-                  </div>
-                  <div data-input-group style="width: 150px;">
-                    <span class="label">수리번호</span>
-                    <input type="text">
-                  </div>
-                  <div data-input-group class="search_box" style="width: 240px;">
-                    <span class="label">정비업체</span>
-                    <input type="text" placeholder="전체">
-                    <div class="search_btn">
-                      <button type="button" class="search">검색</button>
-                    </div>
-                  </div>
                   <div data-input-group class="dropdown" style="width:160px;">
-                    <span class="label">지급구분</span>
+                    <span class="label">검사유형</span>
                     <div data-dropdown>
                       <button type="button" class="toggle">
                         <div class="txt">전체</div>
@@ -86,9 +69,10 @@
                   총 <span class="num">999</span>건
                 </div>
                 <div class="btn">
-                  <button type="button" data-btn>엑셀다운로드</button>
-                  <button type="button" data-btn>승인 취소</button>
-                  <button type="button" data-btn>확정 등록</button>
+                  <button type="button" data-btn>검사결과 업로드</button>
+                  <button type="button" data-btn>불가보고 체크</button>
+                  <button type="button" data-btn>상태 변경</button>
+                  <button type="button" data-btn>엑셀 다운로드</button>
                 </div>
               </div>
               <div class="grid_wrap">
