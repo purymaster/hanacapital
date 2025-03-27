@@ -286,8 +286,8 @@
     window.closeModal = (modalId) => toggleModal(modalId, 'close');
   }
 
-  /* Textarea 포커스 제어 */
-  const handleTextareaFocus = () => {
+  /* Textarea 스타일 제어 */
+  const handleTextarea = () => {
     const $textareas = $('[data-input-group] textarea');
     $textareas.each(function () {
       const $textareaWrap = $(this).closest('.textarea_wrap');
@@ -305,6 +305,53 @@
       $(this).css('height', 'auto');
       $(this).css('height', this.scrollHeight + 'px');
     })
+  }
+
+  /* Datepicker, Monthpicker 제어 */
+  const handleDatepicker = () => {
+    const $datePicker = $(".datepicker");
+    const $monthPicker = $(".monthpicker");
+    const $pickers = $(".datepicker, .monthpicker");
+
+    $pickers.each(function () {
+      const $this = $(this);
+      if ($this.is('[readonly], [disabled]') || $this.closest('fieldset').is('[disabled]')) {
+        $this.closest('[data-input-group].calendar').addClass('disabled');
+      }
+    });
+
+    const defaultOptions = {
+      changeYear: true,
+      showMonthAfterYear: true,
+    };
+
+    $datePicker.filter(":not([readonly]):not([disabled])").datepicker({
+      ...defaultOptions,
+      dateFormat: 'yy.mm.dd',
+      changeMonth: true,
+      gotoCurrent: true,
+      showButtonPanel: true,
+      currentText: 'Today',
+      closeText: '닫기',
+      prevText: '이전 달',
+      nextText: '다음 달',
+      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+      weekHeader: '주',
+      yearSuffix: '년 '
+    });
+
+    $monthPicker.filter(":not([readonly]):not([disabled])").monthpicker({
+      ...defaultOptions,
+      dateFormat: 'yy.mm',
+    });
+
+    $.datepicker._gotoToday = function (id) {
+      $(id).datepicker('setDate', new Date()).datepicker('hide').blur();
+    };
   }
 
   /* 그리드 타입 테이블 제어 */
@@ -331,6 +378,18 @@
       });
     });
   };
+
+  /* 파일 업로드 제어*/
+  const handleFileUpload = () => {
+    const $fileUpload = $('[data-file-upload]');
+    const $fileInput = $fileUpload.find('input[type="file"]');
+    const $fileName = $fileUpload.find('.file_name');
+
+    $fileInput.on('change', function () {
+      const fileName = $(this).val().split('\\').pop();
+      $fileName.text(fileName);
+    });
+  }
 
   /* 페이지 프린트 제어 */
   const printPage = (width = 1000, callback) => {
@@ -371,34 +430,9 @@
     handleToast();
     handleLoading();
     handleModal();
-    handleTextareaFocus();
+    handleTextarea();
+    handleDatepicker();
     handleGridTable();
-    $(".datepicker").datepicker({
-      dateFormat: 'yy.mm.dd',
-      showMonthAfterYear: true,
-      changeYear: true,
-      changeMonth: true,
-      gotoCurrent: true,
-      showButtonPanel: true,
-      currentText: 'Today',
-      closeText: '닫기',
-      prevText: '이전 달',
-      nextText: '다음 달',
-      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-      weekHeader: '주',
-      yearSuffix: '년 '
-    });
-    $(".monthpicker").monthpicker({
-      dateFormat: 'yy.mm',
-      changeYear: true,
-    });
+    handleFileUpload();
   });
-
-  $.datepicker._gotoToday = function (id) {
-    $(id).datepicker('setDate', new Date()).datepicker('hide').blur();
-  };
 })(jQuery);

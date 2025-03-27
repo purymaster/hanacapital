@@ -127,7 +127,7 @@
     </style>
 
     <div class="wrap">
-      <div class="content">
+      <div class="content" style="height:100%;">
 
         <div class="guide_wrap">
 
@@ -257,6 +257,36 @@
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, sequi totam ullam tempora
                     necessitatibus ea iure accusantium, mollitia aperiam sint adipisci modi impedit eaque cumque! Harum
                     repellat odit corrupti nostrum.</li>
+                </ul>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">Alert</h4>
+              <div class="code">
+                <ul class="alert" data-list>
+                  <li>
+                    <div class="item"></div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    <div class="item">유의사항 :</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                </ul>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
+              <h4 class="guide_sub_tit">Alert 우측정렬</h4>
+              <div class="code">
+                <ul class="alert right" data-list>
+                  <li>
+                    <div class="item">유의사항 :</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
                 </ul>
               </div>
               <pre><code class="language-markup"></code></pre>
@@ -670,6 +700,19 @@
             </div>
 
             <div class="guide_group">
+              <h4 class="guide_sub_tit">Datepicker 비활성화</h4>
+              <div class="code">
+                <div data-input-group class="calendar">
+                  <span class="label">발주일</span>
+                  <div class="date_wrap">
+                    <input type="text" class="datepicker" readonly>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-markup"></code></pre>
+            </div>
+
+            <div class="guide_group">
               <h4 class="guide_sub_tit">Datepicker 기간</h4>
               <div class="code">
                 <div data-input-group class="calendar">
@@ -1047,14 +1090,39 @@
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">사진첨부</th>
+                        <th scope="row">파일첨부</th>
+                        <td>
+                          <div data-file-upload>
+                            <div class="guide">
+                              <div class="file_name"></div>
+                              <label for="fileUpload" data-btn class="secondary">파일찾기</label>
+                              <input id="fileUpload" type="file" accept=".jpg, .jpeg, .pdf">
+                              <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
+                            </div>
+                          </div>
+                          <!-- <div data-file-upload>
+                              <div class="guide">
+                                <div class="file_name">fileName.ext</div>
+                                <a href="#" data-btn class="secondary">보기</a>
+                              </div>
+                            </div> -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" rowspan="2">사진첨부</th>
                         <td>
                           <div data-photo-upload>
                             <div class="guide">
-                              <label for="photoUpload" data-btn class="s secondary">파일찾기</label>
+                              <label for="photoUpload" data-btn class="secondary">파일찾기</label>
                               <input id="photoUpload" type="file" accept=".jpg, .jpeg, .pdf" multiple>
                               <p class="txt">JPG, JPEG, PDF 파일만 업로드 가능</p>
                             </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div data-photo-upload>
                             <ul class="preview">
                               <li>
                                 <img src="/static/img/dummy/dummy_slide_01.png" alt="">
@@ -1069,6 +1137,55 @@
                                 <button type="button" class="del">삭제</button>
                               </li>
                             </ul>
+                            <!-- <div class="no_photo">
+                                등록된 이미지가 없습니다.
+                              </div> -->
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">검토의견</th>
+                        <td class="comment">
+                          <div data-cmt-board>
+                            <ul>
+                              <li>
+                                <button type="button" class="del">삭제</button>
+                                <div class="status">
+                                  <div class="user hana">하나캐피탈</div>
+                                  견적서 승인
+                                </div>
+                                <div class="date">9999-99-99</div>
+                                <div class="cmt">
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vitae nihil, quasi
+                                  facilis quos sed quisquam nesciunt eos non ab maiores dignissimos? Fuga exercitationem
+                                  enim placeat recusandae aliquam pariatur dignissimos. Lorem ipsum dolor sit amet
+                                  consectetur
+                                  adipisicing elit. Recusandae vitae nihil, quasi
+                                  facilis quos sed quisquam nesciunt eos non ab maiores dignissimos? Fuga exercitationem
+                                  enim placeat recusandae aliquam pariatur dignissimos.
+                                </div>
+                              </li>
+                              <li>
+                                <button type="button" class="del">삭제</button>
+                                <div class="status">
+                                  <div class="user repair">정비업체</div>
+                                  견적서 등록 완료
+                                </div>
+                                <div class="date">9999-99-99</div>
+                                <div class="cmt">
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vitae nihil, quasi
+                                  facilis quos sed quisquam nesciunt eos non ab maiores dignissimos? Fuga exercitationem
+                                  enim placeat recusandae aliquam pariatur dignissimos. Lorem ipsum dolor sit amet
+                                  consectetur
+                                  adipisicing elit. Recusandae vitae nihil, quasi
+                                  facilis quos sed quisquam nesciunt eos non ab maiores dignissimos? Fuga exercitationem
+                                  enim placeat recusandae aliquam pariatur dignissimos.
+                                </div>
+                              </li>
+                            </ul>
+                            <!-- <div class="no_cmt">
+                              등록된 의견이 없습니다.
+                            </div> -->
                           </div>
                         </td>
                       </tr>
