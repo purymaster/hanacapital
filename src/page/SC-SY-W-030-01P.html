@@ -4,8 +4,115 @@
     <div class="wrap">
       <%- include('_inc/header') %>
         <div class="content">
-          <button type="button" data-btn onClick="showToast('메세지')">툴팁 노출</button>
-          <button type="button" data-btn onClick="showToast('메세지', 5)">툴팁 5초 노출</button>
+          <button type="button" data-btn onClick="showToast('메세지')">Toast Message 노출</button>
+          <button type="button" data-btn onClick="showToast('메세지', 5)">Toast Message 5초 노출</button>
+          <button type="button" data-btn onClick="showToast('메세지', () => alert('토스트 메시지 종료'))">2초 후 콜백
+            실행</button>
+          <button type="button" data-btn onClick="showToast('메세지', 5, () => alert('토스트 메시지 종료'))">5초 후 콜백
+            실행</button>
+          <div style="display:flex; width: 100%; height: 250px; justify-content: center; align-items: center;">
+            <div style="display:inline-flex;">
+              <div data-tooltip>
+                <button type="button" data-btn>기본 툴팁(하단, 중앙)</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sed praesentium eos asperiores
+                    obcaecati consectetur quidem reprehenderit ea facilis ex velit ratione corrupti, similique
+                    earum
+                    fuga tempora natus cupiditate dolorem.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:inline-flex;">
+              <div data-tooltip class="left">
+                <button type="button" data-btn>왼쪽 툴팁</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sed praesentium eos asperiores
+                    obcaecati consectetur quidem reprehenderit ea facilis ex velit ratione corrupti, similique
+                    earum
+                    fuga tempora natus cupiditate dolorem.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:inline-flex;">
+              <div data-tooltip class="right">
+                <button type="button" data-btn>오른쪽 툴팁</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sed praesentium eos asperiores
+                    obcaecati consectetur quidem reprehenderit ea facilis ex velit ratione corrupti, similique
+                    earum
+                    fuga tempora natus cupiditate dolorem.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:inline-flex;">
+              <div data-tooltip class="up">
+                <button type="button" data-btn>상단 툴팁</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sed praesentium eos asperiores
+                    obcaecati consectetur quidem reprehenderit ea facilis ex velit ratione corrupti, similique
+                    earum
+                    fuga tempora natus cupiditate dolorem.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:inline-flex;">
+              <div data-tooltip class="up left">
+                <button type="button" data-btn>왼쪽 상단 툴팁</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sed praesentium eos asperiores
+                    obcaecati consectetur quidem reprehenderit ea facilis ex velit ratione corrupti, similique
+                    earum
+                    fuga tempora natus cupiditate dolorem.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:inline-flex;">
+              <div data-tooltip class="up right">
+                <button type="button" data-btn>오른쪽 상단 툴팁</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sed praesentium eos asperiores
+                    obcaecati consectetur quidem reprehenderit ea facilis ex velit ratione corrupti, similique
+                    earum
+                    fuga tempora natus cupiditate dolorem.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:inline-flex;">
+              <div data-tooltip class="history">
+                <button type="button" data-btn>진행상태 내역</button>
+                <div class="tooltip_box">
+                  <div class="tooltip_txt">
+                    <ul class="list">
+                      <li>
+                        <div class="event">2차탁송배정</div>
+                        <div class="time">yyyy-mm-dd hh:mm:ss</div>
+                      </li>
+                      <li>
+                        <div class="event">2차탁송배정 취소 취소 취소</div>
+                        <div class="time">yyyy-mm-dd hh:mm:ss</div>
+                      </li>
+                      <li>
+                        <div class="event">2차탁송배정</div>
+                        <div class="time">yyyy-mm-dd hh:mm:ss</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
     <%- include('_inc/tail') %>
