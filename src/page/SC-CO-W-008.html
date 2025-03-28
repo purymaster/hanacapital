@@ -1,0 +1,173 @@
+<%- include('_inc/head', {title:'기타원가관리'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content grid">
+          <% const page_title={ title: "기타원가관리" }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+              <div data-tab="tabGroup1" class="bar">
+                <button type="button" data-tab-target="tabPage1">개별소비세율</button>
+                <button type="button" data-tab-target="tabPage2">차고지조합비/동절기용품비</button>
+                <button type="button" data-tab-target="tabPage3">자동차세</button>
+                <button type="button" data-tab-target="tabPage4">매각손실보전금율</button>
+              </div>
+              <div data-tab-pages="tabGroup1">
+                <div class="tab_page" id="tabPage1">
+                  <div data-action-header>
+                    <div class="btn">
+                      <button type="button" data-btn>엑셀 다운로드</button>
+                    </div>
+                  </div>
+                  <div class="grid_wrap">
+                    <div id="myGrid" class="grid_dummy">개별소비세율 AG Grid</div>
+                    <div data-pagination>
+                      <div data-input-group class="dropdown">
+                        <div data-dropdown>
+                          <button type="button" class="toggle">
+                            <div class="txt">20개</div>
+                          </button>
+                          <ul class="option up">
+                            <li>
+                              <button type="button" class="item" data-value="10">10개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="20">20개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="30">30개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="40">40개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="50">50개</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="pagination-div" class="pagination_box"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_page" id="tabPage2">
+                  <div data-action-header>
+                    <div class="btn">
+                      <button type="button" data-btn>엑셀 다운로드</button>
+                    </div>
+                  </div>
+                  <div class="grid_wrap">
+                    <div id="myGrid" class="grid_dummy">차고지조합비/동절기용품비 AG Grid</div>
+                    <div data-pagination>
+                      <div data-input-group class="dropdown">
+                        <div data-dropdown>
+                          <button type="button" class="toggle">
+                            <div class="txt">20개</div>
+                          </button>
+                          <ul class="option up">
+                            <li>
+                              <button type="button" class="item" data-value="10">10개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="20">20개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="30">30개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="40">40개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="50">50개</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="pagination-div" class="pagination_box"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_page" id="tabPage3">
+                  <div data-action-header>
+                    <div class="btn">
+                      <button type="button" data-btn>엑셀 다운로드</button>
+                    </div>
+                  </div>
+                  <div class="grid_wrap">
+                    <div id="myGrid" class="grid_dummy">자동차세 AG Grid</div>
+                    <div data-pagination>
+                      <div data-input-group class="dropdown">
+                        <div data-dropdown>
+                          <button type="button" class="toggle">
+                            <div class="txt">20개</div>
+                          </button>
+                          <ul class="option up">
+                            <li>
+                              <button type="button" class="item" data-value="10">10개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="20">20개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="30">30개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="40">40개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="50">50개</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="pagination-div" class="pagination_box"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_page" id="tabPage4">
+                  <div data-action-header>
+                    <div class="btn">
+                      <button type="button" data-btn>엑셀 다운로드</button>
+                    </div>
+                  </div>
+                  <div class="grid_wrap">
+                    <div id="myGrid" class="grid_dummy">매각손실보전금율 AG Grid</div>
+                    <div data-pagination>
+                      <div data-input-group class="dropdown">
+                        <div data-dropdown>
+                          <button type="button" class="toggle">
+                            <div class="txt">20개</div>
+                          </button>
+                          <ul class="option up">
+                            <li>
+                              <button type="button" class="item" data-value="10">10개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="20">20개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="30">30개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="40">40개</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="50">50개</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="pagination-div" class="pagination_box"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                $('.pagination_box').twbsPagination({
+                  totalPages: 50,
+                  visiblePages: 10
+                });
+              </script>
+        </div>
+    </div>
+    <%- include('_inc/tail') %>
