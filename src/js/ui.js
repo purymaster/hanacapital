@@ -327,7 +327,7 @@
 
     $datePicker.filter(":not([readonly]):not([disabled])").datepicker({
       ...defaultOptions,
-      dateFormat: 'yy.mm.dd',
+      dateFormat: 'yy-mm-dd',
       changeMonth: true,
       gotoCurrent: true,
       showButtonPanel: true,
@@ -346,7 +346,7 @@
 
     $monthPicker.filter(":not([readonly]):not([disabled])").monthpicker({
       ...defaultOptions,
-      dateFormat: 'yy.mm',
+      dateFormat: 'yy-mm',
     });
 
     $.datepicker._gotoToday = function (id) {
