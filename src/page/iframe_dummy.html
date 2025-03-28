@@ -19,173 +19,166 @@
 </head>
 
 <body>
-  <!-- <script>
-    if (window !== window.parent) {
-      document.querySelector('.wrap').classList.add('inner');
-    }
-  </script> -->
-  <div class="wrap inner"> <!-- frame 내부일때 inner 클래스 추가 -->
-    <div class="content grid">
-      <% const page_title={ title: "차량사고접수현황" , isClear: true }; %>
-        <%- include('_inc/page_title.ejs', page_title) %>
-          <div data-search-group>
-            <div class="opt">
-              <div data-input-group class="calendar" style="width:260px;">
-                <span class="label">접수일자</span>
-                <div class="date_wrap">
-                  <input type="text" class="datepicker" placeholder="2025.01.01">
-                  ~
-                  <input type="text" class="datepicker" placeholder="2025.01.01">
-                </div>
-              </div>
-              <div data-input-group class="search_box" style="width: 180px;">
-                <span class="label">차량번호</span>
-                <input type="text" placeholder="전체">
-                <div class="search_btn">
-                  <button type="button" class="search">검색</button>
-                </div>
-              </div>
-              <div data-input-group style="width: 210px;">
-                <span class="label">고객명</span>
-                <input type="text">
-              </div>
-              <div data-input-group class="search_box" style="width: 240px;">
-                <span class="label">정비업체</span>
-                <input type="text" placeholder="전체">
-                <div class="search_btn">
-                  <button type="button" class="search">검색</button>
-                </div>
-              </div>
-              <div data-input-group style="width: 150px;">
-                <span class="label">사고번호</span>
-                <input type="text">
-              </div>
-              <div data-input-group class="dropdown" style="width:160px;">
-                <span class="label">사고유형</span>
-                <div data-dropdown>
-                  <button type="button" class="toggle">
-                    <div class="txt">전체</div>
-                  </button>
-                  <ul class="option">
-                    <li>
-                      <button type="button" class="item" data-value="value1">value1</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value2">value2</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value3">value3</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div data-input-group class="dropdown" style="width:160px;">
-                <span class="label">과실유형</span>
-                <div data-dropdown>
-                  <button type="button" class="toggle">
-                    <div class="txt">전체</div>
-                  </button>
-                  <ul class="option">
-                    <li>
-                      <button type="button" class="item" data-value="value1">value1</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value2">value2</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value3">value3</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div data-input-group class="dropdown" style="width:160px;">
-                <span class="label">면책유형</span>
-                <div data-dropdown>
-                  <button type="button" class="toggle">
-                    <div class="txt">전체</div>
-                  </button>
-                  <ul class="option">
-                    <li>
-                      <button type="button" class="item" data-value="value1">value1</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value2">value2</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value3">value3</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div data-input-group class="dropdown" style="width:160px;">
-                <span class="label">진행상태</span>
-                <div data-dropdown>
-                  <button type="button" class="toggle">
-                    <div class="txt">전체</div>
-                  </button>
-                  <ul class="option">
-                    <li>
-                      <button type="button" class="item" data-value="value1">value1</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value2">value2</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="value3">value3</button>
-                    </li>
-                  </ul>
-                </div>
+  <div class="content grid">
+    <% const page_title={ title: "차량사고접수현황" , isClear: true }; %>
+      <%- include('_inc/page_title.ejs', page_title) %>
+        <div data-search-group>
+          <div class="opt">
+            <div data-input-group class="calendar" style="width:260px;">
+              <span class="label">접수일자</span>
+              <div class="date_wrap">
+                <input type="text" class="datepicker" placeholder="2025.01.01">
+                ~
+                <input type="text" class="datepicker" placeholder="2025.01.01">
               </div>
             </div>
-            <div class="btn">
-              <button type="button" data-btn>검색</button>
+            <div data-input-group class="search_box" style="width: 180px;">
+              <span class="label">차량번호</span>
+              <input type="text" placeholder="전체">
+              <div class="search_btn">
+                <button type="button" class="search">검색</button>
+              </div>
+            </div>
+            <div data-input-group style="width: 210px;">
+              <span class="label">고객명</span>
+              <input type="text">
+            </div>
+            <div data-input-group class="search_box" style="width: 240px;">
+              <span class="label">정비업체</span>
+              <input type="text" placeholder="전체">
+              <div class="search_btn">
+                <button type="button" class="search">검색</button>
+              </div>
+            </div>
+            <div data-input-group style="width: 150px;">
+              <span class="label">사고번호</span>
+              <input type="text">
+            </div>
+            <div data-input-group class="dropdown" style="width:160px;">
+              <span class="label">사고유형</span>
+              <div data-dropdown>
+                <button type="button" class="toggle">
+                  <div class="txt">전체</div>
+                </button>
+                <ul class="option">
+                  <li>
+                    <button type="button" class="item" data-value="value1">value1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value2">value2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value3">value3</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div data-input-group class="dropdown" style="width:160px;">
+              <span class="label">과실유형</span>
+              <div data-dropdown>
+                <button type="button" class="toggle">
+                  <div class="txt">전체</div>
+                </button>
+                <ul class="option">
+                  <li>
+                    <button type="button" class="item" data-value="value1">value1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value2">value2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value3">value3</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div data-input-group class="dropdown" style="width:160px;">
+              <span class="label">면책유형</span>
+              <div data-dropdown>
+                <button type="button" class="toggle">
+                  <div class="txt">전체</div>
+                </button>
+                <ul class="option">
+                  <li>
+                    <button type="button" class="item" data-value="value1">value1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value2">value2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value3">value3</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div data-input-group class="dropdown" style="width:160px;">
+              <span class="label">진행상태</span>
+              <div data-dropdown>
+                <button type="button" class="toggle">
+                  <div class="txt">전체</div>
+                </button>
+                <ul class="option">
+                  <li>
+                    <button type="button" class="item" data-value="value1">value1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value2">value2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="value3">value3</button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div data-action-header>
-            <div class="total">
-              총 <span class="num">999</span>건
-            </div>
-            <div class="btn">
-              <button type="button" data-btn>엑셀 다운로드</button>
-            </div>
+          <div class="btn">
+            <button type="button" data-btn>검색</button>
           </div>
-          <div class="grid_wrap">
-            <div id="myGrid" class="grid_dummy">AG Grid</div>
-            <div data-pagination>
-              <div data-input-group class="dropdown">
-                <div data-dropdown>
-                  <button type="button" class="toggle">
-                    <div class="txt">20개</div>
-                  </button>
-                  <ul class="option up">
-                    <li>
-                      <button type="button" class="item" data-value="10">10개</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="20">20개</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="30">30개</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="40">40개</button>
-                    </li>
-                    <li>
-                      <button type="button" class="item" data-value="50">50개</button>
-                    </li>
-                  </ul>
-                </div>
+        </div>
+        <div data-action-header>
+          <div class="total">
+            총 <span class="num">999</span>건
+          </div>
+          <div class="btn">
+            <button type="button" data-btn>엑셀 다운로드</button>
+          </div>
+        </div>
+        <div class="grid_wrap">
+          <div id="myGrid" class="grid_dummy">AG Grid</div>
+          <div data-pagination>
+            <div data-input-group class="dropdown">
+              <div data-dropdown>
+                <button type="button" class="toggle">
+                  <div class="txt">20개</div>
+                </button>
+                <ul class="option up">
+                  <li>
+                    <button type="button" class="item" data-value="10">10개</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="20">20개</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="30">30개</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="40">40개</button>
+                  </li>
+                  <li>
+                    <button type="button" class="item" data-value="50">50개</button>
+                  </li>
+                </ul>
               </div>
-              <div id="pagination-div"></div>
             </div>
-            <script>
-              $('#pagination-div').twbsPagination({
-                totalPages: 50,
-                visiblePages: 10
-              });
-            </script>
+            <div id="pagination-div"></div>
           </div>
-    </div>
+          <script>
+            $('#pagination-div').twbsPagination({
+              totalPages: 50,
+              visiblePages: 10
+            });
+          </script>
+        </div>
   </div>
   <%- include('_inc/tail') %>
 </body>

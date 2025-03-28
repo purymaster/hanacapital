@@ -27,82 +27,6 @@
   .content {
     height: calc(100% - 88px);
     overflow: auto;
-    padding: 8px 0 8px 50px;
-
-    &.no_snb {
-      padding-left: 30px;
-    }
-
-    // 검색입력폼과 그리드만 있는 페이지
-    &.grid {
-      display: flex;
-      flex-direction: column;
-
-      [data-tab] {
-        flex: none;
-      }
-
-      [data-tab-pages] {
-        margin-top: 20px;
-        @include mixins.flexbox-full-height;
-
-        .tab_page {
-          @include mixins.flexbox-full-height;
-        }
-      }
-    }
-
-    // 상세 및 입력 페이지
-    &.detail {
-      padding-bottom: 30px;
-
-      :not([data-page-title])+.cont_wrap {
-        margin-top: 20px;
-      }
-
-      [data-action-header] {
-        margin-top: 20px;
-      }
-
-      .cont_wrap {
-        .cont_tit {
-          @include mixins.flexbox(flex-start, center);
-          font-size: 18px;
-          line-height: 26px;
-          font-weight: 500;
-          margin-bottom: 8px;
-          gap: 10px;
-
-          .tag {
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 12px;
-            padding: 6px 8px;
-            border-radius: var.$global-border-radius;
-            background: var.$gray-10-color;
-
-            &.pass {
-              background: #d0e2ff;
-              color: #0043ce;
-            }
-
-            &.fail {
-              background: var.$error-10-color;
-              color: var.$error-color;
-            }
-          }
-
-          .btn {
-            margin-left: auto;
-          }
-        }
-      }
-
-      .btn_wrap {
-        text-align: center;
-        margin-top: 30px;
-      }
-    }
   }
 
   &.popup_wrap {
@@ -117,14 +41,89 @@
     overflow-x: hidden;
     overflow-y: scroll;
   }
+}
 
-  //iframe 내부 UI
-  &.inner {
-    padding-right: 30px;
+.content {
+  height: 100%;
+  padding: 8px 30px 8px 50px;
 
-    .content {
-      height: 100%;
-      padding: 0;
+  &.no_snb {
+    padding-left: 30px;
+  }
+
+  //검색입력폼과 그리드만 있는 페이지
+  &.grid {
+    display: flex;
+    flex-direction: column;
+
+    [data-tab] {
+      flex: none;
     }
+
+    [data-tab-pages] {
+      margin-top: 20px;
+      @include mixins.flexbox-full-height;
+
+      .tab_page {
+        @include mixins.flexbox-full-height;
+      }
+    }
+  }
+
+  //상세 및 입력 페이지
+  &.detail {
+    padding-bottom: 30px;
+
+    :not([data-page-title])+.cont_wrap {
+      margin-top: 20px;
+    }
+
+    [data-action-header] {
+      margin-top: 20px;
+    }
+
+    .cont_wrap {
+      .cont_tit {
+        @include mixins.flexbox(flex-start, center);
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        gap: 10px;
+
+        .tag {
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 12px;
+          padding: 6px 8px;
+          border-radius: var.$global-border-radius;
+          background: var.$gray-10-color;
+
+          &.pass {
+            background: #d0e2ff;
+            color: #0043ce;
+          }
+
+          &.fail {
+            background: var.$error-10-color;
+            color: var.$error-color;
+          }
+        }
+
+        .btn {
+          margin-left: auto;
+        }
+      }
+    }
+
+    .btn_wrap {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  //iframe 적용 스타일
+  &:has(iframe) {
+    padding: 0;
   }
 }
