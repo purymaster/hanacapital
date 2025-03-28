@@ -1,0 +1,91 @@
+<%- include('_inc/head', {title:'차고지사용관리'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content grid">
+          <% const page_title={ title: "차고지사용관리" , isClear: true }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+              <div data-search-group>
+                <div class="opt">
+                  <div data-input-group class="calendar" style="width:190px;">
+                    <span class="label">차고지 사용년월</span>
+                    <div class="date_wrap">
+                      <input type="text" class="monthpicker" autocomplete="off" placeholder="2025-01">
+                    </div>
+                  </div>
+                  <div data-input-group class="dropdown" style="width:240px;">
+                    <span class="label">지자체명</span>
+                    <div data-dropdown>
+                      <button type="button" class="toggle">
+                        <div class="txt">전체</div>
+                      </button>
+                      <ul class="option">
+                        <li>
+                          <button type="button" class="item" data-value="value1">value1</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="value2">value2</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="value3">value3</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn">
+                  <button type="button" data-btn>검색</button>
+                </div>
+              </div>
+              <div data-action-header>
+                <div class="total">
+                  총 <span class="num">999</span>건
+                </div>
+                <div class="btn">
+                  <button type="button" data-btn>SMS 수신설정</button>
+                  <button type="button" data-btn>지자체 추가</button>
+                  <button type="button" data-btn>지자체 수정</button>
+                  <button type="button" data-btn>지자체 삭제</button>
+                  <button type="button" data-btn>엑셀 다운로드</button>
+                </div>
+              </div>
+              <div class="grid_wrap">
+                <div id="myGrid" class="grid_dummy">AG Grid</div>
+                <div data-pagination>
+                  <div data-input-group class="dropdown">
+                    <div data-dropdown>
+                      <button type="button" class="toggle">
+                        <div class="txt">20개</div>
+                      </button>
+                      <ul class="option up">
+                        <li>
+                          <button type="button" class="item" data-value="10">10개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="20">20개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="30">30개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="40">40개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="50">50개</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="pagination-div"></div>
+                </div>
+                <script>
+                  $('#pagination-div').twbsPagination({
+                    totalPages: 50,
+                    visiblePages: 10
+                  });
+                </script>
+              </div>
+        </div>
+    </div>
+    <%- include('_inc/tail') %>
