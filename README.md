@@ -66,8 +66,7 @@ src<br/>
  ┃ ┃ ┣ _fonts.scss<br/>
  ┃ ┃ ┗ _reset.scss<br/>
  ┃ ┣ components<br/>
- ┃ ┃ ┣ _ag_grid_theme.scss - AG Grid alpine theme<br/>
- ┃ ┃ ┣ _ag_grid.scss - AG Grid 스타일 정의<br/>
+ ┃ ┃ ┣ _ag_grid_theme.scss - AG Grid alpine 테마<br/>
  ┃ ┃ ┣ _buttons.scss<br/>
  ┃ ┃ ┣ _externals.scss - 외부 라이브러리 스타일 정의<br/>
  ┃ ┃ ┣ _inputs.scss<br/>
