@@ -1,0 +1,86 @@
+<%- include('_inc/head', {title:'정비부가세현황 리스트'}) %>
+
+  <body>
+    <div class="wrap">
+      <%- include('_inc/header') %>
+        <div class="content grid">
+          <% const page_title={ title: "정비부가세현황" , isClear: true }; %>
+            <%- include('_inc/page_title.ejs', page_title) %>
+              <div data-search-group>
+                <div class="opt">
+                  <div data-input-group class="calendar" style="width:280px;">
+                    <span class="label">계산서일자</span>
+                    <div class="date_wrap">
+                      <input type="text" class="datepicker" placeholder="2025.01.01">
+                      ~
+                      <input type="text" class="datepicker" placeholder="2025.01.01">
+                    </div>
+                  </div>
+                  <div data-input-group class="search_box" style="width: 180px;">
+                    <span class="label">차량번호</span>
+                    <input type="text" placeholder="전체">
+                    <div class="search_btn">
+                      <button type="button" class="search">검색</button>
+                    </div>
+                  </div>
+                  <div data-input-group class="search_box" style="width: 240px;">
+                    <span class="label">청구업체</span>
+                    <input type="text" placeholder="전체">
+                    <div class="search_btn">
+                      <button type="button" class="search">검색</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn">
+                  <button type="button" data-btn>검색</button>
+                </div>
+              </div>
+              <div data-action-header>
+                <div class="total">
+                  총 <span class="num">999</span>건
+                </div>
+                <div class="btn">
+                  <button type="button" data-btn>등록/수정</button>
+                  <button type="button" data-btn>하나인 업로드</button>
+                  <button type="button" data-btn>엑셀 다운로드</button>
+                </div>
+              </div>
+              <div class="grid_wrap">
+                <div id="myGrid" class="grid_dummy">AG Grid</div>
+                <div data-pagination>
+                  <div data-input-group class="dropdown">
+                    <div data-dropdown>
+                      <button type="button" class="toggle">
+                        <div class="txt">20개</div>
+                      </button>
+                      <ul class="option up">
+                        <li>
+                          <button type="button" class="item" data-value="10">10개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="20">20개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="30">30개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="40">40개</button>
+                        </li>
+                        <li>
+                          <button type="button" class="item" data-value="50">50개</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="pagination-div"></div>
+                </div>
+                <script>
+                  $('#pagination-div').twbsPagination({
+                    totalPages: 50,
+                    visiblePages: 10
+                  });
+                </script>
+              </div>
+        </div>
+    </div>
+    <%- include('_inc/tail') %>
