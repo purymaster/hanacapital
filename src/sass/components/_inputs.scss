@@ -28,6 +28,23 @@
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
     }
+
+    &.dropdown {
+      position: relative;
+      padding: 0;
+
+      [data-dropdown] {
+        .toggle {
+          border: 0;
+          height: 26px;
+          font-weight: 600;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 
   input[type='text'],

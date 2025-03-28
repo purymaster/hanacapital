@@ -692,7 +692,7 @@
                 <div data-input-group class="calendar">
                   <span class="label">발주일</span>
                   <div class="date_wrap">
-                    <input type="text" class="datepicker">
+                    <input type="text" class="datepicker" placeholder="2025-01-01">
                   </div>
                 </div>
               </div>
@@ -718,9 +718,9 @@
                 <div data-input-group class="calendar">
                   <span class="label">발주일</span>
                   <div class="date_wrap">
-                    <input type="text" class="datepicker">
+                    <input type="text" class="datepicker" placeholder="2025-01-01">
                     ~
-                    <input type="text" class="datepicker">
+                    <input type="text" class="datepicker" placeholder="2025-01-01">
                   </div>
                 </div>
               </div>
@@ -733,7 +733,7 @@
                 <div data-input-group class="calendar">
                   <span class="label">월 검색</span>
                   <div class="date_wrap">
-                    <input type="text" class="monthpicker" autocomplete="off">
+                    <input type="text" class="monthpicker" autocomplete="off" placeholder="2025-01">
                   </div>
                 </div>
               </div>
@@ -975,19 +975,75 @@
               <div class="code">
                 <div data-search-group>
                   <div class="opt">
-                    <div data-input-group>
-                      <span class="label">구분</span>
-                      <input type="text">
+                    <div data-input-group class="calendar" style="width:265px;">
+                      <span class="label">접수일자</span>
+                      <div class="date_wrap">
+                        <input type="text" class="datepicker" placeholder="2025-01-01">
+                        ~
+                        <input type="text" class="datepicker" placeholder="2025-01-01">
+                      </div>
                     </div>
-                    <div data-input-group>
-                      <span class="label">구분</span>
-                      <input type="text">
-                    </div>
-                    <div data-input-group class="search_box">
-                      <span class="label">키워드 검색</span>
-                      <input type="text">
+                    <div data-input-group class="search_box" style="width: 180px;">
+                      <span class="label">차량번호</span>
+                      <input type="text" placeholder="전체">
                       <div class="search_btn">
                         <button type="button" class="search">검색</button>
+                      </div>
+                    </div>
+                    <div data-input-group style="width: 210px;">
+                      <span class="label">고객명</span>
+                      <input type="text">
+                    </div>
+                    <div data-input-group class="search_box" style="width: 240px;">
+                      <span class="label">정비업체</span>
+                      <input type="text" placeholder="전체">
+                      <div class="search_btn">
+                        <button type="button" class="search">검색</button>
+                      </div>
+                    </div>
+                    <div data-input-group style="width: 150px;">
+                      <span class="label">사고번호</span>
+                      <input type="text">
+                    </div>
+                    <div data-input-group class="dropdown" style="width:160px;">
+                      <span class="label">사고유형</span>
+                      <div data-dropdown>
+                        <button type="button" class="toggle">
+                          <div class="txt">전체</div>
+                        </button>
+                        <ul class="option">
+                          <li>
+                            <button type="button" class="item" data-value="value1">value1</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="value2">value2</button>
+                          </li>
+                          <li>
+                            <button type="button" class="item" data-value="value3">value3</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div data-input-group class="calendar" style="width:300px;">
+                      <span class="label dropdown">
+                        <div data-dropdown>
+                          <button type="button" class="toggle selected">
+                            <div class="txt">계약시작일</div>
+                          </button>
+                          <ul class="option">
+                            <li>
+                              <button type="button" class="item" data-value="value1">계약시작일</button>
+                            </li>
+                            <li>
+                              <button type="button" class="item" data-value="value2">계약종료일</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </span>
+                      <div class="date_wrap">
+                        <input type="text" class="datepicker" placeholder="2025-01-01">
+                        ~
+                        <input type="text" class="datepicker" placeholder="2025-01-01">
                       </div>
                     </div>
                   </div>
@@ -1505,7 +1561,7 @@
               <h3 id="modal" class="guide_tit">Modal Popup</h3>
               <p>
                 기본 너비는 1000px이며, 600/800/1200의 너비가 필요할때는 각각 w600/w800/w1200의 클래스를 .modal에 부여<br>
-                기본 높이는 정해져있지 않으며, 고정 높이가 필요한 경우(그리드 뷰)에만 h840의 클래스를 .modal에 부여
+                기본 높이는 정해져있지 않으며, 고정 높이가 필요한 경우(그리드 뷰)에만 h740의 클래스를 .modal에 부여
               </p>
               <div class="code">
                 <div data-modal id="modal2">
